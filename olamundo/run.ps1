@@ -10,6 +10,7 @@ $mingwbin  = 'C:\MinGW\bin'
 $env:COBOL_HOME   = $gnucobol
 $env:CPATH        = "$gnucobol\include"
 $env:LIBRARY_PATH = "$gnucobol\lib"
+$env:COB_SYNC     = "Y" # Força o flush da saída após cada DISPLAY
 $env:PATH         = "$mingwbin;$gnucobol\bin;" + $env:PATH
 
 Write-Host "Compilando olamundo.cob..."
