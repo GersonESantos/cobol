@@ -1,16 +1,18 @@
-	       IDENTIFICATION DIVISION.
-	       PROGRAM-ID. OLAMUNDO.
-	       AUTHOR. GersonESantos.
-	       DATE-WRITTEN. 26/10/2025.
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. OLAMUNDO.
+       AUTHOR. GersonESantos.
+       DATE-WRITTEN. 26/10/2024.
 
-	       ENVIRONMENT DIVISION.
+       ENVIRONMENT DIVISION.
 
-	       DATA DIVISION.
-	       WORKING-STORAGE SECTION.
-	       01 WS-DUMMY PIC X.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-DUMMY PIC X.
 
-	       PROCEDURE DIVISION.
-	           DISPLAY "Olá, mundo!".
-	           *> Pausa o programa para garantir que a saída seja visível
-	           ACCEPT WS-DUMMY.
-	           STOP RUN.
+       PROCEDURE DIVISION.
+           DISPLAY "DEBUG: Programa iniciado.".
+           DISPLAY "Olá, mundo!".
+           DISPLAY "DEBUG: Pressione Enter para sair.".
+           ACCEPT WS-DUMMY.
+           DISPLAY "DEBUG: Programa finalizado.".
+           STOP RUN.
