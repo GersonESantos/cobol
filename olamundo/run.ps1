@@ -1,11 +1,12 @@
 # run.ps1 - compila e executa o olamundo.cob (PowerShell)
 # Usa variáveis temporárias de ambiente para garantir include/lib/bin corretos.
+# Ajuste os caminhos $gnucobol e $mingwbin se a sua instalação estiver em outro local.
 
-# Ajuste estes caminhos se necessário
+# Caminhos padrão (mude se necessário)
 $gnucobol = 'C:\MinGW\share\gnucobol'
 $mingwbin  = 'C:\MinGW\bin'
 
-# Temporário nesta sessão
+# Definir variáveis de ambiente apenas para esta sessão do script
 $env:COBOL_HOME   = $gnucobol
 $env:CPATH        = "$gnucobol\include"
 $env:LIBRARY_PATH = "$gnucobol\lib"
@@ -21,7 +22,12 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Executando olamundo.exe..." -ForegroundColor Green
-.\olamundo.exe
+try {
+    # Executa no terminal atual para que a saída seja visível
+    & .\olamundo.exe
+} catch {
+    Write-Host "Falha ao executar olamundo.exe: $_" -ForegroundColor Red
+}
 
-Write-Host "\nPrograma finalizado. Pressione Enter para sair..."
+Write-Host "`nPrograma finalizado. Pressione Enter para sair..."
 Read-Host | Out-Null
