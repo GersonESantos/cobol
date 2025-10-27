@@ -1,18 +1,18 @@
 loading standard configuration file 'default.conf'
 command line:	C:\MinGW\share\gnucobol\bin\cobc.exe -x -v olamundo.cob 
-preprocessing:	olamundo.cob -> C:\Users\Gersones\AppData\Local\Temp\cob15156_0.cob
+preprocessing:	olamundo.cob -> C:\Users\Gersones\AppData\Local\Temp\cob21400_0.cob
 return status:	0
-parsing:	C:\Users\Gersones\AppData\Local\Temp\cob15156_0.cob (olamundo.cob)
+parsing:	C:\Users\Gersones\AppData\Local\Temp\cob21400_0.cob (olamundo.cob)
 return status:	0
-translating:	C:\Users\Gersones\AppData\Local\Temp\cob15156_0.cob -> C:\Users\Gersones\AppData\Local\Temp\cob15156_0.c (olamundo.cob)
+translating:	C:\Users\Gersones\AppData\Local\Temp\cob21400_0.cob -> C:\Users\Gersones\AppData\Local\Temp\cob21400_0.c (olamundo.cob)
 executing:	gcc -c -pipe -I/mingw/include -I/mingw/include -Wno-unused
 		-fsigned-char -Wno-pointer-sign -o
-		"C:\Users\Gersones\AppData\Local\Temp\cob15156_0.o"
-		"C:\Users\Gersones\AppData\Local\Temp\cob15156_0.c"
+		"C:\Users\Gersones\AppData\Local\Temp\cob21400_0.o"
+		"C:\Users\Gersones\AppData\Local\Temp\cob21400_0.c"
 return status:	0
 executing:	gcc -Wl,--export-all-symbols -Wl,--enable-auto-import
 		-Wl,--enable-auto-image-base -o "olamundo.exe"
-		"C:\Users\Gersones\AppData\Local\Temp\cob15156_0.o"
+		"C:\Users\Gersones\AppData\Local\Temp\cob21400_0.o"
 		-L/mingw/lib -lcob
 return status:	0
 cobc (GnuCOBOL) 3.2.0
