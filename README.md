@@ -9,6 +9,7 @@ Compile
 ```powershell
 # compile with verbose output and create olamundo.exe
 # Compile com saída detalhada e crie olamundo.exe
+cobc -x  olamundo.cob
 cobc -x -v -o olamundo.exe olamundo.cob
 ```
 
