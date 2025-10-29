@@ -1,0 +1,132 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 12.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 149.
+
+       01 DATA-BLOCK.
+      * Variaveis de Tela
+          03 TL-CID-CODIGO                   PIC 9(5).
+          03 TL-CIDADE                       PIC X(30).
+          03 TL-DDD-CIDADE                   PIC 9(2).
+          03 TL-ESTADO                       PIC X(21).
+          03 TL-COD-MUNICIPIO                PIC 9(7).
+      * Variaveis para Lista
+          03 TL-LB-CIDADES.
+             04 TL-LB-CIDADES-ITEM           OCCURS 20.
+                05 TL-LB-CIDADE              PIC X(30).
+                05 TL-LB-CID-CODIGO          PIC 9(5).
+                05 TL-LB-DDD-CIDADE          PIC 9(4).
+                05 TL-LB-ESTADO              PIC X(2).
+                05 TL-LB-COD-MUNICIPIO       PIC 9(7).
+      *
+      * Default Dialog System
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 TL-RESPOSTA                     PIC 9.
+             88 TL-RESPOSTA-TRUE             VALUE 1.
+      *
+      * Variaveis de Controle
+          03 TL-FUNCAO                       PIC X(2).
+          03 FLAG-GRAVACAO                   PIC X(10).
+          03 TL-OCORRENCIAS                  PIC 9(5).
+          03 TL-MENSAGEM                     PIC X(72).
+          03 TL-SELECIONADO                  PIC 9(5).
+          03 TL-SUBPROGRAMA                  PIC 9.
+             88 TL-SUBPROGRAMA-TRUE          VALUE 1.
+          03 TL-CHAMADO                      PIC X(8).
+      *
+      * Ajuda
+          03 DSONLINE-PARAMETER-BLOCK.
+             05 DSONLINE-FUNCTION            PIC X(4).
+             05 DSONLINE-RETURN              PIC x(2) COMP-X.
+             05 DSONLINE-HELP-FLAGS          PIC x(2) COMP-X.
+             05 DSONLINE-HELP-CONTEXT        PIC 9(4).
+             05 DSONLINE-HELP-TOPIC          PIC X(32).
+             05 DSONLINE-HELP-FILE           PIC X(256).
+      **
+      * Variaveis para Tabela
+      *
+          03 TL-TB-ESTADO.
+             04 TL-TB-ESTADO-ITEM            OCCURS 27.
+                05 TL-SB-ESTADO              PIC X(21).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-TL-CID-CODIGO            PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-TL-CIDADE                PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-TL-DDD-CIDADE            PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-TL-ESTADO                PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-TL-COD-MUNICIPIO         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-TL-LB-CIDADE             PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-TL-LB-CID-CODIGO         PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-TL-LB-DDD-CIDADE         PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-TL-LB-ESTADO             PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-TL-LB-COD-MUNICIPIO      PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-TL-RESPOSTA              PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-TL-FUNCAO                PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-FLAG-GRAVACAO            PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-TL-OCORRENCIAS           PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-TL-MENSAGEM              PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-TL-SELECIONADO           PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-TL-SUBPROGRAMA           PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-TL-CHAMADO               PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FLD-NO-DSONLINE-FUNCTION        PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-DSONLINE-RETURN          PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-DSONLINE-HELP-FLAGS      PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-DSONLINE-HELP-CONTEXT    PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-DSONLINE-HELP-TOPIC      PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-DSONLINE-HELP-FILE       PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-TL-SB-ESTADO             PIC 9(4) COMP-5 VALUE
+                                               31.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

@@ -1,0 +1,25 @@
+       AbrirArquivoCidadeInput section.
+           perform DefinirArquivoCidade
+           open input Arquivo-Cidade
+           if File-status not equal zeros
+              perform TratarArquivoCritico
+           end-if
+           .
+       AbrirArquivoCidadeIO section.
+           Perform DefinirArquivoCidade
+           open i-o Arquivo-Cidade
+           if  File-status not equal zeros
+              perform TratarArquivoCritico
+           end-if
+           .
+       DefinirArquivoCidade section.
+           move "Cidade.dat"   to Nome-Arquivo
+           move 10             to Tamanho-Nome-Arquivo
+           perform PreencherCaminho
+           .
+       FecharArquivoCidade section.
+           close Arquivo-Cidade
+           if File-status not equal zeros
+              perform TratarArquivoCritico
+           end-if
+           .

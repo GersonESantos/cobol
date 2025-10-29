@@ -1,0 +1,8 @@
+       FD Arquivo-Cidade.
+       01 Registro-Cidade.
+         02 Cid-Codigo         Pic 9(05).
+         02 Cidade             Pic x(30).
+         02 DDD-Cidade         Pic 9(04).
+         02 Cid-Cod-Municipio  Pic 9(07).
+         02 Cid-Estado         Pic x(02).
+         02 FILLER             Pic x(08).
