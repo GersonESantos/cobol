@@ -1,0 +1,4 @@
+DEBUG: Programa iniciado.
+Ol├í, mundo!
+DEBUG: Pressione Enter para sair.
+DEBUG: Programa finalizado.
