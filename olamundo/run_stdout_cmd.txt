@@ -1,2 +1,4 @@
-'.\olamundo.exe' n∆o Ç reconhecido como um comando interno
-ou externo, um programa oper†vel ou um arquivo em lotes.
+DEBUG: Programa iniciado.
+Ol√°, mundo!
+DEBUG: Pressione Enter para sair.
+DEBUG: Programa finalizado.
