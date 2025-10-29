@@ -10,9 +10,7 @@
        01 WS-DUMMY PIC X.
 
        PROCEDURE DIVISION.
-           DISPLAY "DEBUG: Programa iniciado.".
            DISPLAY "Olá, mundo!".
-           DISPLAY "DEBUG: Pressione Enter para sair.".
            ACCEPT WS-DUMMY.
-           DISPLAY "DEBUG: Programa finalizado.".
+           DISPLAY " Programa finalizado.".
            STOP RUN.
