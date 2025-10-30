@@ -2,7 +2,8 @@
 000020* FD-01 ARQUIVO ACE01, PRODUTOS *
 000030*********************************
 000040 FD  ACE01
-000050     VALUE OF FILE-ID IS '\dados2\arquivos\ace\ACE0101'.
+000050     VALUE OF FILE-ID IS 'D:\DRIVE\dados2\arquivos\ace\ACE0101'.
+
 
 000050*    VALUE OF FILE-ID IS ARQCE-01.
 000060 01  REG-01.

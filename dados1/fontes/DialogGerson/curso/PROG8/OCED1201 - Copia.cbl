@@ -7,33 +7,13 @@
 
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-      *copy \dados1\book\selc-01.
-       copy C:\Repo2024\cobol\dados1\book\selc-01.
+       copy \dados1\book\selc-01.
        DATA DIVISION.
-       copy C:\Repo2024\cobol\dados1\book\fd-01.
 
+       copy \dados1\book\fd-01.
 
        WORKING-STORAGE SECTION.
-       01  MENS-FS.
-           05 CODMENFS    PIC X(08) VALUE SPACES.
-           05 FILLER      PIC X(01) VALUE "-".
-           05 ARQFS       PIC X(08) VALUE SPACES.
-           05 FILLER      PIC X(01) VALUE "-".
-           05 MENFS       PIC X(45) VALUE SPACES.
-           05 FILLER      PIC X(01) VALUE "-".
-           05 FSMENS      PIC XX.
-      *******************************************
-
-       01  FS.
-           03 FS1         PIC X(01).
-           03 FS2         PIC X(01).
-      *    03 FS2-BIN REDEFINES FS2 PIC 9(02) COMP-X.
-       01  FS-T.
-           03 FS1-T       PIC X(01).
-           03 FILLER      PIC X(01).
-           03 FS2-T       PIC 9(03).
-
-
+       01 fs                             pic 99.
        78  dialog-system               VALUE "DSGRUN".
 
        01 Display-Error.
@@ -67,19 +47,8 @@
 
           MOVE Ds-New-Set TO Ds-Control
           MOVE "TCED1201" TO Ds-Set-Name
-          open input ACE01.
-          IF FS NOT = "00"
-              MOVE FS TO FSMENS
-              MOVE "MCE1301B" TO CODMENFS
-              MOVE "ACE01" TO ARQFS
-              PERFORM TESTA-FS THRU SAI-TESTA-FS
-              MOVE MENS-FS TO MENS-ERRO
-              move "EAACE" to ds-procedure
-              PERFORM Call-Dialog-System
-              move 1 to EXIT-FLAG
-              CLOSE ACE01.
-
-      *   PERFORM L-S
+          open input ACE01
+          PERFORM L-S
 
           .
 
@@ -120,10 +89,12 @@
                        MOVE COD-01 TO COD-01CPB
                    NOT INVALID KEY
                        PERFORM F-S-F-R
+      *                PERFORM Derivations
                END-READ
            ELSE
                INITIALIZE REG-01CPB
            END-IF
+      *    PERFORM Set-Up-For-Refresh-Screen.
            .
       *---------------------------------------------------------------*
        L-S SECTION.
@@ -135,6 +106,13 @@
 
 
       *---------------------------------------------------------------*
+
+      *Set-Up-For-Refresh-Screen SECTION.
+
+      *    MOVE refresh-text-and-data-proc TO ds-proc-no.
+
+      *---------------------------------------------------------------*
+
 
       *---------------------------------------------------------------*
 
@@ -158,8 +136,3 @@
               PERFORM Program-Terminate
           END-IF
           .
-
-       copy C:\Repo2024\cobol\dados1\book\CPYPDFS.
-
-
-

@@ -1,4 +1,4 @@
-      *> D:\DRIVE\dados1\curso\pro10oo\oceace01.cls
+      *> C:\Repo2024\cobol\dados1\fontes\DialogGerson\curso\pro10oo\oceace01.cls
       $SET ALIGN(8)
        78 maxnumberbytes               value h"0FFFFFFF".
       *>>---------------------------------------------------------------
