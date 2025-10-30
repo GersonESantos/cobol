@@ -1,0 +1,16 @@
+000010*===============================*
+000020*FDPT02-CADASTRO DE LOCALIDADES *
+000030*===============================*
+000040 FD  APT02
+000050     VALUE OF FILE-ID IS ARQPA-02.
+000060 01  REG-APT02.
+000070     03 CHAVE02.
+000080*====> codigo da localidade
+000090        05 CODIGO02    PIC 9(03).
+000100*====> descricao da localidade
+000110     03 RAZAO02        PIC X(30).
+000120*====> endereco da localidade
+000130     03 ENDERECO02     PIC X(25).
+000140     03 FILLER         PIC X(06).
+000150*=======================================*
+

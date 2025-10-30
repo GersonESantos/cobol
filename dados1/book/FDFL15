@@ -1,0 +1,17 @@
+000010****************************************************************
+000020*FDFL15-CADASTRO DE FUNCIONARIOS COM SEUS RESPECTIVOS HORARIOS *
+000030****************************************************************
+000040 FD  AFL15
+000050     VALUE OF FILE-ID IS ARQFL-15.
+000060 01  REGFL-15.
+000070     03  CHAVE-15.
+000080         05  CODIGO-15          PIC X(09).
+000090*            (CODIGO DO FUNCIONARIO)
+000100     03  CARTAO-15              PIC 9(04).
+000110*        (NUMERO DO CARTAO DE PONTO)
+000120     03  TAB-HORARIO-15.
+000130         05  TB-HOR-15 OCCURS 7 TIMES.
+000140             07  TB-TIPO-15     PIC 9(03).
+000150*        (TABELA COM O TIPO DE HORARIO PARA CADA FUNCIONARIO)
+000160     03  FILLER                 PIC X(10).
+

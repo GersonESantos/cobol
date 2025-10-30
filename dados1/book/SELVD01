@@ -1,0 +1,13 @@
+000010******************************************************
+000020* SELVD01 - COPY SELECT CADASTRO DE PRODUTO *
+000030******************************************************
+000040     SELECT AVD01  ASSIGN TO DISK
+000050                   ORGANIZATION IS INDEXED
+000060                   ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                   RECORD KEY IS CHVD01
+000090                   ALTERNATE RECORD KEY IS COD2VD01
+000100                   WITH DUPLICATES
+000110                   FILE STATUS IS FS.
+000120******************************************************
+

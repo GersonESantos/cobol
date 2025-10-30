@@ -1,0 +1,9 @@
+000010***** LAY-OUT DO SELECT-06........................................
+000020     SELECT  ACE06    ASSIGN TO DISK
+000030                      ORGANIZATION IS INDEXED
+000040                      ACCESS MODE IS DYNAMIC
+000050               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000060                      RECORD KEY IS CHAVE-06
+000070                      FILE STATUS IS FS.
+000080
+

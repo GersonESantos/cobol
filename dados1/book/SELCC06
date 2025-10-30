@@ -1,0 +1,10 @@
+000010*****************************************
+000020* SELECT DO CADASTRO DE JUROS ANUAL     *
+000030*****************************************
+000040     SELECT  ACC06           ASSIGN TO DISK
+000050                             ORGANIZATION IS INDEXED
+000060                             ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                             RECORD KEY IS CHAVECC-06
+000090                             FILE STATUS IS FS.
+

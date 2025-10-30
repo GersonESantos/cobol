@@ -1,0 +1,33 @@
+000010*========================================*
+000020* FDTM01 - FD DO CADASTRO TELEMARKETING        
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ATM01 
+000090     VALUE OF FILE-ID IS ARQTM-01.
+000100 01  REGTM-01.
+000110     03 CHAVETM-01.
+000120        05 CLITM01       PIC 9(05).
+000130        05 TIPTM01       PIC 9(02).
+000140        05 DTCTM01.
+000150           07 AATM01     PIC 9(02).
+000160           07 MMTM01     PIC 9(02).
+000170           07 DDTM01     PIC 9(02).
+000180        05 COMTM01.
+000190           07 LOTM01     PIC 9(02).
+000210           07 NFTM01     PIC 9(04).
+000200           07 HORFM01    PIC 9(06).
+000220           07 DIFTM01    PIC 9(04).
+000230     03 VALTM01          PIC 9(12).
+000240     03 VALTM01R REDEFINES 
+000250        VALTM01          PIC 9(10)V99.
+           03 OBTM01           PIC X(35).
+           03 OBTM02           PIC X(35).
+    	   03 OKTM01           PIC XX.
+           03 OPER01           PIC 99.  
+           03 HORIM01          PIC 9(06).
+000260     03 FILLER           PIC X(07).
+000270*=====================================*
+

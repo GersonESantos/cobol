@@ -1,0 +1,262 @@
+000010**********************************
+000020* TAB-W                          *
+000030**********************************
+000040 WORKING-STORAGE SECTION.
+       01  TEMPO1         PIC X(07) VALUE "sleep 1".
+       01  TEMPO2         PIC X(07) VALUE "sleep 2".
+       01  TEMPO3         PIC X(07) VALUE "sleep 3".
+       01  TEMPO4         PIC X(07) VALUE "sleep 4".
+       01  TEMPO5         PIC X(07) VALUE "sleep 5".
+000050 01  FLAG           PIC X(01) VALUE SPACES.
+000060 01  ARQS.
+000070     05 ARQ1        PIC 9.
+000080     05 ARQ2        PIC 9.
+000090     05 ARQ3        PIC 9.
+000100     05 ARQ4        PIC 9.
+000110     05 ARQ5        PIC 9.
+000120     05 ARQ6        PIC 9.
+000130 01  CLI-INI        PIC 9(05) VALUE ZEROS.
+000140 01  CLI-FIN        PIC 9(05) VALUE ZEROS.
+000150 01  CTP            PIC 9(04) VALUE 0.
+000160*    contador de paginas para relatorio
+000170 01  CTL            PIC 9(02) VALUE 70.
+000180*    contador de linhas para relatorio
+000190 01  CR             PIC X(01) VALUE SPACES.
+000200*    respostas para mensagens em tela
+000210 01  RESP           PIC X(01) VALUE SPACES.
+000220*    respostas para execucao de tarefas
+000230 01  OPCAO-1        PIC 9(01) VALUE 0.
+000240*    Selecao de opcao com um caracter numerico
+000250 01  OPCAO-2        PIC 9(02) VALUE 0.
+000260*    Selecao de opcao com dois caracteres numericos
+000270 01  OPCAO          PIC X.
+000280*    Selecao de opcao com um caracter alfanumerico
+000290 01  LPESC          PIC X(65) VALUE
+000300     " TECLE ESC PARA RETORNAR       ".
+000310 01  LIMPA          PIC X(80) VALUE SPACES.
+000320 01  LIMPA10        PIC X(10) VALUE SPACES.
+000330 01  LIMPA14        PIC X(14) VALUE SPACES.
+000340 01  LIMPA20        PIC X(20) VALUE SPACES.
+000350 01  LIMPA25        PIC X(25) VALUE SPACES.
+000360 01  LIMPA30        PIC X(30) VALUE SPACES.
+000360 01  LIMPA35        PIC X(35) VALUE SPACES.
+000370 01  LIMPA40        PIC X(40) VALUE SPACES.
+000380 01  LIMPA50        PIC X(50) VALUE SPACES.
+000390 01  LIMPA55        PIC X(55) VALUE SPACES.
+000400 01  LIMPA76        PIC X(76) VALUE SPACES.
+000410*    limpeza da linha descriminada
+000420 01  EX-MENS        PIC X(65) VALUE SPACES.
+000430*    limpeza da linha descriminada
+000440 01  LN             PIC 99.
+000450*    variavel correspondente a LIN
+000460 01  CL             PIC 99.
+000470*    variavel correspondente a COL
+000480 01  FS.
+000490     03 FS1         PIC X(01).
+000500     03 FS2         PIC X(01).
+000510*    03 FS2-BIN REDEFINES FS2 PIC 9(02) COMP-X.
+000520 01  FS-T.
+000530     03 FS1-T       PIC X(01).
+000540     03 FILLER      PIC X(01).
+000550     03 FS2-T       PIC 9(03).
+000560 01  FS-BROQ        PIC X(03) VALUE "068".
+000570 01  FS-INIC        PIC X(02) VALUE "35".
+000580*    variavel correspondente ao status do arquivo
+000590 77  E              PIC 99.
+000600*    variavel correspondente a <ESC> e <CTRL-E>
+           88 TECLOU-ENTER                                 VALUE 0.
+           88 TECLOU-ESC                                   VALUE 1.
+           88 TECLOU-F1                                    VALUE 2.
+           88 TECLOU-F2                                    VALUE 3.
+           88 TECLOU-F3                                    VALUE 4.
+           88 TECLOU-F4                                    VALUE 5.
+           88 TECLOU-F5                                    VALUE 6.
+
+000610 01  ST             PIC 9.
+000620 01  ESC            PIC 99.
+000630*    indexadores usados no sistema
+000640 01  IND1-W         PIC 99 VALUE ZEROS.
+000650 01  IND2-W         PIC 99 VALUE ZEROS.
+000660 01  IND3-W         PIC 99 VALUE ZEROS.
+000670 01  IND4-W         PIC 99 VALUE ZEROS.
+000680 01  IND5-W         PIC 99 VALUE ZEROS.
+000690 01  IND6-W         PIC 99 VALUE ZEROS.
+000700 01  IND7-W         PIC 99 VALUE ZEROS.
+000710* campos para teste de validade de data
+000720 01  ANO-PART2      PIC 9(03) VALUE ZEROS.
+000730 01  INTEIROS       PIC 9(03) VALUE ZEROS.
+000740 01  Q-DATA         PIC 9(03) VALUE ZEROS.
+000750 01  R-DATA         PIC 9(03) VALUE ZEROS.
+000760 01  WS-RESPOS      PIC X(01) VALUE SPACES.
+000770 01  DATA-VAL.
+000780     05 DIA-VAL     PIC 99.
+000790     05 MES-VAL     PIC 99.
+000800     05 ANO-VAL     PIC 99.
+000810*    data para acesso do sistema operacional
+000820 01  DATA-W.
+000830     05 A-W         PIC 99.
+000840     05 M-W         PIC 99.
+000850     05 D-W         PIC 99.
+000860 01  DATA-WR REDEFINES DATA-W PIC 9(06).
+000870*    hora para acesso do sistema operacional
+000880 01  HORA-W.
+000890     05 HH-W        PIC 99.
+000900     05 MS-W        PIC 99.
+000910     05 SS-W        PIC 99.
+000920*    hora auxiliar
+000930 01  DATA-WS.
+000940     05 DIA         PIC 99.
+000950     05 MES         PIC 99.
+000960     05 ANO         PIC 99.
+000970 01  DATA-WSR REDEFINES DATA-WS PIC 9(06).
+000980 01  SIST           PIC X(40) VALUE SPACES.
+000990 01  INFT           PIC X(45) VALUE SPACES.
+001000 01  TS             PIC X(08) VALUE SPACES.
+001010 01  TAB-UF.
+001020     05 FILLER      PIC X(56) VALUE
+001030     "ACALAMAPBACEDFESFNGOMAMGMSMTPAPBPEPIRDRJRNRORRRSSCSESPTO".
+001040 01  TAB-FUR REDEFINES TAB-UF.
+001050     05  WS-UF      PIC XX OCCURS 28 TIMES.
+001060 01  TAB-MESES.
+001070     05 FILLER      PIC X(09) VALUE "  JANEIRO".
+001080     05 FILLER      PIC X(09) VALUE "FEVEREIRO".
+001090     05 FILLER      PIC X(09) VALUE "    MARCO".
+001100     05 FILLER      PIC X(09) VALUE "    ABRIL".
+001110     05 FILLER      PIC X(09) VALUE "     MAIO".
+001120     05 FILLER      PIC X(09) VALUE "    JUNHO".
+001130     05 FILLER      PIC X(09) VALUE "    JULHO".
+001140     05 FILLER      PIC X(09) VALUE "   AGOSTO".
+001150     05 FILLER      PIC X(09) VALUE " SETEMBRO".
+001160     05 FILLER      PIC X(09) VALUE "  OUTUBRO".
+001170     05 FILLER      PIC X(09) VALUE " NOVEMBRO".
+001180     05 FILLER      PIC X(09) VALUE " DEZEMBRO".
+001190 01  MESES-W REDEFINES TAB-MESES.
+001200     05 MES-W1 OCCURS 12 TIMES    PIC X(09).
+001210 01  TABMM.
+001220     02 VAR-MES OCCURS 12 TIMES.
+001230        03 MESES                  PIC 9.
+001240*    tabela referente a primeira segunda de cada mes p\ o
+001250*    calculo do prazo na rotina de deflacionamento
+001260 01  CAMPOS-PRZ.
+001270     02 CAMP1       PIC 99.
+001280     02 CAMP2       PIC 99.
+001290     02 CAMP3       PIC 99.
+001300     02 CAMP4       PIC 99.
+001310     02 CAMP5       PIC 99.
+001320     02 CAMP6       PIC 99.
+001330*    campos utilizados na rotina de deflacionamento
+001340 01  IMP-W.
+001350     05 FILLER      PIC X(14) VALUE "/DADOS2/SPOOL/".
+001360     05 CHREL-W.
+001370        07 RREL-W   PIC X.
+001380        07 FILLER   PIC X(06).
+001390     05 HORREL-W.
+001400        07 MSREL-W  PIC 99.
+001410        07 SSREL-W  PIC 99.
+001420     05 DATREL-W.
+001430        07 DDREL-W  PIC 99.
+001440 01  IMP-W1.
+001450     05 FILLER      PIC X(14) VALUE "/DADOS2/SPOOL/".
+001460     05 CHREL-W1.
+001470        07 RREL-W1  PIC X.
+001480        07 FILLER   PIC X(06).
+001490     05 HORREL-W1.
+001500        07 MSREL-W1 PIC 99.
+001510        07 SSREL-W1 PIC 99.
+001520     05 DATREL-W1.
+001530        07 DDREL-W1 PIC 99.
+001540*******************************************
+001550* AREA PARA DISPLAY DE MENSAGENS DE ERROS *
+001560*******************************************
+001630*******************************************
+001640* CABECALHOS PARA FORMULARIOS 132 COLUNAS *
+001650*******************************************
+001660 01  CAB1A.
+001670     05 FILLER      PIC X(06) VALUE SPACES.
+001680     05 FILLER      PIC X(09) VALUE "EMPRESA: ".
+001690     05 COD-EMPA    PIC 99 VALUE ZEROS.
+001700     05 FILLER      PIC X(03) VALUE " - ".
+001710     05 EMP-CAB1A   PIC X(40) VALUE SPACES.
+001720     05 FILLER      PIC X(41) VALUE SPACES.
+001730     05 FILLER      PIC X(06) VALUE "DATA: ".
+001740     05 D-CAB1A     PIC 99 VALUE ZEROS.
+001750     05 FILLER      PIC X  VALUE "\".
+001760     05 M-CAB1A     PIC 99 VALUE ZEROS.
+001770     05 FILLER      PIC X  VALUE "\".
+001780     05 A-CAB1A     PIC 99 VALUE ZEROS.
+001790     05 FILLER      PIC X(10) VALUE "   PAG: ".
+001800     05 PAG-CAB1A   PIC ZZZZ9.
+001810 01  CAB2A.
+001820     05 FILLER      PIC X(06) VALUE SPACES.
+001830     05 NOME-RELA   PIC X(14) VALUE SPACES.
+001840     05 SIST-RELA   PIC X(81) VALUE SPACES.
+001850     05 FILLER      PIC X(06) VALUE "HORA: ".
+001860     05 HH-CAB2A    PIC 99.
+001870     05 FILLER      PIC X(01) VALUE ":".
+001880     05 MS-CAB2A    PIC 99.
+001890     05 FILLER      PIC X(01) VALUE ":".
+001900     05 SS-CAB2A    PIC 99.
+001910 01  CAB132.
+001920     05 FILLER      PIC X(132) VALUE ALL "-".
+001930*******************************************
+001940* CABECALHOS PARA FORMULARIOS 220 COLUNAS *
+001950*******************************************
+001960 01  CAB1AA.
+001970     05 FILLER      PIC X(06) VALUE SPACES.
+001980     05 FILLER      PIC X(09) VALUE "EMPRESA: ".
+001990     05 COD-EMPAA   PIC 99 VALUE ZEROS.
+002000     05 FILLER      PIC X(03) VALUE " - ".
+002010     05 EMP-CAB1AA  PIC X(40) VALUE SPACES.
+002020     05 FILLER      PIC X(129) VALUE SPACES.
+002030     05 FILLER      PIC X(06) VALUE "DATA: ".
+002040     05 D-CAB1AA    PIC 99 VALUE ZEROS.
+002050     05 FILLER      PIC X  VALUE "\".
+002060     05 M-CAB1AA    PIC 99 VALUE ZEROS.
+002070     05 FILLER      PIC X  VALUE "\".
+002080     05 A-CAB1AA    PIC 99 VALUE ZEROS.
+002090     05 FILLER      PIC X(10) VALUE "   PAG: ".
+002100     05 PAG-CAB1AA  PIC ZZZZ9.
+002110 01  CAB2AA.
+002120     05 FILLER      PIC X(06) VALUE SPACES.
+002130     05 NOME-RELAA  PIC X(14) VALUE SPACES.
+002140     05 SIST-RELAA  PIC X(186) VALUE SPACES.
+002150     05 FILLER      PIC X(06) VALUE "HORA: ".
+002160     05 HH-CAB2AA   PIC 99.
+002170     05 FILLER      PIC X(01) VALUE ":".
+002180     05 MS-CAB2AA   PIC 99.
+002190     05 FILLER      PIC X(01) VALUE ":".
+002200     05 SS-CAB2AA   PIC 99.
+002210 01  CAB132A.
+002220     05 FILLER      PIC X(220) VALUE ALL "-".
+002230 01  CAB220.
+002240     05 FILLER      PIC X(220) VALUE ALL "-".
+002250**********************************************
+002260* CABECALHOS PARA FORMULARIOS DE 80 COLUNAS  *
+002270**********************************************
+002280 01  CAB1B.
+002290     05 FILLER      PIC X(02) VALUE SPACES.
+002300     05 FILLER      PIC X(09) VALUE "EMPRESA: ".
+002310     05 COD-EMPB    PIC X(02) VALUE SPACES.
+002320     05 FILLER      PIC X(02) VALUE " -".
+002330     05 EMP-CAB1B   PIC X(41) VALUE SPACES.
+002340     05 FILLER      PIC X(06) VALUE "DATA: ".
+002350     05 D-CAB1B     PIC 99 VALUE ZEROS.
+002360     05 FILLER      PIC X  VALUE "\".
+002370     05 M-CAB1B     PIC 99 VALUE ZEROS.
+002380     05 FILLER      PIC X  VALUE "\".
+002390     05 A-CAB1B     PIC 99 VALUE ZEROS.
+002400     05 FILLER      PIC X(05) VALUE " PAG:".
+002410     05 PAG-CAB1B   PIC ZZZZ9.
+002420 01  CAB2B.
+002430     05 FILLER      PIC X(02) VALUE SPACES.
+002440     05 NOME-RELB   PIC X(13) VALUE SPACES.
+002450     05 SIST-RELB   PIC X(41) VALUE SPACES.
+002460     05 FILLER      PIC X(06) VALUE "HORA: ".
+002470     05 HH-CAB2B    PIC 99.
+002480     05 FILLER      PIC X(01) VALUE ":".
+002490     05 MS-CAB2B    PIC 99.
+002500     05 FILLER      PIC X(01) VALUE ":".
+002510     05 SS-CAB2B    PIC 99.
+002520 01  CAB80.
+002530     05 FILLER      PIC X(80) VALUE ALL "-".
+002540********************************************************

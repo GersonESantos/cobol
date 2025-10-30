@@ -1,0 +1,14 @@
+000010
+000020**********************************************
+000030* SELCP01-COPY SELECT CADASTRO  DE DUPLICATAS*
+000040**********************************************
+000050     SELECT ACP05     ASSIGN TO DISK
+000060                      ORGANIZATION IS INDEXED
+000070                      ACCESS MODE IS DYNAMIC
+000080               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                      RECORD KEY IS NUM-FAT-05
+000100                      ALTERNATE RECORD KEY IS CLIENTE-05
+000110                      WITH DUPLICATES
+000120                      FILE STATUS IS FS.
+000130
+

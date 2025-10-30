@@ -1,0 +1,12 @@
+000010*========================================*
+000020* SELTM05 SELECT CADASTRO DE CLI-SELMA   * 
+000030*========================================*
+000040     SELECT ATM05     ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070                      RECORD KEY IS CHAVETM-05
+000080                      ALTERNATE RECORD KEY IS TELFONTM05
+000090                      WITH DUPLICATES
+000100                      FILE STATUS IS FS.
+000110*-----------------------FIM---------------------
+

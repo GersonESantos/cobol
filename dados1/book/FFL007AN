@@ -1,0 +1,163 @@
+000010*----------------------------------- SISPROG:FFL007A  SERIE:00692F
+000020*FFL007AN
+000030*CADASTRO DE FUNCIONARIOS (AFLFUN--)
+000040*TAMANHO DO REGISTRO: 1024
+000050*INDEXADO
+000060*CHAVE  PRIMARIA...: FU-CHAVE-K0 (18)
+000070*CHAVES SECUNDARIAS: FU-CHAVE1-K0 (06)  DUPLICATES
+000080*FD ESPECIFICA PARA USO NOS PROG. DE CALCULO  FL203N,FL205N,FL302N
+000090*
+000100*-----------------------------------------------------------------
+000110 FD  FUNCIONARION
+000120     VALUE OF FILE-ID IS ARQFL-03.
+000130 01  REG-FUNCN.
+000140     05  FU-CHAVE-K0.
+000150*        (CODIGO DO FUNCIONARIO)
+000160         10  FU-CODIGO-K0                        PIC X(018).
+000170     05  FU-CHAVE1-K0.
+000180         10  FU-CODIGO1-K0                       PIC X(006).
+000190     05  FU-NOME                                 PIC X(025).
+000200*        (NOME DO FUNCIONARIO)
+000210     05  FILLER                                  PIC X(092).
+000220     05  FU-DATADM.
+000230*        (DATA DE ADMISSAO DO FUNCIONARIO)
+000240         10  FU-DIAADM                           PIC 9(002).
+000250         10  FU-MESADM                           PIC 9(002).
+000260         10  FU-ANOADM                           PIC 9(002).
+000270     05  FU-DATADM-R  REDEFINES   FU-DATADM      PIC 9(006).
+000280     05  FILLER                                  PIC X(003).
+000290     05  FU-OPC-FGTS                             PIC X(001).
+000300*        (OPCAO DO FGTS: S - OPTANTE
+000310*                        N - NAO OPTANTE)
+000320     05  FILLER                                  PIC X(006).
+000330     05  FU-CARGO                                PIC 9(003).
+000340*        (CODIGO DO CARGO)
+000350     05  FU-SIND                                 PIC 9(002).
+000360*        (CODIGO DO SINDICATO)
+000370     05  FILLER                                  PIC X(036).
+000380     05  FU-TIPO-SAL                             PIC 9(001).
+000390*        (TIPO DE SALARIO:   1 - MENSAL
+000400*                            3 - SEMANAL
+000410*                            5 - HORA)
+000420     05  FU-TIPO-PAG                             PIC X(001).
+000430*        (TIPO DE PAGAMENTO:     S - SEMANAL
+000440*                                M - MENSAL)
+000450     05  FILLER                                  PIC X(002).
+000460     05  FU-SALARIO                              PIC 9(009)V99.
+000470*        (SALARIO DO FUNCIONARIO:    MENSAL,
+000480*                                    SEMANAL OU
+000490*                                    HORA)
+000500     05  FILLER                                  PIC X(011).
+000510     05  FU-QUOTA-SF                             PIC 9(002).
+000520*        (NUMERO DE FILHOS PARA O CALCULO DO
+000530*         SALARIO FAMILIA)
+000540     05  FU-QUOTA-IR                             PIC 9(002).
+000550*        (NUMERO DE DEPENDENTES PARA A DEDUCAO
+000560*         DO IMPOSTO DE RENDA)
+000570     05  FU-PERC-PERIC                           PIC 9(003)V99.
+000580*        (PERCENTUAL PARA O CALCULO DO ADICIO
+000590*         NAL DE PERICULOSIDADE)
+000600     05  FU-PERC-PR   REDEFINES   FU-PERC-PERIC  PIC 9V9999.
+000610     05  FU-PERC-INSAL                           PIC 9(003)V99.
+000620*        (PERCENTUAL PARA O CALCULO DO ADICIO
+000630*         NAL DE INSALUBRIDADE)
+000640     05  FU-PERC-IB   REDEFINES   FU-PERC-INSAL  PIC 9V9999.
+000650     05  FU-CONDICAO                             PIC 9(001).
+000660*        (CONDICAO DO FUNCIONARIO:
+000670*          1 - ATIVO
+000680*          2 - AFASTADO COM REMUNERACAO
+000690*          3 - AFASTADO SEM REMUNERACAO
+000700*          4 - AFASTADO IAPAS
+000710*          5 - AFASTADO ACIDENTE DE TRABALHO
+000720*          6 - AFASTADO SERVICO MILITAR
+000730*          7 - AFASTADO LICENCA MATERNIDADE
+000740*          8 - EM DESLIGAMENTO
+000750*          9 - DESLIGADO
+000760     05  FU-COND-ANT                             PIC 9(001).
+000770*        (CONDICAO ANTERIOR DO FUNCIONARIO)
+000780     05  FU-DATAFA.
+000790*        (DATA EM QUE O FUNCIONARIO FOI AFASTADO)
+000800         10  FU-DIAAFA                           PIC 9(002).
+000810         10  FU-MESAFA                           PIC 9(002).
+000820         10  FU-ANOAFA                           PIC 9(002).
+000830     05  FU-DATAFA-R  REDEFINES   FU-DATAFA      PIC 9(006).
+000840     05  FU-DATRET-R                             PIC 9(006).
+000850*        (DATA EM QUE O FUNCIONARIO RETORNOU)
+000860     05  FU-CAUSA-RES                            PIC 9(001).
+000870*        (CODIGO DA CAUSA DA RESCISAO:
+000880*         1 - POR INICIATIVA DO EMPREGADOR C/JUSTA CAUSA
+000890*         2 - POR INICIATIVA DO EMPREGADOR S/JUSTA CAUSA
+000900*         3 - POR INICIATIVA DO EMPREGADO C/JUSTA CAUSA
+000910*         4 - POR INICIATIVA DO EMPREGADO S/JUSTA CAUSA
+000920*         6 - TRANSFERENCIA DE EMPREGO DENTRO DA MESMA FIRMA
+000930*         7 - APOSENTADORIA OU REFORMA OU RESERVA
+000940*         8 - MORTE
+000950*         9 - OUTROS
+000960*
+000970     05  FU-IND-FER                              PIC X(001).
+000980*        (INDICA SE O FUNC. ESTA EM FERIAS)
+000990     05  FILLER                                  PIC X(014).
+001000     05  FU-BASE-IR-AC                           PIC X(006).
+001010*        (BASE DE IR ACUMULADA ATE O ULTIMO CALCULO)
+001020     05  FU-IRF-AC                               PIC X(005).
+001030*        (I.R. PAGO  ATE O MOMENTO)
+001040     05  FU-CALC-AD                              PIC 9(001).
+001050*        (CAMPO DO ADTO  QUINZENAL: 0-NAO CALC.  1-CALCULADO)
+001060     05  FILLER                                  PIC X(012).
+001070     05  FU-MESTRAB                              PIC 9(002).
+001080*        (NUMERO DE MESES TRABALHADOS DURANTE O ANO)
+001090     05  FU-ARREDON                              PIC X(002).
+001100*        (ARREDONDAMENTO DO MES OU DA SEMANA
+001110*             CAMPO COMPACTADO)
+001120*
+001130*====>   CAMPOS ATUALIZADOS PELO PROGRAMA DE CALCULO:
+001140     05  FU-BASE-IP-MES                          PIC X(006).
+001150*        (BASE DE IAPAS DO MES
+001160*         CAMPO COMPACTADO - PIC 9(010)V99)
+001170     05  FU-BASE-IR-MES                          PIC X(006).
+001180*        (BASE DE IMPOSTO DE RENDA DO MES
+001190*         CAMPO COMPACTADO - PIC 9(010)V99)
+001200     05  FU-BASE-CONTR                           PIC X(006).
+001210*        (SALARIO BASE MAIS COMISSOES DE FEVE
+001220*         REIRO PARA O CALCULO DA CONTRIBUICAO
+001230*         SINDICAL DE COMISSIONADOS EM MARCO
+001240*         CAMPO COMPACTADO - PIC 9(010)V99)
+001250     05  FU-IND-MES                              PIC 9(001).
+001260*        (SE 1 (UM) INDICA QUE O MES EM QUESTAO
+001270*         FOI CONSIDERADO COMO MES TRABALHADO
+001280*         PELO PROGRAMA DE CALCULO)
+001290     05  FU-CALC                                 PIC 9(001).
+001300*        (INDICADOR DE ESTADO DO FUNCIONARIO:
+001310*          0 - NAO CALCULADO 1 -CALCULADO
+001320*                            2 - CALCULADO (CONDICAO 8)
+001330*                            3 - SEMANALISTA EM CONDICAO 8
+001340*                                AGUARDANDO O FECHAMENTO
+001350*                                DE MES
+001360     05  FILLER                                  PIC X(002).
+001370     05  FU-SITUACAO                             PIC 9(001).
+001380     05 FU-HORAS-EXT                             PIC X(004).
+001390*        (SOMATORIO HORAS EXTRAS X PERCENTUAL,
+001400*         PARA O CALCULO DO 13. SALARIO VARIAVEL
+001410*         CAMPO COMPACTADO - PIC 9(5)V999 )
+001420     05 FU-HORAS-NOT                             PIC X(004).
+001430*        (SOMATORIO HORAS COM ADICIONAL NOTURNO X
+001440*         PERCENTUAL PARA O CALCULO DO 13. SALARIO
+001450*         VARIAVEL
+001460*         CAMPO COMPACTADO - PIC 9(5)V999 )
+001470     05 FU-13PARFIN                              PIC X(006).
+001480*        (ACUMULADOR 13.SALARIO - PARCELA FINAL.
+001490*         CAMPO COMPACTADO).
+001500     05  FILLER                                  PIC X(035).
+001510     05 FU-13PAGO                                PIC X(005).
+001520*               ( 13.SALARIO - ADIANTAMENTOS)
+001530     05 FU-REM-MES                               PIC X(005).
+001540*               ( ULTIMA REMUNERACAO)
+001550     05 FU-BASE-13VR                             PIC X(005).
+001560*               ( BASE DE CALCULO DO 13. VARIAVEL)
+001570     05 FILLER                                   PIC X(005).
+001580     05 FU-AC-INSAL                              PIC X(005).
+001590*               ( ACUMULADOR DE INSALUBRIDADE )
+001600     05 FU-AC-PERIC                              PIC X(005).
+001610*               ( ACUMULADOR DE PERICULOSIDADE )
+001620     05  FILLER                                  PIC X(626).
+

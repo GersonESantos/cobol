@@ -1,0 +1,18 @@
+000020**------------------------------------------------**
+000030* SELCC                                            *
+000040**------------------------------------------------**
+000050 ENVIRONMENT DIVISION.
+000060 CONFIGURATION SECTION.
+000070 SOURCE-COMPUTER. S10000-TC.
+000080 OBJECT-COMPUTER. S10000-TC.
+000090 SPECIAL-NAMES. DECIMAL-POINT IS COMMA.
+000100 INPUT-OUTPUT SECTION.
+000110 FILE-CONTROL.
+000120     SELECT    EMPCC  ASSIGN TO DISK
+000130                      ORGANIZATION IS INDEXED
+000140                      ACCESS MODE IS DYNAMIC
+000170               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000180                      RECORD KEY IS CHAVE-EMPCC
+000190                      FILE STATUS IS FS.
+000200*---------------FIM DO COPY-----------------------*
+

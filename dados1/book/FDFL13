@@ -1,0 +1,52 @@
+000010**************************************************************
+000020*FDFL13-CADASTRO DE CONTROLE DE HORAS EXTRAS,FALTAS E ATRASOS*
+000030**************************************************************
+000040 FD  AFL13 VALUE OF FILE-ID IS ARQFL-13.
+000050 01  REGFL-13.
+000060     05  CHAVE-13.
+000070         10 CODFUN-13            PIC X(018).
+000080*            (CODIGO DO FUNCIONARIO)
+000090         10 CODOCO-13            PIC 9(003).
+000100*             (CODIGO DA OCORRENCIA)
+000110         10 DATA-13.
+000120            15 DIA-13            PIC 99.
+000130            15 MES-13            PIC 99.
+000140            15 ANO-13            PIC 99.
+000150*            (DATA DO PROCESSAMENTO).
+000160     05 INCIDENCIA-13            PIC 9(002).
+000170*        (INDICA O NUMERO DE VEZES QUE A
+000180*         OCORRENCIA DEVE APARECER.
+000190*         SE IGUAL A '99' E UMA OCORRENCIA
+000200*         PERMANENTE)
+000210     05  REFER-13                PIC 9(003)V99.
+000220     05  REFER-13R REDEFINES REFER-13 PIC X(005).
+000230*         (NUMERO DE HORAS,QUOTAS DE IMPOSTO DE
+000240*          RENDA, QUOTAS  DE SALARIO FAMILIA, ETC
+000250*          REFERENTES A OCORRENCIA)
+000260     05  VALOR-13                PIC 9(009)V99.
+000270*         (VALOR DA OCORRENCIA)
+000280     05  VALOR-13R REDEFINES VALOR-13 PIC 9(11).
+000290     05  INDTP-13                PIC X(001).
+000300*          (INDICADOR DO TIPO DE OCORRENCIA:
+000310*                  P = PROVENTO
+000320*                  D = DESCONTO
+000330*                  R = RESULTADO
+000340     05  INDES-13                PIC X(001).
+000350*          (INDICADOR DO ESTADO DA OCORRNCIA:
+000360*                  I = INFORMADA
+000370*                  C = CALCULADA
+000380     05  INDRE-13                PIC 9(001).
+000390*          (INDICADOR DO TIPO DE REFERENCIA:
+000400*                    0 - REFERENCIA EM HORAS, SE VALOR DA
+000410*                        OCORRENCIA FOR IGUAL A ZERO, O
+000420*                        PROGRAMA DE CALCULO IRA UTILIZAR A
+000430*                        REFERENCIA PARA OBTER O VALOR DA
+000440*                        OCORRENCIA.
+000450*                    1 - REFERENCIA APENAS INFORMATIVA
+000460*                    2 - SEM REFERENCIA)
+000470     05  INTEGRA-13              PIC X(001).
+000480*          (INDICADOR SE REGISTRO JA FOI INTEGRADO C/ AFL08)
+000490*                    S - SIM.
+000500*                    N - NAO.
+000510     05  FILLER                  PIC X(001).
+

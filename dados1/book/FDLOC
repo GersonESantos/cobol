@@ -1,0 +1,15 @@
+000010*==============================*
+000020*FDLOC-CADASTRO DE LOCALIDADES *
+000030*==============================*
+000040 FD  ALOC
+000050     VALUE OF FILE-ID IS ARQPA-05.
+000060 01  REG-ALOC.
+000070     03 CHAVELOC    PIC 9(02).
+000080*====> descricao da localidade
+000090     03 RAZAOLOC        PIC X(30).
+000100*====> endereco da localidade
+000110     03 ENDERECOLOC     PIC X(25).
+000120     03 FILLER           PIC X(07).
+000130* ! SELLOC FDLOC LOCALIDADES
+000140*=======================================*
+

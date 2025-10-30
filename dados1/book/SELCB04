@@ -1,0 +1,12 @@
+000010
+000020*===================================================*
+000030* SELCB04 - COPY SELECT CADASTRO DE CARTAO DE CREDITO
+000040*===================================================*
+000050           SELECT ACB04 ASSIGN TO DISK
+000060                         ORGANIZATION IS INDEXED
+000070                         ACCESS MODE IS DYNAMIC
+000080               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                         RECORD KEY IS CHAVECB-04
+000100                         FILE STATUS IS FS.
+000110*===================================================*
+

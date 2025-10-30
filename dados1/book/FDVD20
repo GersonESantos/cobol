@@ -1,0 +1,31 @@
+000010*========================================*
+000020* FDVD20 - FD DO ORDEM DE SERVICO  AVD20 *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  AVD20
+000090     VALUE OF FILE-ID IS ARQ20-VD.
+000100 01  REG-VD20.
+000110     03 CHVD20.
+000120        05 OSVD20      PIC 9(06).
+000130        05 SEQVD20     PIC 9(02).
+000140     03 CGCCLIVD20     PIC 9(14).
+000150     03 CODVD20.
+000160        05 COD1VD20   PIC X(08).
+000170        05 COD2VD20   PIC X(08).
+000180        05 COD3VD20   PIC X(06).
+000190     03 QTVD20        PIC 9(05).
+000200     03 QTRVD20 REDEFINES
+000210        QTVD20        PIC 9(03)V99.
+000220     03 VENDVD20      PIC 9(03).
+000230     03 DEPVD20       PIC 9(02).
+000240     03 TIPOVD20      PIC X.
+000250     03 STAVD20       PIC X(01).
+000260     03 VALUNVD20     PIC 9(14).
+000270     03 VALUNRVD20 REDEFINES
+000280        VALUNVD20     PIC 9(12)V99.
+000290     03 FILLER        PIC X(58).
+000300*=====================================*
+

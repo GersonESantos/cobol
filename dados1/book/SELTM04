@@ -1,0 +1,18 @@
+000010*===================================================*
+000020* SELTM04 - COPY SELECT CADASTRO DE COTACAO         *
+000030*===================================================*
+000040     SELECT ATM04 ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070                      RECORD KEY IS CHAVETM-04
+000080                      LOCK MODE IS MANUAL
+000090                      WITH LOCK ON MULTIPLE RECORDS
+000100                      ALTERNATE RECORD KEY IS RAZAOTM04
+000110                      WITH DUPLICATES
+000120                      ALTERNATE RECORD KEY IS TELFONTM04
+000130                      WITH DUPLICATES
+000140                      ALTERNATE RECORD KEY IS CONTM04 
+000150                      WITH DUPLICATES
+000160                      FILE STATUS IS FS.
+000170*===================================================*
+

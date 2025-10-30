@@ -1,0 +1,23 @@
+000010*===========================================*
+000020*FDCP03 - ARQUIVO DO VALOR FATURADO DO DIA  *
+000030*===========================================*
+000040 FD  ACP03
+000050     VALUE OF FILE-ID IS ARQ03-ID.
+000060 01  REG-CP03.
+000070     03 CHAVEP-03.
+000080         05 DATA-03   PIC X(6).
+000090         05 TIPO-03   PIC 9.
+000100     03  TOTLIQ-03    PIC 9(11)V99.
+000110     03  TOTLIQ-RED REDEFINES
+000120         TOTLIQ-03    PIC 9(13).
+000130     03  TOTBRT-03    PIC 9(11)V99.
+000140     03  TOTBRT-RED REDEFINES
+000150         TOTBRT-03    PIC 9(13).
+000160     03  FILLER       PIC X(31).
+000170***************    E S T R U T U R A   ***************
+000180*    DATA-03  ==> DATA DO FATURAMENTO                *
+000190*    TIPO-03 ==>  0 AVISTA, 1 C/APRES, 2 FATURADO    *
+000200*    TOTLIQ  ==>  TOTAL LIQUIDO FATURADO NO DIA      *
+000210*    TOTBRT  ==>  TOTAL BRUTO FATURADO NO DIA        *
+000220******************************************************
+

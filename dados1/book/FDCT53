@@ -1,0 +1,43 @@
+000010**************************************************
+000020* FDCT52 - ARQUIVO DE DUPLICATAS CONTAS A  PAGAR *
+000030**************************************************
+000040 FD  ACT53
+000050     VALUE OF FILE-ID IS ARQCT-52.
+000060 01  REG-CT52.
+000070     05 NUM-FAT-52.
+000080        07 NFAT-52    PIC 9(06).
+000090        07 DIFFAT-52  PIC 99.
+000100     05 FOR-52        PIC 9(4).
+000110     05 FILLER        PIC X(1).
+000120     05 EMI-52.
+000130        07 AE-52      PIC 99.
+000140        07 ME-52      PIC 99.
+000150        07 DE-52      PIC 99.
+000160     05 VENC-52.
+000170        07 AV-52      PIC 99.
+000180        07 MV-52      PIC 99.
+000190        07 DV-52      PIC 99.
+000200     05 FAT-52        PIC 9(08)V99.
+000210     05 FATRED-52 REDEFINES
+000220        FAT-52        PIC 9(10).
+000230     05 STATUS-52     PIC X.
+000240     05 DTPGTO-52.
+000250        07 APGTO-52   PIC 99.
+000260        07 MPGTO-52   PIC 99.
+000270        07 DPGTO-52   PIC 99.
+000280     05 VRPGTO-52     PIC 9(8)V99.
+000290     05 VRRED-52 REDEFINES
+000300        VRPGTO-52     PIC 9(10).
+000310     05 PORTDUP-52    PIC 99.
+000320     05 SIT-52        PIC X.
+000330     05 JUR-52        PIC 9(6)V99.
+000340     05 JURRED-52 REDEFINES
+000350        JUR-52        PIC 9(8).
+000360     05 DESC-52       PIC 9(6)V99.
+000370     05 DESCRED-52 REDEFINES
+000380        DESC-52       PIC 9(8).
+000390     05 CARTA-52      PIC X.
+000400     05 NF-52         PIC 9(06).
+000410     05 FILLER        PIC X(50).
+000420********************************
+

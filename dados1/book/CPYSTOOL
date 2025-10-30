@@ -1,0 +1,220 @@
+000010 77 RESPOSTA	      PIC X(01).
+000020 77 N-TELA	      PIC 9(02) COMP-0.
+000030 77 TELA		      PIC 9(04) VALUE 1.
+000040 77 DISPLAY-2	      PIC 9(02).
+000050 77 BUFFER	      PIC X(3840).
+000060 77 TIPO-JANELA	      PIC X(01).
+000070 77 VERTICES	      PIC 9(08).
+000080 77 VARIAVEL            PIC XX.
+000090*
+000100*****
+000110* PARAMETROS DA ROTINA (RETMENU)
+000120*****
+000130*
+000140
+000150* Nome da biblioteca de MENU administrada pelo SCREEN TOOLS
+000160
+000170 01 BIB-MENU.
+000180
+000190    03 NOME-BIB         PIC X(49) VALUE "VEICULO.BIB".
+000200FILLER	      PIC X(01) VALUE LOW-VALUE.
+000210
+000220 01  CONTROLE-RETMENU.
+000230
+000240    03 CONTROLE-VARIAVEL.
+000250
+000260       05  TABELA-DE-LETRAS      PIC X(22) VALUE
+000270           "RSC*******************".
+000280
+000290 05 LINHAS-ATIVAS	       PIC X(22) VALUE
+000300           "SSSSSSSSSSSSSSSSSSSSSS".
+000310
+000320 TABELA-DE-FUNCOES        PIC X(40) VALUE
+000330        "F;F<F=F>F?F@FAFBFCFD FMFKFGFO..........".
+000340
+000350 CARACTER-SEPARADOR       PIC X(02) VALUE
+000360        "ÄÍ".
+000370
+000380     03 COR-DA-REGUA             PIC X(01) VALUE "N".
+000390
+000400 POSICAO-DE-RETORNO       PIC 9(02) COMP-0.
+000410
+000420 LETRA-DE-RETORNO	       PIC X(01).
+000430        88 DIGITOU-FUNCAO                  VALUE "*".
+000440
+000450 FUNCAO-DE-RETORNO        PIC X(02).
+000460 88 FUNCOES-VALIDAS VALUE
+000470
+000480           "F;" "F<" "F=" "F>" "F?" "F@" "FA" "FB" "FC" "FD" "FT"
+000490           "FU" "FV" "FW" "FY" "FZ" "F[" "F]" "F|" "F÷" "Fk" "  "
+000500           "F0" "F." "F" "F&" "F$" "F2" "F," " " " " " " " "
+000510           " " " " " " " " "F\" "FH" "FP" "FM" "FK" "FG" "FO"
+000520           "FI" "FQ" "Ft" "Fs" "Fu" "Fw" "FR" "FS" " " "01" " "
+000530           "F" "Fx" "Fa" "F`" "Fy" "Fz" "F{" " " "F" "F" "F"
+000540           "F/" " " "F1" "F" " " " " " " "F" "F" "Fh" "Fi"
+000550           "F:" "F-" "F_" "F" "F^" "F" "F" "TC" "F" " +" " -"
+000560           " " "F!" "DE".
+000570
+000580        88 F1                        VALUE "F;".
+000590        88 F2                        VALUE "F<".
+000600        88 F3                        VALUE "F=".
+000610        88 F4                        VALUE "F>".
+000620        88 F5                        VALUE "F?".
+000630        88 F6                        VALUE "F@".
+000640        88 F7                        VALUE "FA".
+000650        88 F8                        VALUE "FB".
+000660        88 F9                        VALUE "FC".
+000670        88 F10                       VALUE "FD".
+000680        88 F11                       VALUE "FT".
+000690        88 F12                       VALUE "FU".
+000700        88 F13                       VALUE "FV".
+000710        88 F14                       VALUE "FW".
+000720        88 F16                       VALUE "FY".
+000730        88 F17                       VALUE "FZ".
+000740        88 F18                       VALUE "F[".
+000750        88 F19                       VALUE "F\".
+000760        88 F20                       VALUE "F]".
+000770        88 ALT-F1                    VALUE "Fh".
+000780        88 ALT-F2                    VALUE "Fi".
+000790        88 ALT-F4                    VALUE "Fk".
+000800        88 ALT-1                     VALUE "Fx".
+000810        88 ALT-2                     VALUE "Fy".
+000820        88 ALT-3                     VALUE "Fz".
+000830        88 ALT-4                     VALUE "F{".
+000840        88 ALT-A                     VALUE "F".
+000850        88 ALT-B                     VALUE "F0".
+000860        88 ALT-C                     VALUE "F.".
+000870        88 ALT-E                     VALUE "F".
+000880        88 ALT-F                     VALUE "F!".
+000890        88 ALT-I                     VALUE "F".
+000900        88 ALT-L                     VALUE "F&".
+000910        88 ALT-J                     VALUE "F$".
+000920        88 ALT-N                     VALUE "F1".
+000930        88 ALT-M                     VALUE "F2".
+000940        88 ALT-S                     VALUE "F".
+000950        88 ALT-O                     VALUE "F".
+000960        88 ALT-U                     VALUE "F".
+000970        88 ALT-P                     VALUE "F".
+000980        88 ALT-Q                     VALUE "F".
+000990        88 ALT-R                     VALUE "F".
+001000        88 ALT-T                     VALUE "F".
+001010        88 ALT-V                     VALUE "F/".
+001020        88 ALT-X                     VALUE "F-".
+001030        88 ALT-Y                     VALUE "F".
+001040        88 ALT-Z                     VALUE "F,".
+001050        88 ALT-SETA-ESQUERDA         VALUE " ".
+001060        88 ALT-SETA-DIREITA          VALUE " ".
+001070        88 ALT-SETA-ABAIXO           VALUE " ".
+001080        88 ALT-SETA-ACIMA            VALUE " ".
+001090        88 CTRL-D                    VALUE "F^".
+001100        88 CTRL-E                    VALUE " ".
+001110        88 CTRL-I                    VALUE "F|".
+001120        88 CTRL-J                    VALUE "F:".
+001130        88 CTRL-L                    VALUE " ".
+001140        88 CTRL-M                    VALUE "F÷".
+001150        88 CTRL-N                    VALUE " ".
+001160        88 CTRL-P                    VALUE " ".
+001170        88 CTRL-R                    VALUE " ".
+001180        88 CTRL-S                    VALUE " ".
+001190        88 CTRL-T                    VALUE " ".
+001200        88 CTRL-X                    VALUE " ".
+001210        88 CTRL-V                    VALUE " ".
+001220        88 CTRL-Y                    VALUE " ".
+001230        88 CTRL-A                    VALUE " ".
+001240        88 CTRL-F2                   VALUE "F_".
+001250        88 CTRL-F3                   VALUE "F`".
+001260        88 CTRL-F4                   VALUE "Fa".
+001270        88 SETA-ACIMA                VALUE "FH".
+001280        88 SETA-ABAIXO               VALUE "FP".
+001290        88 SETA-DIREITA              VALUE "FM".
+001300        88 SETA-ESQUERDA             VALUE "FK".
+001310        88 HOME                      VALUE "FG".
+001320        88 TECLA-END                 VALUE "FO".
+001330        88 PGUP                      VALUE "FI".
+001340        88 PGDN                      VALUE "FQ".
+001350        88 CTRL-SETA-DIREITA         VALUE "Ft".
+001360        88 CTRL-SETA-ESQUERDA        VALUE "Fs".
+001370        88 CTRL-END                  VALUE "Fu".
+001380        88 CTRL-SINAL-VIDEO          VALUE "Fw".
+001390        88 INS                       VALUE "FR".
+001400        88 DEL                       VALUE "FS".
+001410        88 ESC                       VALUE " ".
+001420        88 ESPACO                    VALUE "  ".
+001430        88 BACK-SPACE                VALUE "F".
+001440        88 SOMA                      VALUE " +".
+001450        88 SUBTRACAO                 VALUE " -".
+001460        88 SELECIONOU-LETRA          VALUE "SL".
+001470        88 DIGITOU-ESPACO            VALUE "DB".
+001480        88 DIGITOU-ENTER             VALUE "DE".
+001490        88 ROTINA-EM-LOOP            VALUE "RL".
+001500        88 TELA-MAIOR-QUE-89         VALUE "89".
+001510
+001520     03 MOSTRA-BARRA             PIC X(01) VALUE "S".
+001530     03 MOSTRA-HELP              PIC X(01) VALUE "S".
+001540
+001550 CURSOR-OFF.
+001560
+001570        05 PRIMEIRA-LINHA        PIC X(01) VALUE "".
+001580 05 ULTIMA-LINHA	       PIC X(01) VALUE LOW-VALUE.
+001590
+001600 CONTROLE-MENU	       PIC X(09).
+001610 CONTROLE-MENU-R	       REDEFINES CONTROLE-MENU.
+001620
+001630 05 SNOW-M 	       PIC X(01).
+001640 05 SOMBRA-M	       PIC X(02).
+001650 05 COR-SOMBRA-M	       PIC X(01).
+001660 05 COR-JANELA-M	       PIC X(02).
+001670 05 EXPLOSAO-M	       PIC X(01).
+001680 05 FATOR-EXPLOSAO-M      PIC X(01).
+001690 05 MASCARA-M	       PIC X(01).
+001700
+001710 CONTROLE-BARRA	       PIC X(09).
+001720 CONTROLE-BARRA-R	       REDEFINES CONTROLE-BARRA.
+001730
+001740 05 SNOW-R 	       PIC X(01).
+001750 05 SOMBRA-R	       PIC X(02).
+001760 05 COR-SOMBRA-R	       PIC X(01).
+001770 05 COR-JANELA-R	       PIC X(02).
+001780 05 EXPLOSAO-R	       PIC X(01).
+001790 05 FATOR-EXPLOSAO-R      PIC X(01).
+001800 05 MASCARA-R	       PIC X(01).
+001810
+001820 CONTROLE-HELP	       PIC X(09).
+001830 CONTROLE-HELP-R	       REDEFINES CONTROLE-HELP.
+001840
+001850 05 SNOW-H 	       PIC X(01).
+001860 05 SOMBRA-H	       PIC X(02).
+001870 05 COR-SOMBRA-H	       PIC X(01).
+001880 05 COR-JANELA-H	       PIC X(02).
+001890 05 EXPLOSAO-H	       PIC X(01).
+001900 05 FATOR-EXPLOSAO-H      PIC X(01).
+001910 05 MASCARA-H	       PIC X(01).
+001920
+001930     03 APRESENTA-TELA           PIC X(01) VALUE "S".
+001940
+001950     03 CHUVISCO-NA-BARRA        PIC X(01) VALUE "N".
+001960
+001970
+001980 01 CONTROLE-VAR-RETMENU.
+001990
+002000     03 CONTROLE-MENU-1.
+002010
+002020        05  TABELA-DE-LETRAS-1    PIC X(22) VALUE
+002030            "VT*I*F****************".
+002040
+002050        05 LINHAS-ATIVAS-1       PIC X(22) VALUE
+002060           "SSSSSSSSSSSSSSSSSSSSSS".
+002070
+002080
+002090      03 CONTROLE-MENU-2.
+002100
+002110          05  TABELA-DE-LETRAS-2    PIC X(22) VALUE
+002120              "BR********************".
+002130
+002140          05 LINHAS-ATIVAS-2       PIC X(22) VALUE
+002150             "SSSSSSSSSSSSSSSSSSSSSS".
+002160
+002170 01 CURSOR-FORA-TELA.
+002180    02  LINHA-CURSOR               PIC 99 COMP-X VALUE 255.
+002190    02  COLUNA-CURSOR              PIC 99 COMP-X VALUE 255.
+

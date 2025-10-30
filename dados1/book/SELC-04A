@@ -1,0 +1,10 @@
+
+000010***** LAY-OUT DO SELECT-04..............................
+000020     SELECT  ACE04    ASSIGN TO DISK
+000030                      ORGANIZATION IS INDEXED
+000040                      ACCESS MODE IS DYNAMIC
+000060                      RECORD KEY IS CHAVE-04
+000070                      ALTERNATE RECORD KEY IS ALT-04
+000080                      WITH DUPLICATES
+000090                      FILE STATUS IS FS.
+

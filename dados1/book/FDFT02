@@ -1,0 +1,22 @@
+000010*========================================*
+000020* FDFT02 - FD DO CADASTRO FOTOGRAMAS
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  AFT02
+000090     VALUE OF FILE-ID IS ARQFT-02.
+000100 01  REGFT-02.
+000110     03 CHAVEFT-02.
+000120        05 DATAFT02.
+000130           07 ANOFT02 PIC 99.
+000140           07 MESFT02 PIC 99.
+000150           07 DIAFT02 PIC 99.
+000160        05 CODIFT02   PIC 9(04).
+000170     03 FOTOFT02      PIC 9(05).
+000180     03 EXPUFT02      PIC 9(05).
+000190     03 TOTAFT02      PIC 9(06).
+000200     03 FILLER        PIC X(38).
+000210*=====================================*
+

@@ -1,0 +1,12 @@
+000010***********************
+000020*SELC-32              *
+000030***********************
+000040      SELECT  ACE32   ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000080                      RECORD KEY IS CHAVE-32
+000080              LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                      ALTERNATE RECORD KEY IS DESC-32
+000100                      WITH DUPLICATES
+000110                      FILE STATUS IS FS.
+

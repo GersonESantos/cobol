@@ -1,0 +1,20 @@
+000010*========================================*
+000020* FDTB01 - FD DO TABELA DE BANCOS      ATB01      *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ATB01
+000090     VALUE OF FILE-ID IS ARQTB-01.
+000100 01  REG-TB01.
+000110     03 CHTB01.
+000120        05 CHCONTATB01       PIC X(12).
+000130        05 CHBANCOTB01       PIC 9(03).
+000140        05 CHAGENCIATB01       PIC X(30).
+000150     03 BANTB01          PIC X(20).
+000160     03 TELEFONESTB01          PIC 9(07).
+000170     03 CONTATOTB01          PIC X(30).
+000180     03 FILLER        PIC X(01).
+000190*=====================================*
+

@@ -1,0 +1,11 @@
+000010*********************************************
+000020* SELCM02-COPY SELECT CADASTRO  DE CHAMADA  *
+000030*********************************************
+000040     SELECT ACM02     ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000090               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000100                      RECORD KEY IS CHAME
+000110                      FILE STATUS IS FS.
+000120
+

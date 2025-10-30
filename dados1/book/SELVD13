@@ -1,0 +1,11 @@
+000010******************************************************
+000020* SELVD13 - COPY SELECT CADASTRO DE CADASTRO DE COMISSOES *
+000030******************************************************
+000040     SELECT AVD13  ASSIGN TO DISK
+000050                   ORGANIZATION IS INDEXED
+000060                   ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                   RECORD KEY IS CHVD13
+000090                   FILE STATUS IS FS.
+000100******************************************************
+

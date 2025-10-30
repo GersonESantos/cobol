@@ -1,0 +1,12 @@
+000010*===========================*
+000020*ARQUIVOS DE CORRESPONDENTES*
+000030*===========================*
+000040     SELECT  ACE27    ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                      RECORD KEY IS CHAVE-27
+000090                      ALTERNATE RECORD KEY IS COD2-27
+000100                      WITH DUPLICATES
+000110                      FILE STATUS IS FS.
+

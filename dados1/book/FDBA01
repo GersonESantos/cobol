@@ -1,0 +1,35 @@
+000010*********************************************
+000020*    FDBA01 - CADASTRO DE BANCO             *
+000030*********************************************
+000040 FD  ABA01
+000050     VALUE OF FILE-ID IS ARQ01-BA.
+000060 01  REG-BA01.
+000070     03 CHBA01.
+000080        07 CODBA01         PIC 9(06).
+000090        07 CODAGEBA01      PIC 9(06).
+000100     03 DTINCLBA01.
+000110        05 AA-DT-INCLBA01  PIC 9(02).
+000120        05 MM-DT-INCLBA01  PIC 9(02).
+000130        05 DD-DT-INCLBA01  PIC 9(02).
+000140     03 RAZAOBA01          PIC X(30).
+000150     03 ENDERECOBA01       PIC X(20).
+000160     03 BAIRROBA01         PIC X(15).
+000170     03 CIDADEBA01         PIC X(20).
+000180     03 CEPBA01            PIC 9(05).
+000190     03 ESTADOBA01         PIC X(02).
+000200     03 FONEBA01           PIC 9(13).
+000210     03 TEXBA01            PIC 9(13).
+000220     03 FAXBA01            PIC 9(13).
+000230     03 CGCBA01            PIC 9(14).
+000240     03 INSCRICAOBA01      PIC 9(12).
+000250     03 CONTATOBA01        PIC X(20).
+000260     03 CARCONTBA01        PIC X(10).
+000270     03 TELBA01            PIC 9(13).
+000280     03 CONT1BA01          PIC X(12).
+000290     03 CONT2BA01          PIC X(12).
+000300     03 CONT3BA01          PIC X(12).
+000310     03 CONT4BA01          PIC X(12).
+000320     03 CONT5BA01          PIC X(12).
+000330     03 CONT6BA01          PIC X(12).
+000340     03 FILLER             PIC X(17).
+

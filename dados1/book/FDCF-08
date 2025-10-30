@@ -1,0 +1,19 @@
+000010*========================================*
+000020* FDCF-08 - FD DO PRODUCAO ACF08          *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACF08
+000090     VALUE OF FILE-ID IS ARQCF-08.
+000100 01  REG-CF08.
+000110     03 CHCF08.
+000120        05 CHANOCF08       PIC 99.
+000130        05 CHMESCF08       PIC 99.
+000140        05 CHDIACF08       PIC 99.
+000150        05 CHLOJACF08      PIC 99.
+000160     03 QTENVCF08          PIC 9(05).
+000170     03 FILLER             PIC X(01).
+000180*=====================================*
+

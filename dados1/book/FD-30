@@ -1,0 +1,37 @@
+000010*********************************
+000020* FD-30 ARQUIVO VALE DE VENDA 2005*
+000030*********************************
+000040 FD  ACE30
+000050     VALUE OF FILE-ID IS ARQCE-30.
+000060 01  REG-30.
+000070     03 CHAVE-30.
+000080        05 PEDIDO-30.
+000090           07 CLI-30  PIC 9(05).
+000100           07 PED-30  PIC 9(06).
+000110        05 COD-30     PIC 9(06).
+000120     03 QT-30         PIC 9(07).
+000130     03 QT-30R REDEFINES
+000140        QT-30         PIC 9(05)V99.
+000150     03 PRECO-30      PIC 9(12).
+000160     03 PRECO-30R REDEFINES
+000170        PRECO-30      PIC 9(10)V99.
+000180     03 DESC-30       PIC 9(04).
+000190     03 DESC-30R REDEFINES
+000200        DESC-30       PIC 99V99.
+000210     03 VRDES-30      PIC 9(12).
+000220     03 VRDES-30R REDEFINES VRDES-30 PIC 9(10)V99.
+000230     03 VEN-30        PIC 9(05).
+000240     03 CON-30        PIC 9(01).
+000250     03 STATUS-30     PIC X.
+           03 DATA-30.
+              05 ANO-30     PIC 9(02).
+              05 MES-30     PIC 9(02).
+              05 DIA-30     PIC 9(02).
+           03 DATAPG-30     PIC 9(06).
+           03 DATAPG-30R REDEFINES DATAPG-30.
+              05 ANOPG-30     PIC 9(02).
+              05 MESPG-30     PIC 9(02).
+              05 DIAPG-30     PIC 9(02).
+000260     03 FILLER        PIC X(57).
+000270*=================================
+

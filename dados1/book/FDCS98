@@ -1,0 +1,29 @@
+000010*========================================*
+000020* FDCS98 - FD DO CADASTRO ARQUIVO DE SAIDAS
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACS98
+000090     VALUE OF FILE-ID IS ARQCS-98.
+000100 01  REGCS-98.
+000110     03 CHAVECS-98.
+000120        05 SETCS98       PIC 9(04).
+000130        05 CODCS98       PIC 9(06).
+000140     03 QPRECS98          PIC 9(08).
+000150     03 QTGAS1CS98          PIC 9(08).
+000160     03 GAS2CS98          PIC 9(08).
+000170     03 GAS3CS98          PIC 9(08).
+000180     03 GAS4CS98          PIC 9(08).
+000190     03 GAS5CS98          PIC 9(08).
+000200     03 GAS6CS98          PIC 9(08).
+000210     03 GAS7CS98          PIC 9(08).
+000220     03 GAS8CS98          PIC 9(08).
+000230     03 GAS9CS98          PIC 9(08).
+000240     03 GAS10CS98          PIC 9(08).
+000250     03 GAS11CS98          PIC 9(08).
+000260     03 GAS12CS98          PIC 9(08).
+000270     03 FILLER        PIC X(01).
+000280*=====================================*
+

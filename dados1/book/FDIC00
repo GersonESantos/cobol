@@ -1,0 +1,62 @@
+000010**********************************************************
+000020* FDIC00 - CADASTRO DE EMPRESAS SISTEMA DE INTEGRACAO DE *
+000030*          ENTRADAS, SAIDAS, TRANSFERENCIAS, PAGASMENTOS *
+000040**********************************************************
+000050 DATA DIVISION.
+000060 FILE SECTION.
+000070 FD  EMPIC00
+000080     VALUE OF FILE-ID IS ARQ00-IC.
+000090 01  REGIC-00.
+000100     05 CHAVEIC-00.
+000110        07 CODIC-00     PIC 99.
+000120     05 RAZAOIC-00      PIC X(35).
+000130     05 LOTEIC-00       PIC 9(03).
+000140     05 FORIC-00.
+000150        07 FOR1IC-00    PIC 9(04).
+000160        07 FOR2IC-00    PIC 9(04).
+000170        07 FOR3IC-00    PIC 9(05).
+000180     05 CLIIC-00.
+000190        07 CLI1IC-00    PIC 9(04).
+000200        07 CLI2IC-00    PIC 9(04).
+000210        07 CLI3IC-00    PIC 9(05).
+000220     05 IMPIC-00        PIC 9(13).
+000230* IMPOSTOS A APROPRIAR
+000240*=====================================================
+000250*CLASSIFICACAO CONTABIL REFERENTE A ENTRADAS,COMPRAS
+000260*=====================================================
+000270     05 ENTVIC-00       PIC 9(13).
+000280     05 ENTPIC-00       PIC 9(13).
+000290     05 JUREIC-00       PIC 9(13).
+000300     05 ICMEIC-00       PIC 9(13).
+000310     05 FILLER          PIC X(??).
+000320*=====================================================
+000330*CLASSIFICACAO CONTABIL REFERENTE A SAIDAS
+000340*=====================================================
+000350     05 VENAIC-00       PIC 9(13).
+000360     05 VENPIC-00       PIC 9(13).
+000370     05 JURSIC-00       PIC 9(13).
+000380     05 ICMSIC-00       PIC 9(13).
+000390     05 FILLER          PIC X(??).
+000400
+000410*==============================================================
+000420*
+000430*           PARAMETROS CONTABEIS P/GERACAO DE LANCAMENTOS
+000440*
+000450*  H I S T O R I C O              CONTA DEBITO   CONTA CREDITO
+000460*  -----------------------       -------------   -------------
+000470*  PAGAMENTO DE DUPLICATAS         FORIC-00       CTACRECB-01
+000480*  JUROS S/PAGTO DUPLICATAS        JUREIC-00      CTACRECB-01
+000490*  PAGAMENTO DESPESAS DIVERSAS     CDEBCB-08      CTACRECB-01
+000500*
+000510*  ENTRADAS A AVISTA               ENTVIC-00      CTACRECB-01
+000520*  ENTRADAS A PRAZO                ENTPIC-00      FORIC-00
+000530*  ICMS S/ENTRADAS                 IMPIC-00       ICMEIC-00
+000540*
+000550*  VENDAS A VISTA                  CTADEBCB-01    VENAIC-00
+000560*  VENDAS A PRAZO                  CLIIC-00       VENPIC-00
+000570*  ICMS S/VENDA                    ICMSIC-00      IMPIC-00
+000580*
+000590*  RECEBIMENTO DE DUPLICATAS       CTACRECB-01    CLIIC-00
+000600*  S/JUROS                         CTACRECB-01    JUREIC-00
+000610*==============================================================
+

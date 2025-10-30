@@ -1,0 +1,13 @@
+000010
+000020******************************
+000030*SELMCT                      *
+000040******************************
+000050     SELECT AMCT      ASSIGN TO DISK
+000060                      ORGANIZATION IS INDEXED
+000070                      ACCESS MODE IS DYNAMIC
+000080               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                      RECORD KEY IS CHAVEMCT
+000100                      ALTERNATE RECORD KEY IS DATMOVMCT
+000110                      WITH DUPLICATES
+000120                      FILE STATUS IS FS.
+

@@ -1,0 +1,19 @@
+000010*****************************************
+000020*CPYTMCE                                *
+000030*****************************************
+000040*    DISPLAY BRANQUEIA.
+000050     DISPLAY (04, 69) "<I>NCLUSAO".
+000060     DISPLAY (05, 69) "<A>LTERACAO".
+000070     DISPLAY (06, 69) "<E>XCLUSAO".
+000080     DISPLAY (07, 69) "<P>ESQUISA".
+000090     DISPLAY (09, 69) "< > OPCAO".
+000100 R-8888.
+000110     ACCEPT (09, 70) OPCAO WITH UPDATE AUTO-SKIP.
+000120     ACCEPT E FROM ESCAPE KEY.
+000130     IF OPCAO = "!" OR E = "01" GO TO R-9999.
+000140     IF OPCAO = "I" GO TO ROT-I.
+000150     IF OPCAO = "A" GO TO ROT-A.
+000160     IF OPCAO = "E" GO TO ROT-E.
+000170     IF OPCAO = "P" GO TO ROT-P.
+000180*****************************************
+

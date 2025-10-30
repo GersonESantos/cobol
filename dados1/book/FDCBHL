@@ -1,0 +1,18 @@
+000010**********************
+000020* FDCBHL             *
+000030**********************
+000040 FD  ACBHL
+000050     VALUE OF FILE-ID IS ARQ04-CB.
+000060 01  REG-ACBHL.
+000070     03 LCTO-HL.
+000080        05 MESL-HL    PIC 99.
+000090        05 NUML-HL.
+000100           07 LOTE-HL PIC 9(03).
+000110           07 DOC-HL  PIC 99.
+000120        05 NAT-HL     PIC X.
+000130        05 COMPL-HL   PIC 99.
+000140        05 CONT-HL    PIC 99.
+000150     03 HIST-HL.
+000160        05 TBHIST-HL  PIC X OCCURS 35 TIMES.
+000170**********************
+

@@ -1,0 +1,13 @@
+000010*****************************************************
+000020* SELCP19- ARQUIVO DE CONSISTENCIA DA PRODUCAO      *
+000030*****************************************************
+000040     SELECT ACP19     ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                      RECORD KEY IS CHAVE-19
+000090                      ALTERNATE RECORD KEY IS DATNF-19
+000100                      WITH DUPLICATES
+000110                      FILE STATUS IS FS.
+000120
+

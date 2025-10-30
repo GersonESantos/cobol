@@ -1,0 +1,28 @@
+000010*********************************************
+000020*    FDBA03 - CADASTRO DE CHEQUES           *
+000030*********************************************
+000040 FD  ABA03
+000050     VALUE OF FILE-ID IS ARQ03-BA.
+000060 01  REG-BA03.
+000070     03 CHAVEP03.
+000080        07 DOC03           PIC 9(07).
+000090        07 DIF03           PIC 99.
+000100     03 CHBA03.
+000110        07 CODBANBA03      PIC 9(06).
+000120        07 CODAGEBA03      PIC 9(06).
+000130        07 COCTABA03       PIC X(12).
+000140        07 CODCHEBA03      PIC 9(08).
+000150     03 NOMEFOR03          PIC X(22).
+000160     03 VALOR03            PIC 9(16).
+000170     03 VALOR03R REDEFINES
+000180        VALOR03            PIC 9(14)V99.
+000190     03 HIST03             PIC X(30).
+000200     03 STATUS03           PIC 9.
+000210     03 RESPONSAVEL03      PIC 9(06).
+000220     03 TIPO03             PIC X.
+000230     03 DATA03.
+000240        07 ANO03           PIC 99.
+000250        07 MES03           PIC 99.
+000260        07 DIA03           PIC 99.
+000270     03 FILLER             PIC X(05).
+

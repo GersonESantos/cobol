@@ -1,0 +1,26 @@
+000010*=====================================*
+000020* FDTB-CADASTRO DE EMPRESA - SISTEMA  *
+000030*=====================================*
+000040 DATA DIVISION.
+000050 FILE SECTION.
+000060 FD  EMPTB
+000070     VALUE OF FILE-ID IS ARQTB-00.
+000080 01  REG-EMPTB.
+000090     03 CHAVE-TB.
+000100        05 CODEMP-TB  PIC 99.
+000110     03 NOME-TB       PIC X(35).
+000120     03 END-TB        PIC X(34).
+000130     03 BAIRRO-TB     PIC X(20).
+000140     03 MUNIC-TB      PIC X(20).
+000150     03 CEP-TB        PIC 9(05).
+000160     03 UF-TB         PIC XX.
+000170     03 CGC-TB        PIC 9(14).
+000180     03 INSCRIEST-TB  PIC 9(13).
+000190     03 DATA-TB.
+000200        05 DIA-TB     PIC 99.
+000210        05 MES-TB     PIC 99.
+000220        05 ANO-TB     PIC 99.
+000230     03 INDICE-TB     PIC X(05).
+000240     03 FILLER        PIC X(356).
+000250*=====================================*
+

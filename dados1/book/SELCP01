@@ -1,0 +1,14 @@
+000010*********************************************
+000020* SELCP01-COPY SELECT CADASTRO  DE ACP01 *
+000030*********************************************
+000040     SELECT ACP01     ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070                      RECORD KEY IS CLIENTE-01
+000080            LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                      ALTERNATE RECORD KEY IS RAZAO-01
+000100                      WITH DUPLICATES
+000110                      ALTERNATE RECORD KEY IS CGCCPF-01
+000120                      WITH DUPLICATES
+000130                      FILE STATUS IS FS.
+000140

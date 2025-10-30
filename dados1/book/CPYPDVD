@@ -1,0 +1,224 @@
+000010******************************************
+000020* CPYPDVD - COPY DA ABERTURA DO VD  *
+000030******************************************
+000040 01  ARQ00-VD.
+000050     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000060     05 FILLER          PIC X(05) VALUE "EMPVD".
+000070     05 COMP-00         PIC 99.
+000080 01  ARQ01-VD.
+000090     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000100     05 FILLER          PIC X(05) VALUE "AVD01".
+000110     05 COMP-01         PIC 99.
+000120 01  ARQ02-VD.
+000130     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000140     05 FILLER          PIC X(05) VALUE "AVD02".
+000150     05 COMP-02         PIC 99.
+000160 01  ARQ03-VD.
+000170     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000180     05 FILLER          PIC X(05) VALUE "AVD03".
+000190     05 COMP-03         PIC 99.
+000200 01  ARQ04-VD.
+000210     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000220     05 FILLER          PIC X(05) VALUE "AVD04".
+000230     05 COMP-04         PIC 99.
+000240 01  ARQ05-VD.
+000250     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000260     05 FILLER          PIC X(05) VALUE "AVD05".
+000270     05 COMP-05         PIC 99.
+000280 01  ARQ06-VD.
+000290     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000300     05 FILLER          PIC X(05) VALUE "AVD06".
+000310     05 COMP-06         PIC 99.
+000320 01  ARQ07-VD.
+000330     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000340     05 FILLER          PIC X(05) VALUE "AVD07".
+000350     05 COMP-07         PIC 99.
+000360 01  ARQ08-VD.
+000370     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000380     05 FILLER          PIC X(05) VALUE "AVD08".
+000390     05 COMP-08         PIC 99.
+000400 01  ARQ09-VD.
+000410     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000420     05 FILLER          PIC X(05) VALUE "AVD09".
+000430     05 COMP-09         PIC 99.
+000440 01  ARQ10-VD.
+000450     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000460     05 FILLER          PIC X(05) VALUE "AVD10".
+000470     05 COMP-10         PIC 99.
+000480 01  ARQ11-VD.
+000490     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000500     05 FILLER          PIC X(05) VALUE "AVD11".
+000510     05 COMP-11         PIC 99.
+000520 01  ARQ12-VD.
+000530     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000540     05 FILLER          PIC X(05) VALUE "AVD12".
+000550     05 COMP-12         PIC 99.
+000560 01  ARQ13-VD.
+000570     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000580     05 FILLER          PIC X(05) VALUE "AVD13".
+000590     05 COMP-13         PIC 99.
+000600 01  ARQ14-VD.
+000610     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000620     05 FILLER          PIC X(05) VALUE "AVD14".
+000630     05 COMP-14         PIC 99.
+000640 01  ARQ15-VD.
+000650     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000660     05 FILLER          PIC X(05) VALUE "AVD15".
+000670     05 COMP-15         PIC 99.
+000680 01  ARQ16-VD.
+000690     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000700     05 FILLER          PIC X(05) VALUE "AVD16".
+000710     05 COMP-16         PIC 99.
+000720 01  ARQ17-VD.
+000730     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000740     05 FILLER          PIC X(05) VALUE "AVD17".
+000750     05 COMP-17         PIC 99.
+000760 01  ARQ18-VD.
+000770     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000780     05 FILLER          PIC X(05) VALUE "AVD18".
+000790     05 COMP-18         PIC 99.
+000800 01  ARQ19-VD.
+000810     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000820     05 FILLER          PIC X(05) VALUE "AVD19".
+000830     05 COMP-19         PIC 99.
+000840 01  ARQ20-VD.
+000850     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000860     05 FILLER          PIC X(05) VALUE "AVD20".
+000870     05 COMP-20         PIC 99.
+000880 01  ARQ21-VD.
+000890     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000900     05 FILLER          PIC X(05) VALUE "AVD21".
+000910     05 COMP-21         PIC 99.
+000920 01  ARQ22-VD.
+000930     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000940     05 FILLER          PIC X(05) VALUE "AVD22".
+000950     05 COMP-22         PIC 99.
+000960 01  ARQ23-VD.
+000970     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+000980     05 FILLER          PIC X(05) VALUE "AVD23".
+000990     05 COMP-23         PIC 99.
+001000 01  ARQCE-18.
+001010     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001020     05 FILLER          PIC X(05) VALUE "ACE18".
+001030     05 COMP-24         PIC 99.
+001040 01  ARQCF-01.
+001050     05 FILLER          PIC X(19) VALUE "../../arquivos/acf/".
+001060     05 FILLER          PIC X(05) VALUE "ACF01".
+001070     05 COMP-25         PIC 99.
+001080 01  ARQCE-08.
+001090     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001100     05 FILLER          PIC X(05) VALUE "ACE08".
+001110     05 COMP-26         PIC 99.
+001120 01  ARQ10-ID.
+001130     05 FILLER          PIC X(19) VALUE "../../arquivos/acp/".
+001140     05 FILLER          PIC X(05) VALUE "ACP10".
+001150     05 COMP-27         PIC 99.
+001160 01  ARQ01-CA.
+001170     05 FILLER          PIC X(19) VALUE "../../arquivos/aca/".
+001180     05 FILLER          PIC X(05) VALUE "ACA01".
+001190     05 COMP-28         PIC 99.
+001200 01  ARQ22-ID.
+001210     05 FILLER          PIC X(19) VALUE "../../arquivos/acp/".
+001220     05 FILLER          PIC X(04) VALUE "AMBC".
+001230     05 COMP-29         PIC 99.
+001240 01  ARQ15-ID.
+001250     05 FILLER          PIC X(19) VALUE "../../arquivos/acp/".
+001260     05 FILLER          PIC X(04) VALUE "AMCR".
+001270     05 COMP-30         PIC 99.
+001280 01  ARQ05-ID.
+001290     05 FILLER          PIC X(19) VALUE "../../arquivos/acp/".
+001300     05 FILLER          PIC X(05) VALUE "ACP05".
+001310     05 COMP-31         PIC 99.
+001320 01  ARQCE-01.
+001330     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001340     05 FILLER          PIC X(05) VALUE "ACE01".
+001350     05 COMP-32         PIC 99.
+001360 01  ARQCE-02.
+001370     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001380     05 FILLER          PIC X(05) VALUE "ACE02".
+001390     05 COMP-33         PIC 99.
+001400 01  ARQCE-06.
+001410     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001420     05 FILLER          PIC X(05) VALUE "ACE06".
+001430     05 COMP-34         PIC 99.
+001440 01  ARQCE-07.
+001450     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001460     05 FILLER          PIC X(05) VALUE "ACE07".
+001470     05 COMP-35         PIC 99.
+001480 01  ARQ04-CA.
+001490     05 FILLER          PIC X(19) VALUE "../../arquivos/aca/".
+001500     05 FILLER          PIC X(05) VALUE "ACA04".
+001510     05 COMP-36         PIC 99.
+001520 01  ARQ03-BA.
+001530     05 FILLER          PIC X(19) VALUE "../../arquivos/avd/".
+001540     05 FILLER          PIC X(05) VALUE "ABA03".
+001550     05 COMP-37         PIC 99.
+001560 01  ARQ01-ID.
+001570     05 FILLER          PIC X(19) VALUE "../../arquivos/acp/".
+001580     05 FILLER          PIC X(05) VALUE "ACP01".
+001590     05 COMP-38         PIC 99.
+001600 01  ARQCE-12.
+001610     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001620     05 FILLER          PIC X(05) VALUE "ACE12".
+001630     05 COMP-39         PIC 99.
+001640 01  ARQCE-13.
+001650     05 FILLER          PIC X(19) VALUE "../../arquivos/ace/".
+001660     05 FILLER          PIC X(05) VALUE "ACE13".
+001670     05 COMP-40         PIC 99.
+001680 01  ARQCT-52.
+001690     05 FILLER          PIC X(19) VALUE "../../arquivos/act/".
+001700     05 FILLER          PIC X(05) VALUE "ACT52".
+001710     05 COMP-41         PIC 99.
+001720 01  EX-BRANCO          PIC X(78) VALUE SPACES.
+001730
+001740*LINKAGE SECTION.
+001750 01  PARAM-W.
+001760     05 PROG-W           PIC X(08).
+001770     05 PW-W             PIC X(04).
+001780     05 ARG-W            PIC 9(06).
+001790     05 FILLER-1 REDEFINES ARG-W.
+001800        07 FILLER        PIC X(04).
+001810        07 COMP-W        PIC 99.
+001820     05 CONTROLE-W       PIC 99.
+001830 COPY "/dados1/book/TELASIS".
+001840 PROCEDURE DIVISION CHAINING PARAM-W.
+001850 INICIO.
+001860*========================================================
+001870     MOVE ARG-W TO COMP-00 COMP-01 COMP-02 COMP-03
+001880                   COMP-04 COMP-05 COMP-06 COMP-07
+001890                   COMP-08 COMP-09 COMP-10 COMP-11
+001900                   COMP-12 COMP-13 COMP-14 COMP-15
+001910                   COMP-16 COMP-17 COMP-18 COMP-19
+001920                   COMP-20 COMP-21 COMP-22 COMP-23.
+001930     MOVE ARG-W TO COMP-24 COMP-25 COMP-26 COMP-27
+001940                   COMP-28 COMP-29 COMP-30 COMP-31
+001950                   COMP-32 COMP-33 COMP-34 COMP-35
+001960                   COMP-36 COMP-37 COMP-38 COMP-39
+001970                   COMP-40 COMP-41.
+001980     OPEN INPUT EMPVD.
+001990     IF FS NOT EQUAL "00"
+002000        MOVE "MVD0000A" TO CODMENFS
+002010        PERFORM TESTA-FS THRU SAI-TESTA-FS
+002020        CLOSE EMPVD STOP RUN.
+002030     MOVE ARG-W TO CODEMP-VD
+002040     READ EMPVD INVALID KEY
+002050        DISPLAY (01, 01) ERASE
+002060        CLOSE EMPVD
+002070        STOP RUN.
+002080     ACCEPT DATA-W FROM DATE.
+002090     ACCEPT HORA-W FROM TIME.
+002100     MOVE "RELATORIO DO VD " TO SIST-RELA SIST-RELB.
+002110     MOVE CODEMP-VD TO COD-EMPA COD-EMPB.
+002120     MOVE NOME-VD   TO EMP-CAB1A EMP-CAB1B.
+002130     MOVE D-W TO DDREL-W.
+002140     MOVE D-W        TO D-CAB1A  D-CAB1B.
+002150     MOVE M-W        TO M-CAB1A  M-CAB1B.
+002160     MOVE A-W        TO A-CAB1A  A-CAB1B.
+002170     MOVE HH-W       TO HH-CAB2A HH-CAB2B.
+002180     MOVE MS-W       TO MSREL-W MS-CAB2A MS-CAB2B.
+002190     MOVE SS-W       TO SSREL-W SS-CAB2A SS-CAB2B.
+002200     MOVE PROG-W     TO CHREL-W.
+002210     MOVE "R"        TO RREL-W.
+002220     GO TO INICIA.
+002230*======================================================
+

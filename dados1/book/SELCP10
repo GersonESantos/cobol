@@ -1,0 +1,13 @@
+000010****************************
+000020* SELCP10 - NOTAS FISCAIS  *
+000030****************************
+000040     SELECT  ACP10    ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                      RECORD KEY IS CHAVE-10
+000090                      ALTERNATE RECORD KEY IS CHALT-10
+000100                      WITH DUPLICATES
+000110                      FILE STATUS IS FS.
+000120
+

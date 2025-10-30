@@ -1,0 +1,8 @@
+000010**** ARQUIVO   -     ARQUIVO EMPRESA .............................
+000020     SELECT  EMPCE           ASSIGN TO DISK
+000030                             ORGANIZATION IS INDEXED
+000040                             ACCESS MODE IS DYNAMIC
+000050               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000060                             RECORD KEY IS COD-EMPCE
+000070                             FILE STATUS IS FS.
+

@@ -1,0 +1,20 @@
+000010*========================================*
+000020* FD-24 - FD DO CADASTRO ARQUIVO DE SAIDAS
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACE24
+000090     VALUE OF FILE-ID IS ARQCE-24.
+000100 01  REG-24.
+000110     03 CHAVE-24.
+000120        05 SET-24        PIC 9(04).
+000130        05 COD-24        PIC 9(06).
+000140     03 QTPRE-24         PIC 9(08).
+000150     03 QTPRE-24R REDEFINES QTPRE-24 PIC 9(06)V99.
+000160     03 QTGAS-24 OCCURS 12 TIMES.
+000170        05 GAS-24         PIC 9(08).
+000180        05 GAS-24R REDEFINES GAS-24 PIC 9(06)V99.
+000190     03 FILLER            PIC X(14).
+

@@ -1,0 +1,11 @@
+000010*===================================================*
+000020* SELTM02 - COPY SELECT CADASTRO DE CONTATOS
+000030*===================================================*
+000040           SELECT ATM02 ASSIGN TO DISK
+000050                         ORGANIZATION IS INDEXED
+000060                         ACCESS MODE IS DYNAMIC
+000070           LOCK MODE IS AUTOMATIC WITH LOCK ON MULTIPLE RECORDS
+000070                         RECORD KEY IS CHAVETM-02
+000080                         FILE STATUS IS FS.
+000090*===================================================*
+

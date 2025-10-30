@@ -1,0 +1,22 @@
+000010*========================================*
+000020* FD-25 - FD DO CADASTRO DE PRECIFICACAO *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACE25
+000090     VALUE OF FILE-ID IS ARQCE-25.
+000100 01  REG-25.
+000110     03 CHAVE-25.
+000120        05 DATA-25.
+000130           07 ANO-25     PIC 9(02).
+000140           07 MES-25     PIC 9(02).
+000150           07 DIA-25     PIC 9(02).
+000160        05 COD-25        PIC 9(06).
+000170        05 CODR-25 REDEFINES COD-25 PIC X(06).
+000180     03 VRCUS-25         PIC 9(10).
+000190     03 VRCUS-25R REDEFINES VRCUS-25 PIC 9(08)V99.
+000200     03 STA-25           PIC X(01).
+000210     03 FILLER           PIC X(09).
+

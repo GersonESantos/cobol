@@ -1,0 +1,110 @@
+000010*    WORKING STORAGE DA ROTINA EXTENSO.
+000020*
+000030 77  NCEM-EXT-U                      PIC X(04)   VALUE "CEM".
+000040 77  IND-EXT-U                       PIC 9(01)   VALUE ZEROS.
+000050 77  POS-EXT-U                       PIC 9(03)   VALUE ZEROS.
+000060 77  UNID-EXT-U                      PIC 9(02)   VALUE ZEROS.
+000070 77  FLAG-EXT-U                      PIC 9(02)   VALUE ZEROS.
+000080 77  ASTER-U                         PIC X(260)  VALUE ALL "*".
+000090 77  CENTAVOS-U                      PIC X(01)   VALUE SPACES.
+000100 01  DESCR-EXT-U.
+000110     03  LDESCR-EXT-U OCCURS 40 TIMES PIC X(01).
+000120 01  EXTENSO-EXT-U.
+000130     03  LETRA-EXT-U OCCURS 260 TIMES PIC X(01).
+000140 01  EXT-U REDEFINES EXTENSO-EXT-U.
+000150     03  EXT-EXT-U OCCURS 4 TIMES PIC X(65).
+000160 01  NUMERO-EXT-U                    PIC 9(15)V99.
+000170 01  FILLER REDEFINES NUMERO-EXT-U.
+000180     03  NUM-R-EXT-U.
+000190         05  CENTENA-EXT-U           PIC 9(03).
+000200         05  FILLER REDEFINES CENTENA-EXT-U.
+000210             07  CEM-EXT-U           PIC 9(01).
+000220             07  DEZ-EXT-U           PIC 9(01).
+000230             07  UNI-EXT-U           PIC 9(01).
+000240         05  RESTO-EXT-U.
+000250             07  FILLER              PIC X(09).
+000260             07  ZEROS-EXT-U         PIC X(03).
+000270     03  CENTAVOS-EXT-U              PIC 9(02).
+000280 01  DESCR1-U.
+000290     03  FILLER                      PIC X(40) VALUE
+000300         "09TRILHOES *****************************".
+000310     03  FILLER                      PIC X(40) VALUE
+000320         "08BILHOES ******************************".
+000330     03  FILLER                      PIC X(40) VALUE
+000340         "08MILHOES ******************************".
+000350     03  FILLER                      PIC X(40) VALUE
+000360         "04MIL **********************************".
+000370     03  FILLER                      PIC X(40) VALUE
+000380         "38INTEIROS DE UNIDADES REAIS DE VALOR **".
+000390 01  DESCR1-R-U REDEFINES DESCR1-U.
+000400     03  FILLER OCCURS 5 TIMES.
+000410         05  LPLURAL-EXT-U           PIC 9(02).
+000420         05  PLURAL-EXT-U            PIC X(38).
+000430 01  DESCR2-U.
+000440     03  FILLER                      PIC X(40) VALUE
+000450         "08TRILHAO ******************************".
+000460     03  FILLER                      PIC X(40) VALUE
+000470         "07BILHAO *******************************".
+000480     03  FILLER                      PIC X(40) VALUE
+000490         "07MILHAO *******************************".
+000500     03  FILLER                      PIC X(40) VALUE
+000510         "04MIL **********************************".
+000520     03  FILLER                      PIC X(40) VALUE
+000530         "33INTEIRO DE UNIDADE REAL DE VALOR *****".
+000540 01  DESCR2-R-U REDEFINES DESCR2-U.
+000550     03  FILLER OCCURS 5 TIMES.
+000560         05  LSING-EXT-U             PIC 9(02).
+000570         05  SING-EXT-U              PIC X(38).
+000580 01  DESCR3-U.
+000590     03  FILLER                 PIC X(15) VALUE "06CENTO *******".
+000600     03  FILLER                 PIC X(15) VALUE "09DUZENTOS ****".
+000610     03  FILLER                 PIC X(15) VALUE "10TREZENTOS ***".
+000620     03  FILLER                 PIC X(15) VALUE "13QUATROCENTOS ".
+000630     03  FILLER                 PIC X(15) VALUE "11QUINHENTOS **".
+000640     03  FILLER                 PIC X(15) VALUE "11SEISCENTOS **".
+000650     03  FILLER                 PIC X(15) VALUE "11SETECENTOS **".
+000660     03  FILLER                 PIC X(15) VALUE "11OITOCENTOS **".
+000670     03  FILLER                 PIC X(15) VALUE "11NOVECENTOS **".
+000680 01  DESCR3-R-U REDEFINES DESCR3-U.
+000690     03  FILLER OCCURS 9 TIMES.
+000700         05 LCENT-EXT-U              PIC 9(02).
+000710         05 CENT-EXT-U               PIC X(13).
+000720 01  DESCR4-U.
+000730     03  FILLER                    PIC X(12) VALUE SPACES.
+000740     03  FILLER                    PIC X(12) VALUE "06VINTE ****".
+000750     03  FILLER                    PIC X(12) VALUE "07TRINTA ***".
+000760     03  FILLER                    PIC X(12) VALUE "09QUARENTA *".
+000770     03  FILLER                    PIC X(12) VALUE "10CINQUENTA ".
+000780     03  FILLER                    PIC X(12) VALUE "09SESSENTA *".
+000790     03  FILLER                    PIC X(12) VALUE "08SETENTA **".
+000800     03  FILLER                    PIC X(12) VALUE "08OITENTA **".
+000810     03  FILLER                    PIC X(12) VALUE "08NOVENTA **".
+000820 01  DESCR4-R-U REDEFINES DESCR4-U.
+000830     03  FILLER OCCURS 9 TIMES.
+000840         05  LDEZENA-EXT-U         PIC 9(02).
+000850         05  DEZENA-EXT-U          PIC X(10).
+000860 01  DESCR5-U.
+000870     03  FILLER                    PIC X(12) VALUE "03UM *******".
+000880     03  FILLER                    PIC X(12) VALUE "05DOIS *****".
+000890     03  FILLER                    PIC X(12) VALUE "05TRES *****".
+000900     03  FILLER                    PIC X(12) VALUE "07QUATRO ***".
+000910     03  FILLER                    PIC X(12) VALUE "06CINCO ****".
+000920     03  FILLER                    PIC X(12) VALUE "05SEIS *****".
+000930     03  FILLER                    PIC X(12) VALUE "05SETE *****".
+000940     03  FILLER                    PIC X(12) VALUE "05OITO *****".
+000950     03  FILLER                    PIC X(12) VALUE "05NOVE *****".
+000960     03  FILLER                    PIC X(12) VALUE "04DEZ ******".
+000970     03  FILLER                    PIC X(12) VALUE "05ONZE *****".
+000980     03  FILLER                    PIC X(12) VALUE "05DOZE *****".
+000990     03  FILLER                    PIC X(12) VALUE "06TREZE ****".
+001000     03  FILLER                    PIC X(12) VALUE "09QUATORZE *".
+001010     03  FILLER                    PIC X(12) VALUE "07QUINZE ***".
+001020     03  FILLER                    PIC X(12) VALUE "10DEZESSEIS ".
+001030     03  FILLER                    PIC X(12) VALUE "10DEZESSETE ".
+001040     03  FILLER                    PIC X(12) VALUE "08DEZOITO **".
+001050     03  FILLER                    PIC X(12) VALUE "09DEZENOVE *".
+001060 01  DESCR5-R-U REDEFINES DESCR5-U.
+001070     03  FILLER OCCURS 19 TIMES.
+001080         05  LUNIDADE-EXT-U       PIC 9(02).
+001090         05  UNIDADE-EXT-U        PIC X(10).
+

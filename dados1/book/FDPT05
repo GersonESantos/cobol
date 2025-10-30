@@ -1,0 +1,16 @@
+000010*===============================*
+000020*FDPT05-CADASTRO DE SEGURADORAS *
+000030*===============================*
+000040 FD  APT05
+000050     VALUE OF FILE-ID IS ARQPA-05.
+000060 01  REG-APT05.
+000070     02 DATAPT-05.
+000080        05 ANOPT-05    PIC 99.
+000090        05 MESPT-05    PIC 99.
+000100        05 DIAPT-05    PIC 99.
+000110     02 VALORPT-05     PIC 9(13).
+000120     02 VALORREDPT-05 REDEFINES
+000130        VALORPT-05     PIC 9(11)V99.
+000140     02 FILLER         PIC X(45).
+000150*=======================================*
+

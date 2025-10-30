@@ -1,0 +1,10 @@
+000010* SELFL-04 TIPO DE OCORRENCIA
+000020     SELECT  TIPO-OCON        ASSIGN                DISK
+000030                             ORGANIZATION           INDEXED
+000040                             ACCESS                 DYNAMIC
+000050               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000060                             RECORD KEY             TO-CHAVE-K0
+000070                             ALTERNATE RECORD KEY   TO-CHAVE-K1
+000080                             FILE STATUS           FS.
+000090*
+

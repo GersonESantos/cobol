@@ -1,0 +1,19 @@
+000010*******************************
+000020*FDFL05-CADASTRO DE SINDICATOS*
+000030*******************************
+000040 FD  SINDICATON
+000050     VALUE OF FILE-ID IS ARQFL-05.
+000060 01  REG-SINDICATO.
+000070     05  SI-CHAVE-K0.
+000080         10  SI-SIND-K0                          PIC 9(002).
+000090*            (CODIGO DO SINDICATO)
+000100     05  SI-NOME                                 PIC X(060).
+000110*        (NOME DO SINDICATO)
+000120     05  SI-DATDIS.
+000130*        (DATA DO ULTIMO DISSIDIO COLETIVO)
+000140         10  SI-DIADIS                           PIC 9(002).
+000150         10  SI-MESDIS                           PIC 9(002).
+000160         10  SI-ANODIS                           PIC 9(002).
+000170     05  SI-DATDIS-R  REDEFINES   SI-DATDIS      PIC 9(006).
+000180     05  FILLER                                  PIC X(016).
+

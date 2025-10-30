@@ -1,0 +1,13 @@
+000010*******************************
+000020* SELIC02                     *
+000030*******************************
+000040     SELECT AIC02     ASSIGN TO DISK
+000050                      ACCESS MODE IS DYNAMIC
+000060                      ORGANIZATION IS INDEXED
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                      RECORD KEY IS KRAZAOIC-02
+000090                      ALTERNATE RECORD KEY IS KDIARIOIC-02
+000100                      WITH DUPLICATES
+000110                      FILE STATUS IS FS.
+000120
+

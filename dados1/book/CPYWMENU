@@ -1,0 +1,97 @@
+000010*****************************************************************
+000020* CPYWMENU COPY DA WORKING PARA MENU DE MODO JANELAS            *
+000030*****************************************************************
+000040 01 screen-position.
+000050 screen-row       pic 9(2) comp-x value 07.
+000060 screen-col       pic 9(2) comp-x value 15.
+000070 01 screen-position-MANUT.
+000080 screen-row-MANUT pic 9(2) comp-x value 06.
+000090 screen-col-MANUT pic 9(2) comp-x value 37.
+000100 01 screen-position-ENTRA.
+000110 screen-row-ENTRA pic 9(2) comp-x value 06.
+000120 screen-col-ENTRA pic 9(2) comp-x value 37.
+000130 01 screen-position-RELAT.
+000140 screen-row-RELAT pic 9(2) comp-x value 06.
+000150 screen-col-RELAT pic 9(2) comp-x value 37.
+000160 01 screen-position-UTILS.
+000170 screen-row-UTILS pic 9(2) comp-x value 06.
+000180 screen-col-UTILS pic 9(2) comp-x value 37.
+000190 01 top-row	       pic 9(2) comp-x value 07.
+000200 01 top-row-MANUT	       pic 9(2) comp-x value 06.
+000210 01 top-row-ENTRA	       pic 9(2) comp-x value 06.
+000220 01 top-row-RELAT	       pic 9(2) comp-x value 06.
+000230 01 top-row-UTILS	       pic 9(2) comp-x value 06.
+000240 01 bottom-row	       pic 9(2) comp-x value 13.
+000250 01 bottom-row-MANUT     pic 9(2) comp-x value 15.
+000260 01 bottom-row-ENTRA     pic 9(2) comp-x value 15.
+000270 01 bottom-row-RELAT     pic 9(2) comp-x value 15.
+000280 01 bottom-row-UTILS     pic 9(2) comp-x value 15.
+000290 01 reverse-vid	       pic x(16) value all x"70".
+000300 01 reverse-vid-MANUT    pic x(24) value all x"70".
+000310 01 reverse-vid-ENTRA    pic x(24) value all x"70".
+000320 01 reverse-vid-RELAT    pic x(24) value all x"70".
+000330 01 reverse-vid-UTILS    pic x(24) value all x"70".
+000340 01 screen-origin        pic 9(4) comp-x value 0.
+000350 01 screen-buffer        pic x(2000).
+000360 01 screen-attrs	       pic x(2000).
+000370 01 screen-string-length pic 9(4) comp-x value 2000.
+000380 01 get-single-char      pic 9(2) comp-x value 26.
+000390 01 key-status.
+000400 key-type	       pic x.
+000410 key-code-1       pic 9(2) comp-x.
+000420 key-code-2       pic 9(2) comp-x.
+000430 01 set-bit-pairs        pic 9(2) comp-x value 1.
+000440 01 user-key-control.
+000450 user-key-setting pic 9(2) comp-x value 1.
+000460 filler	       pic x value "1".
+000470 first-user-key   pic 9(2) comp-x value 1.
+000480 number-of-keys   pic 9(2) comp-x value 10.
+000490 78 user-fn-key	       value "1".
+000500 78 adis-fn-key	       value "2".
+000510 78 f1-key	       value 1.
+000520 78 f2-key	       value 2.
+000530 78 f3-key	       value 3.
+000540 78 f4-key	       value 4.
+000550 78 f5-key	       value 5.
+000560 78 f6-key	       value 6.
+000570 78 f7-key	       value 7.
+000580 78 f8-key	       value 8.
+000590 78 f9-key	       value 9.
+000600 78 carriage-return      value 0.
+000610 78 up-arrow	       value 5.
+000620 78 down-arrow	       value 6.
+000630 01 cursor-off-screen.
+000640 row-number       pic 99 comp-x value 255.
+000650 col-number       pic 99 comp-x value 255.
+000660 01  flag-w              pic x value spaces.
+000670 screen section.
+000680 01 g-picscrn1.
+000690 blank screen.
+000700     05  L01 LINE 01 COLUMN 01 VALUE "ษอออออออออออออออออปษออออออออ
+000710-        "ออออออออออออออออออออออออออออออออออปษอออออออออออออออป"
+000720         HIGHLIGHT.
+000730     05  L02 LINE 02 COLUMN 01 VALUE "บ                 บบ
+000740-        "                                  บบEMPRESA:       บ"
+000750         HIGHLIGHT.
+000760     05  L03 LINE 03 COLUMN 01 VALUE "ศอออออออออออออออออผศออออออออ
+000770-        "ออออออออออออออออออออออออออออออออออผศอออออออออออออออผ"
+000780         HIGHLIGHT.
+000790     05  L21 LINE 21 COLUMN 01 VALUE "ฺฤฤฤฤฤฤฤฤฤฤฤยฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+000800-        "ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ"
+000810         HIGHLIGHT.
+000820     05  L22 LINE 22 COLUMN 01 VALUE "ณ Mensagem: ณ
+000830-        "                                                   ณ"
+000840         HIGHLIGHT.
+000850     05  L23 LINE 23 COLUMN 01 VALUE "ภฤฤฤฤฤฤฤฤฤฤฤมฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+000860-        "ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู"
+000870         HIGHLIGHT.
+000880 01 g-picscrn2.
+000890 line  8 column 16 value "MANUTENCAO".
+000900 line 10 column 16 value "ENTRADA DE DADOS".
+000910 line 12 column 16 value "RELATORIOS".
+000920 line 14 column 16 value "UTILITARIOS".
+000930 line 20 column 16 value "F1=Ajuda F2=Manut F3=Entr F4=Rele
+000940-                              "lat F5=Utils F6=Limpa F9=Saida".
+000950 line 22 column 16 value "Utilize   or  para selecionar u
+000960-                               "m item, e <cr> para comcluir".
+

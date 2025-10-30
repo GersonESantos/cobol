@@ -1,0 +1,51 @@
+000010*************************************************
+000020*FDCP05 - ARQUIVO DE DUPLICATAS CONTAS A RECEBER*
+000030*************************************************
+000040 FD  ACP05
+000050     VALUE OF FILE-ID IS ARQ05-ID.
+000060 01  REG-CP05.
+000070     05 NUM-FAT-05.
+000080        07 NFAT-05    PIC 9(06).
+000090        07 DIFFAT-05  PIC 99.
+000100     05 CLIENTE-05    PIC 9(5).
+000110     05 EMI-05.
+000120        07 AE-05      PIC 99.
+000130        07 ME-05      PIC 99.
+000140        07 DE-05      PIC 99.
+000150     05 VENC-05.
+000160        07 AV-05      PIC 99.
+000170        07 MV-05      PIC 99.
+000180        07 DV-05      PIC 99.
+000190* valor da duplicata
+000200     05 FAT-05        PIC 9(10)V99.
+000210     05 FATRED-05 REDEFINES
+000220        FAT-05        PIC 9(12).
+000230     05 STATUS-05     PIC X.
+000240     05 DTPGTO-05.
+000250        07 APGTO-05   PIC 99.
+000260        07 MPGTO-05   PIC 99.
+000270        07 DPGTO-05   PIC 99.
+000280* valor do pagamento da duplicata
+000290     05 VRPGTO-05     PIC 9(10)V99.
+000300     05 VRRED-05 REDEFINES
+000310        VRPGTO-05     PIC 9(12).
+000320     05 PORTDUP-05    PIC 99.
+000330     05 SIT-05        PIC X.
+000340* valor do juros da duplicata
+000350     05 JUR-05        PIC 9(08)V99.
+000360     05 JURRED-05 REDEFINES
+000370        JUR-05        PIC 9(10).
+000380* valor do desconto da duplicata
+000390     05 DESC-05       PIC 9(08)V99.
+000400     05 DESCRED-05 REDEFINES
+000410        DESC-05       PIC 9(10).
+000420     05 CARTA-05      PIC X.
+000430     05 NF-05         PIC 9(06).
+000440     05 DATADIG-05.
+000450        07 DDIG-05    PIC 99.
+000460        07 MDIG-05    PIC 99.
+000470        07 ADIG-05    PIC 99.
+000480     05 FILLER        PIC X(13).
+000540     05 FILLER        PIC X(23).
+000550****************************************
+

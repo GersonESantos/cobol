@@ -1,0 +1,12 @@
+000010***************************************
+000020* CADASTRO DE JUROS CONTROLE DE CUSTO *
+000030***************************************
+000040 FD  ACC03
+000050     VALUE OF FILE-ID IS ARQC-03.
+000060 01  REGCC-03.
+000070     03  CHAVECC-03.
+000080         05  PRAZOCC-03              PIC 999.
+000090*    PRAZO  DA  VENDA
+000100     03  JUROSCC-03                  PIC 9999V9999.
+000110*    JUROS  DE  ACRESCIMO
+

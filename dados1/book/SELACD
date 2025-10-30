@@ -1,0 +1,7 @@
+000010*********************************************
+000020* SELACD-COPY SELECT CONS.DE DISQ.          *
+000030*********************************************
+000040     SELECT ACD       ASSIGN TO DISK
+000050                      ORGANIZATION IS LINE SEQUENTIAL
+000060                      ACCESS MODE IS SEQUENTIAL
+

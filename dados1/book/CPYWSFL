@@ -1,0 +1,365 @@
+000010************************************************
+000020*CPYWSFL REGISTRO Z DO CADASTRO DE FUNCIONARIOS*
+000030************************************************
+000040 01  WS-REGFUN.
+000050     05 Z-CHAVE-K0.
+000060*        (CODIGO DO FUNCIONARIO)
+000070         10 Z-CODIGO-K0                         PIC X(018).
+000080     05 Z-CHAVE1-K0.
+000090         10 Z-CODIGO1-K0                        PIC X(006).
+000100     05 Z-NOME                                  PIC X(025).
+000110*        (NOME DO FUNCIONARIO)
+000120     05 Z-ENDERECO                              PIC X(025).
+000130*        (ENDERECO DO FUNCIONARIO)
+000140     05 Z-MUNICIPIO                             PIC X(015).
+000150*        (NOME DO MUNICIPIO)
+000160     05 Z-UF                                    PIC X(002).
+000170*        (SIGLA DA UNIDADE DA FEDERACAO)
+000180     05 Z-CEP                                   PIC 9(005).
+000190*        (CODIGO DE ENDERECAMENTO POSTAL)
+000200     05 Z-SEXO                                  PIC X(001).
+000210*        (SEXO DO FUNCIONARIO:   M - MASCULINO
+000220*                                F - FEMININO)
+000230     05 Z-CIVIL                                 PIC 9(001).
+000240     05 Z-CIVILX REDEFINES Z-CIVIL             PIC X(001).
+000250*        (ESTADO CIVIL DO FUNCIONARIO:
+000260*            1 - SOLTEIRO
+000270*            2 - CASADO
+000280*            3 - DESQUITADO
+000290*            4 - DIVORCIADO
+000300*            5 - VIUVO
+000310     05 Z-VINCULO                               PIC X(001).
+000320*        (VINCULO EMPREGATICIO DO FUNCIONARIO:
+000330*         1 - EMPREGADO PELA CLT
+000340*         2 - SERVIDOR PUBLICO OU MILITAR
+000350*         3 - EMPREGADO AVULSO
+000360*         4 - EMPREGADO TEMPORARIO
+000370*         5 - EMPREGADO PELA CLT COM PRAZO DETERMINADO
+000380*         6 - EMPREGADO PELO ESTATUTO DO TRABALHADOR RURAL
+000390*         7 - DIRETOR SEM VINCULO, COM DEPOSITO DE FGTS
+000400*         8 - SERVIDOR PUBLICO NAO EFETIVO
+000410*         9 - OUTROS
+000420     05 Z-DATNAS.
+000430*        (DATA DE NASCIMENTO)
+000440         10 Z-DIANAS                            PIC 9(002).
+000450         10 Z-MESNAS                            PIC 9(002).
+000460         10 Z-ANONAS                            PIC 9(002).
+000470     05 Z-DATNAS-R  REDEFINES  Z-DATNAS        PIC 9(006).
+000480     05 Z-GRAUINS                               PIC 9(001).
+000490     05 Z-GRAUINSX REDEFINES Z-GRAUINS         PIC X(001).
+000500*        (GRAU DE INSTRUCAO:
+000510*           1 - ANALFABETO
+000520*           2 - 1.GRAU INCOMPLETO (PRIMARIO)
+000530*           3 - 1.GRAU COMPLETO (PRIMARIO)
+000540*           4 - 1.GRAU INCOMPLETO (GINASIAL)
+000550*           5 - 1.GRAU COMPLETO (GINASIAL)
+000560*           6 - 2.GRAU INCOMPLETO (COLEGIAL)
+000570*           7 - 2.GRAU COMPLETO (COLEGIAL)
+000580*           8 - SUPERIOR INCOMPLETO
+000590*           9 - SUPERIOR COMPLETO)
+000600     05 Z-CBO                                   PIC 9(005).
+000610     05 Z-CBOX  REDEFINES  Z-CBO               PIC X(005).
+000620*        (CODIGO BRASILEIRO DE OCUPACAO)
+000630     05 Z-TIPMOV                                PIC 9(002).
+000640*        (CADASTRO GERAL DE EMPREGADOS E DESEM
+000650*         PREGADOS: (TIPO DE MOVIMENTO - ADMISSAO)
+000660*         10 - ADMISSAO - PRIMEIRO EMPREGO
+000670*         20 - ADMISSAO - REEMPREGO
+000680*         70 - ENTRADA POR TRANSFERENCIA (MESMA EMPRESA)
+000690     05 Z-NACIO                                 PIC 9(002).
+000700     05 Z-NACIOX   REDEFINES  Z-NACIO          PIC X(002).
+000710*        (CODIGO DA NACIONALIDADE:
+000720*          10 - BRASILEIRO
+000730*          20 - NATURALIZADO BRASILEIRO
+000740*          30 - ALEMAO
+000750*          35 - ESPANHOL
+000760*          36 - NORTE AMERICANO
+000770*          37 - FRANCES
+000780*          39 - ITALIANO
+000790*          41 - JAPONES
+000800*          45 - PORTUGUES
+000810*          48 - LATINO-AMERICANO
+000820*          49 - ASIATICO (EXCETO JAPONES)
+000830*          50 - OUTROS
+000840     05 Z-ANOCHE                                PIC 9(002).
+000850     05 Z-ANOCHEX REDEFINES Z-ANOCHE           PIC X(002).
+000860*        (ANO DE CHEGADA AO BRASIL)
+000870     05 Z-CARPRO.
+000880*        (CARTEIRA PROFISSIONAL)
+000890         10 Z-NUMCAR                            PIC 9(006).
+000900*            (NUMERO DA CARTEIRA)
+000910         10 Z-SERCAR                            PIC 9(004).
+000920*            (SERIE DA CARTEIRA)
+000930         10 Z-UFCAR                             PIC X(002).
+000940*            (ESTADO EMISSOR DA CARTEIRA)
+000950         10 Z-MODCAR                            PIC 9(001).
+000960*            (MODELO DA CARTEIRA:    1 - URBANA
+000970*                                    2 - RURAL)
+000980     05 Z-CPF                                   PIC 9(014).
+000990*        (NUMERO DO CADASTRO DE PESSOA FISICA)
+001000     05 Z-PIS                                   PIC 9(014).
+001010*        (NUMERO NO PROGRAMA DE INTEGRACAO SOCIAL)
+001020     05 Z-DATADM.
+001030*        (DATA DE ADMISSAO DO FUNCIONARIO)
+001040         10 Z-DIAADM                            PIC 9(002).
+001050         10 Z-MESANO-ADM.
+001060             15 Z-MESADM                        PIC 9(002).
+001070             15 Z-ANOADM                        PIC 9(002).
+001080     05 Z-DATADM-R  REDEFINES  Z-DATADM        PIC 9(006).
+001090     05 Z-HORAS-CONTR                           PIC 9(002).
+001100     05 Z-HORAS-CONTRX REDEFINES Z-HORAS-CONTR
+001110                                                 PIC X(002).
+001120*        (HORAS CONTRATUAIS DE TRABALHO NA
+001130*         SEMANA)
+001140     05 Z-TIPSAL-CONTR                          PIC 9(001).
+001150     05 Z-TIPSAL-CONTRX REDEFINES Z-TIPSAL-CONTR
+001160                                                 PIC X(001).
+001170*        (TIPO DE SALARIO CONTRATUAL:
+001180*         1 - MENSAL
+001190*         2 - QUINZENAL
+001200*         3 - SEMANAL
+001210*         4 - DIARIO
+001220*         5 - HORARIO
+001230*         6 - TAREFA
+001240*         7 - OUTROS
+001250     05 Z-OPC-FGTS                              PIC X(001).
+001260*        (OPCAO DO FGTS: S - OPTANTE
+001270*                        N - NAO OPTANTE)
+001280     05 Z-DATOPC.
+001290*        (DATA DE OPCAO DO FGTS)
+001300         10 Z-DIAOPC                            PIC 9(002).
+001310         10 Z-MESANO-OPC.
+001320             15 Z-MESOPC                        PIC 9(002).
+001330             15 Z-ANOOPC                        PIC 9(002).
+001340     05 Z-DATOPC-R  REDEFINES  Z-DATOPC        PIC 9(006).
+001350     05 Z-CARGO                                 PIC 9(003).
+001360     05 Z-CARGOX    REDEFINES  Z-CARGO         PIC X(003).
+001370*        (CODIGO DO CARGO)
+001380     05 Z-SIND                                  PIC 9(002).
+001390     05 Z-SINDX REDEFINES Z-SIND               PIC X(002).
+001400*        (CODIGO DO SINDICATO)
+001410     05 Z-BANCO-F.
+001420*        (CODIGO DO BANCO DEPOSITARIO DO FGTS)
+001430         10 Z-BCO-F                             PIC 9(003).
+001440         10 Z-AGE-F                             PIC 9(004).
+001450         10 Z-DIG-F                             PIC 9(001).
+001460     05 Z-BANCO-FR  REDEFINES Z-BANCO-F        PIC 9(008).
+001470     05 Z-CONTA-FGTS                            PIC 9(010).
+001480*        (CODIGO DA CONTA DO FGTS)
+001490     05 Z-BANCO-S.
+001500*        (CODIGO DO BANCO DEPOSITARIO DO SALARIO)
+001510         10 Z-BCO-S                             PIC 9(003).
+001520         10 Z-AGE-S                             PIC 9(004).
+001530         10 Z-DIG-S                             PIC 9(001).
+001540     05 Z-BANCO-SR  REDEFINES  Z-BANCO-S       PIC 9(008).
+001550     05 Z-CONTA-COR                             PIC X(010).
+001560*        (CODIGO DA CONTA CORRENTE)
+001570     05 Z-TIPO-SAL                              PIC 9(001).
+001580     05 Z-TIPO-SALX REDEFINES Z-TIPO-SAL       PIC X(001).
+001590*        (TIPO DE SALARIO:   1 - MENSAL
+001600*                            3 - SEMANAL
+001610*                            5 - HORA)
+001620     05 Z-TIPO-PAG                              PIC X(001).
+001630*        (TIPO DE PAGAMENTO:     S - SEMANAL
+001640*                                M - MENSAL)
+001650     05 Z-ADQUI                                 PIC X(001).
+001660*        (INDICADOR DE ADIANTAMENTO QUINZENAL:
+001670*                            S - RECEBE
+001680*                            N - NAO RECEBE)
+001690     05 Z-CARPTO                                PIC X(001).
+001700*        (INDICADOR DE EMISSAO DE ETIQUETAS DE
+001710*         CARTAO DE PONTO:
+001720*                            S - EMITE
+001730*                            N - NAO EMITE)
+001740     05 Z-SALARIO                               PIC 9(009)V99.
+001750*        (SALARIO DO FUNCIONARIO:    MENSAL,
+001760*                                    SEMANAL OU
+001770*                                    HORA)
+001780     05 Z-SALDIS                                PIC 9(009)V99.
+001790*        (SALARIO BASE PARA O CALCULO DO
+001800*         DISSIDIO COLETIVO)
+001810     05 Z-QUOTA-SF                              PIC 9(002).
+001820     05 Z-QUOTA-SFX REDEFINES Z-QUOTA-SF       PIC X(002).
+001830*        (NUMERO DE FILHOS PARA O CALCULO DO
+001840*         SALARIO FAMILIA)
+001850     05 Z-QUOTA-IR                              PIC 9(002).
+001860     05 Z-QUOTA-IRX REDEFINES Z-QUOTA-IR       PIC X(002).
+001870*        (NUMERO DE DEPENDENTES PARA A DEDUCAO
+001880*         DO IMPOSTO DE RENDA)
+001890     05 Z-PERC-PERIC                            PIC 9(003)V99.
+001900*        (PERCENTUAL PARA O CALCULO DO ADICIO
+001910*         NAL DE PERICULOSIDADE)
+001920     05 Z-PERC-PR   REDEFINES Z-PERC-PERIC     PIC 9V9999.
+001930     05 Z-PERC-INSAL                            PIC 9(003)V99.
+001940*        (PERCENTUAL PARA O CALCULO DO ADICIO
+001950*         NAL DE INSALUBRIDADE)
+001960     05 Z-PERC-IB   REDEFINES Z-PERC-INSAL     PIC 9V9999.
+001970     05 Z-CONDICAO                              PIC 9(001).
+001980     05 Z-CONDICAOX REDEFINES Z-CONDICAO       PIC X(001).
+001990*        (CONDICAO DO FUNCIONARIO:
+002000*          1 - ATIVO
+002010*          2 - AFASTADO COM REMUNERACAO
+002020*          3 - AFASTADO SEM REMUNERACAO
+002030*          4 - AFASTADO IAPAS
+002040*          5 - AFASTADO ACIDENTE DE TRABALHO
+002050*          6 - AFASTADO SERVICO MILITAR
+002060*          7 - AFASTADO LICENCA MATERNIDADE
+002070*          8 - EM DESLIGAMENTO
+002080*          9 - DESLIGADO
+002090     05 Z-COND-ANT                              PIC 9(001).
+002100     05 Z-COND-ANTX REDEFINES Z-COND-ANT       PIC X(001).
+002110*        (CONDICAO ANTERIOR DO FUNCIONARIO)
+002120     05 Z-DATAFA.
+002130*        (DATA EM QUE O FUNCIONARIO FOI AFASTADO)
+002140         10 Z-DIAAFA                            PIC 9(002).
+002150         10 Z-MESANO-AFA.
+002160             15 Z-MESAFA                        PIC 9(002).
+002170             15 Z-ANOAFA                        PIC 9(002).
+002180     05 Z-DATAFA-R  REDEFINES  Z-DATAFA        PIC 9(006).
+002190     05 Z-DATRET.
+002200*        (DATA EM QUE O FUNCIONARIO RETORNOU)
+002210         10 Z-DIARET                            PIC 9(002).
+002220         10 Z-MESANO-RET.
+002230             15 Z-MESRET                        PIC 9(002).
+002240             15 Z-ANORET                        PIC 9(002).
+002250     05 Z-DATRET-R  REDEFINES  Z-DATRET        PIC 9(006).
+002260     05 Z-CAUSA-RES                             PIC 9(001).
+002270     05 Z-CAUSA-RESX REDEFINES Z-CAUSA-RES     PIC X(001).
+002280*        (CODIGO DA CAUSA DA RESCISAO:
+002290*         1 - POR INICIATIVA DO EMPREGADOR C/JUSTA CAUSA
+002300*         2 - POR INICIATIVA DO EMPREGADOR S/JUSTA CAUSA
+002310*         3 - POR INICIATIVA DO EMPREGADO C/JUSTA CAUSA
+002320*         4 - POR INICIATIVA DO EMPREGADO S/JUSTA CAUSA
+002330*         6 - TRANSFERENCIA DE EMPREGO DENTRO DA MESMA FIRMA
+002340*         7 - APOSENTADORIA OU REFORMA OU RESERVA
+002350*         8 - MORTE
+002360*         9 - OUTROS
+002370*
+002380     05 Z-IND-FER                               PIC X(001).
+002390*        (INDICADOR SE O FUNCIONARIO ESTA EM FERIAS:
+002400*         'S' OU 'N'.Z-DATAFA = INICIO DAS FERIAS,
+002410*                    Z-DATRET = FIM DAS FERIAS)
+002420     05 Z-TIPDEM                                PIC 9(002).
+002430*        (CADASTRO GERAL DE EMPREGADOS E DESEM
+002440*         PREGADOS: (TIPO MOVIMENTO - DEMISSAO)
+002450*         31 - DISPENSADO PELO EMPREGADOR S/ JUSTA CAUSA
+002460*         32 - DISPENSADO PELO EMPREGADOR C/ JUSTA CAUSA
+002470*         40 - DESLIGAMENTO ESPONTANEO
+002480*         50 - APOSENTADORIA
+002490*         60 - MORTE
+002500*         80 - SAIDA POR TRANSFERENCIA (MESMA EMPRESA)
+002510     05  FILLER                                  PIC X(013).
+002520     05 Z-BASE-IR-AC                            PIC 9(014).
+002530*        (BASE DE IR ACUMULADA ATE O  ULTIMO CALCULO)
+002540     05 Z-IRF-AC                                PIC 9(010).
+002550*        (IR PAGO ATE O MOMENTO)
+002560     05 Z-CALC-AD                               PIC 9(001).
+002570*        (CAMPO RELATIVO  AO ADIANTAMENTO QUINZENAL:
+002580*              0 - NAO CALCULADO
+002590*              1-CALCULADO                          )
+002600     05 Z-DATAD.
+002610        10 Z-ANOAD                              PIC 9(002).
+002620        10 Z-MESAD                              PIC 9(002).
+002630        10 Z-DIAAD                              PIC 9(002).
+002640*        (DATA DE PAGAMENTO DO ADIANTAMENTO DA 1. PARCELA 13.)
+002650     05 Z-DATSAL13.
+002660        10 Z-ANOSAL13                           PIC 9(002).
+002670        10 Z-MESSAL13                           PIC 9(002).
+002680        10 Z-DIASAL13                           PIC 9(002).
+002690*        (DATA DO PAGAMENTO DA ULTIMA PARCELA DO 13. SALARIO)
+002700     05 Z-MESTRAB                               PIC 9(002).
+002710     05 Z-MESTRABX REDEFINES Z-MESTRAB         PIC 9(002).
+002720*        (NUMERO DE MESES TRABALHADOS DURANTE O ANO)
+002730     05 Z-ARREDON                               PIC 9(004).
+002740*        (ARREDONDAMENTO DO MES OU DA SEMANA)
+002750*
+002760*====>   CAMPOS ATUALIZADOS PELO PROGRAMA DE CALCULO:
+002770*
+002780     05 Z-BASE-IP-MES                           PIC 9(12).
+002790*        (BASE DE IAPAS DO MES)
+002800     05 Z-BASE-IR-MES                           PIC 9(012).
+002810*        (BASE DE IMPOSTO DE RENDA DO MES)
+002820     05 Z-BASE-CONTR                            PIC 9(12).
+002830*        (SALARIO BASE MAIS COMISSOES DE FEVE
+002840*         REIRO PARA O CALCULO DA CONTRIBUICAO
+002850*         SINDICAL DE COMISSIONADOS EM MARCO)
+002860     05 Z-IND-MES                               PIC 9(001).
+002870*        (SE 1 (UM) INDICA QUE O MES EM QUESTAO
+002880*         FOI CONSIDERADO COMO MES TRABALHADO
+002890*         PELO PROGRAMA DE CALCULO)
+002900     05 Z-CALC                                  PIC 9(001).
+002910*        (INDICADOR DE ESTADO DO FUNCIONARIO:
+002920*                            0 - NAO CALCULADO
+002930*                            1 - CALCULADO
+002940*                            2 - CALCULADO (CONDICAO 8)
+002950*                            3 - SEMANALISTA EM CONDICAO 8
+002960*                                AGUARDANDO O FECHAMENTO
+002970*                                DE MES
+002980     05 Z-CALC-13-1P                            PIC 9(001).
+002990*        (CAMPO RELATIVO AO 13. SALARIO - 1. PARCELA:
+003000*             0 - NAO CALCULADO
+003010*             1 - CALCULADO)
+003020     05 Z-CALC-13-2P                            PIC 9(001).
+003030*        (CAMPO RELATIVO AO 13. SALARIO - 2. PARCELA:
+003040*             0 - NAO CALCULADO
+003050*             1 - CALCULADO)
+003060     05 Z-SITUACAO                              PIC 9(001).
+003070     05 Z-SITUACAOX  REDEFINES Z-SITUACAO      PIC X(001).
+003080*        (CODIGO DE SITUACAO - RAIS).
+003090     05 Z-HORAS-EXT                             PIC X(004).
+003100*        (SOMATORIO HORAS EXTRAS X PERCENTUAL,
+003110*         PARA O CALCULO DO 13. SALARIO VARIAVEL
+003120*         CAMPO COMPACTADO - PIC 9(5)V999 )
+003130     05 Z-HORAS-NOT                             PIC X(004).
+003140*        (SOMATORIO HORAS COM ADICIONAL NOTURNO X
+003150*         PERCENTUAL PARA O CALCULO DO 13. SALARIO
+003160*         VARIAVEL
+003170*         CAMPO COMPACTADO - PIC 9(5)V999 )
+003180     05 Z-13PARFIN                              PIC 9(12).
+003190*        (ACUMULADOR 13.SALARIO - PARCELA FINAL. )
+003200     05 Z-TAB-VAL.
+003210        10   Z-TAB-ANO.
+003220             15 Z-FGTSME1                PIC 9(08)V99.
+003230*                ( FGTS      MES  1)
+003240             15 Z-FGTSME2                PIC 9(08)V99.
+003250*                ( FGTS      MES  2)
+003260             15 Z-FGTSME3                PIC 9(08)V99.
+003270*                ( FGTS      MES  3)
+003280             15 Z-FGTSTR1                PIC 9(08)V99.
+003290*               ( FGTS       TRIMESTRE 1)
+003300             15 Z-FGTSTR2                PIC 9(08)V99.
+003310*               ( FGTS       TRIMESTRE 2)
+003320             15 Z-FGTSTR3                PIC 9(08)V99.
+003330*               ( FGTS       TRIMESTRE 3)
+003340             15 Z-FGTSTR4                PIC 9(08)V99.
+003350*               ( FGTS       TRIMESTRE 4)
+003360             15 Z-13PAGO                 PIC 9(08)V99.
+003370*               ( 13.SALARIO - ADIANTAMENTOS)
+003380             15 Z-REM-MES                PIC 9(08)V99.
+003390*               ( ULTIMA REMUNERACAO)
+003400             15 Z-BASE-13VR              PIC 9(08)V99.
+003410*               ( BASE DE CALCULO DO 13. VARIAVEL)
+003420             15 Z-BASE-IP-13S            PIC 9(08)V99.
+003430*           ( BASE DE CALCULO IAPAS
+003440*                 SOBRE 13. SALARIO)
+003450             15 Z-AC-INSAL               PIC 9(08)V99.
+003460*           (ACUMULADOR DE ADICIONAL DE INSALU-
+003470*                 BRIDADE PAGO)
+003480             15 Z-AC-PERIC               PIC 9(08)V99.
+003490*           ( ACUMULADOR DE ADICIONAL DE PERICU-
+003500*                 LOSIDADE PAGO)
+003510*---------------------------------------------------------------
+003520*---------------------------------------------------------------
+003530*    CAMPOS DE REFERENCIA PARA O ARQUIVO DE FICHA FINANCEIRA
+003540     05 Z-CODFINI                               PIC 9(004).
+003550*    (NUMERO DO PRIMEIRO REGISTRO USADO PARA GRAVAR FICHA)
+003560     05 Z-TABELA                                PIC X(560).
+003570     05 Z-TAB-FICHA  REDEFINES Z-TABELA.
+003580        10 Z-TAB1 OCCURS  80 TIMES.
+003590           15 Z-REGFREL                         PIC 9(005).
+003600*          (CODIGO DO REGISTRO RELATIVO A FICHA FINANCEIRA)
+003610           15 Z-FOCORREL                       PIC 9(002).
+003620*          (NUMERO DE OCORRENCIAS DA DATA)
+003630     05 Z-CCEP                                  PIC 9(03).
+003640     05 FILLER                                  PIC X(59).
+

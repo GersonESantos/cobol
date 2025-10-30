@@ -1,0 +1,26 @@
+000010*********************************
+000020* FD-32 ARQUIVO ACE32, PRODUTOS *
+000030*********************************
+000040 FD  ACE32
+000050     VALUE OF FILE-ID IS ARQCE-32.
+000060 01  REG-32.
+000070     03 CHAVE-32.
+000080        04 COD-32     PIC 9(05).
+000080        04 CODDV-32   PIC 9(01).
+000100*CODIGO DO PRODUTO
+000700     03 EMB-32        PIC 999.
+003210     03 DESC-32       PIC X(40).
+003210     03 DESC-32A     PIC X(47).
+000680     03 CATUAL-32     PIC 9(07).
+           03 CATUAL-32R REDEFINES CATUAL-32 PIC 9(05)V99.
+           03 FILLER REDEFINES CATUAL-32R.
+             04 MIL-32      pic 99.
+             04 CEN-32      PIC 999.
+             04 DEC-32      pic 99.
+000690*CUSTO ATUAL
+000710     03 ARTIGO-32     PIC X(20).
+           03 ORD-32        PIC 9(03).
+           03 QTPED-32      PIC 9(07).
+003210     03 FILLER        PIC X(114).
+000830*======================================
+

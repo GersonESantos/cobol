@@ -1,0 +1,26 @@
+000010*=====================================*
+000020* FDMA-CADASTRO DE EMPRESA - SISTEMA  *
+000030*=====================================*
+000040 DATA DIVISION.
+000050 FILE SECTION.
+000060 FD  EMPMA
+000070     VALUE OF FILE-ID IS ARQMA-00.
+000080 01  REG-EMPMA.
+000090     03 CHAVE-MA.
+000100        05 CODEMP-MA  PIC 99.
+000110     03 NOME-MA       PIC X(35).
+000120     03 END-MA        PIC X(34).
+000130     03 BAIRRO-MA     PIC X(20).
+000140     03 MUNIC-MA      PIC X(20).
+000150     03 CEP-MA        PIC 9(05).
+000160     03 UF-MA         PIC XX.
+000170     03 CGC-MA        PIC 9(14).
+000180     03 INSCRIEST-MA  PIC 9(13).
+000190     03 DATA-MA.
+000200        05 DIA-MA     PIC 99.
+000210        05 MES-MA     PIC 99.
+000220        05 ANO-MA     PIC 99.
+000230     03 INDICE-MA     PIC X(05).
+000240     03 FILLER        PIC X(356).
+000250*=====================================*
+

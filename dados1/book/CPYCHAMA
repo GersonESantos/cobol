@@ -1,0 +1,8 @@
+000010******************************
+000020* COPY WSGUARDA              *
+000030******************************
+000040 01 TELA-ORIG         PIC 9(04) COMP-X VALUE 0.
+000050 01 AREA-TELA         PIC X(2000).
+000060 01 TELA-ATTRS        PIC X(2000).
+000070 01 TAMCAM-TELA       PIC 9(04) COMP-X VALUE 2000.
+

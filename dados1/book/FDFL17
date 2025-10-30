@@ -1,0 +1,13 @@
+000010******************************
+000020*FDFL17-CADASTRO DE FUNCOES  *
+000030******************************
+000040 FD  AFL16
+000050     VALUE OF FILE-ID IS ARQFL-16.
+000060 01  REGFL-16.
+000070     03  CHAVE-16.
+000080         05  CODIGO-16          PIC 9(03).
+000090*            (CODIGO DA FUNCAO)
+000100     03  FUNCAO-16              PIC X(30).
+000110*        (DESCRICAO DA FUNCAO)
+000120     03  FILLER                 PIC X(31).
+

@@ -1,0 +1,57 @@
+000010*========================================*
+000020* FDTM02 - FD DO CADASTRO CADASTRO FORNECEDOR
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ATM02
+000090     VALUE OF FILE-ID IS ARQTM-02.
+000100 01  REGTM-02.
+000110     03 CHAVETM-02.
+000120        05 CODTM02    PIC 9(04).
+000130     03 NOMETM02      PIC X(20).
+000140     03 RAZTM02       PIC X(40).
+000150     03 CATTM02       PIC X(01).
+000160     03 PROP1TM02     PIC X(15).
+000170     03 PROP2TM02     PIC X(15).
+000180     03 PROP3TM02     PIC X(15).
+000190     03 VEN1TM02      PIC X(15).
+000200     03 VEN2TM02      PIC X(15).
+000210     03 VEN3TM02      PIC X(15).
+000220     03 TELEFONE1.
+000230        05 DDD1TM02   PIC 9(03).
+000240        05 TEL1TM02   PIC 9(03).
+000250        05 FON1TM02   PIC 9(04).
+000260     03 TELEFONE2.
+000270        05 DDD2TM02   PIC 9(03).
+000280        05 TEL2TM02   PIC 9(03).
+000290        05 FON2TM02   PIC 9(04).
+000300     03 TELEFONE3.
+000310        05 DDD3TM02   PIC 9(03).
+000320        05 TEL3TM02   PIC 9(03).
+000330        05 FON3TM02   PIC 9(04).
+000340     03 TELEFONE4.
+000350        05 DDD4TM02   PIC 9(03).
+000360        05 TEL4TM02   PIC 9(03).
+000370        05 FON4TM02   PIC 9(04).
+000380     03 FAX1TM02.
+000390        05 DDD1FTM02  PIC 9(03).
+000400        05 TEL1FTM02  PIC 9(03).
+000410        05 FON1FTM02  PIC 9(04).
+000420     03 FAX2TM02.
+000430        05 DDD2FTM02  PIC 9(03).
+000440        05 TEL2FTM02  PIC 9(03).
+000450        05 FON2FTM02  PIC 9(04).
+000460     03 ENDTM02       PIC X(30).
+000470     03 BAITM02       PIC X(30).
+000480     03 CIDTM02       PIC X(25).
+000490     03 UFTM02        PIC X(02).
+000500     03 CEPTM02       PIC 9(08).
+000510     03 TCONTM02      PIC X(30).
+000520     03 BANTM02       PIC 9(03).
+000530     03 AGETM02       PIC 9(08).
+000540     03 CCORTM02      PIC 9(10).
+000550     03 FILLER        PIC X(01).
+000560*=====================================*
+

@@ -1,0 +1,5 @@
+000010*****************************
+000020* COPY FUNCAO               *
+000030*****************************
+000040 call x"af" using controlador user-key-control.
+

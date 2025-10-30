@@ -1,0 +1,18 @@
+000010************************
+000020* FDCBAH               *
+000030************************
+000040 FD  ACBAH
+000050     VALUE OF FILE-ID IS ARQ06-CB.
+000060 01  REG-ACBAH.
+000070     03 LCTO-AH.
+000080        05 MESL-AH    PIC 99.
+000090        05 NUML-AH.
+000100           07 LOTE-AH PIC 9(03).
+000110           07 DOC-AH  PIC 99.
+000120        05 NAT-AH     PIC X.
+000130        05 COMPL-AH   PIC 99.
+000140        05 CONT-AH    PIC 99.
+000150     03 HIST-AH.
+000160        05 TBHIST-AH  PIC X OCCURS 35 TIMES.
+000170************************
+

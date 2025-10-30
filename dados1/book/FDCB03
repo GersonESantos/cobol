@@ -1,0 +1,30 @@
+000010*========================================*
+000020* FDCB03 - CADASTRO MOVIMENTO BANCARIO   *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACB03
+000090     VALUE OF FILE-ID IS ARQCB-03.
+000100 01  REGCB-03.
+000110     03 CHAVECB-03.
+000120        05 BANCB03    PIC 9(03).
+000130        05 AGECB03    PIC 9(08).
+000140        05 DOCCB03    PIC 9(08).
+000150        05 DVDOCCB03  PIC 9(02).
+000160     03 DTLCB03.
+000170        05 ANOCB03    PIC 99.
+000180        05 MESCB03    PIC 99.
+000190        05 DIACB03    PIC 99.
+000200     03 HISCB03       PIC 9(03).
+000210     03 DHISCB03      PIC X(30).
+000220     03 TIPCB03       PIC X(01).
+000230     03 VALCB03       PIC 9(14).
+000240     03 VALCB03R REDEFINES VALCB03 PIC 9(12)V99.
+000250     03 STACB03       PIC X(01).
+000260     03 CTACB03       PIC 9(08).
+000270     03 CONDCB03      PIC X(01).
+000280     03 FILLER        PIC X(43).
+000290*=====================================*
+

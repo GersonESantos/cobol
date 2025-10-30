@@ -1,0 +1,9 @@
+000010*======================================
+000020* SELLP04 - SELECT DA TABELA DE PRECOS*
+000030*======================================
+000040     SELECT  ALP04      ASSIGN  TO  DISK
+000050                        ORGANIZATION IS INDEXED
+000060                        ACCESS MODE IS DYNAMIC
+000070                        RECORD KEY IS CHAVELP-04
+000080                        FILE STATUS IS FS.
+

@@ -1,0 +1,21 @@
+000010*========================================*
+000020* FDCB04 - FD DO CADASTRO CARTAO DE CREDITO
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACB04
+000090     VALUE OF FILE-ID IS ARQCB-04.
+000100 01  REGCB-04.
+000110     03 CHAVECB-04.
+000120        05 CODCB04       PIC 9(02).
+000130     03 RAZCB04          PIC X(30).
+000140     03 TAXCB04          PIC 9(04).
+000150     03 TAXCB04R REDEFINES TAXCB04 PIC 9(02)V99.
+000160     03 DPCCB04          PIC 9(03).
+000170     03 BANCB04          PIC 9(03).
+000180     03 AGECB04          PIC 9(08).
+000190     03 FILLER           PIC X(14).
+000200*=====================================*
+

@@ -1,0 +1,26 @@
+000010*=====================================*
+000020* FDBA-CADASTRO DE EMPRESA - SISTEMA  *
+000030*=====================================*
+000040 DATA DIVISION.
+000050 FILE SECTION.
+000060 FD  EMPBA
+000070     VALUE OF FILE-ID IS ARQ00-BA.
+000080 01  REG-EMPBA.
+000090     03 CHAVE-BA.
+000100        05 CODEMP-BA  PIC 99.
+000110     03 NOME-BA       PIC X(35).
+000120     03 END-BA        PIC X(34).
+000130     03 BAIRRO-BA     PIC X(20).
+000140     03 MUNIC-BA      PIC X(20).
+000150     03 CEP-BA        PIC 9(05).
+000160     03 UF-BA         PIC XX.
+000170     03 CGC-BA        PIC 9(14).
+000180     03 INSCRIEST-BA  PIC 9(13).
+000190     03 DATA-BA.
+000200        05 DIA-BA     PIC 99.
+000210        05 MES-BA     PIC 99.
+000220        05 ANO-BA     PIC 99.
+000230     03 INDICE-BA     PIC X(05).
+000240     03 FILLER        PIC X(356).
+000250*=====================================*
+

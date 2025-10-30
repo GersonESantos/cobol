@@ -1,0 +1,11 @@
+000010*===================================*
+000020* SELCA02-HISTORICOS DO CAIXA       *
+000030*===================================*
+000040     SELECT ACA02     ASSIGN TO DISK
+000050                      ACCESS MODE IS DYNAMIC
+000060                      ORGANIZATION IS INDEXED
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                      RECORD KEY IS CHAVE-CA02
+000090                      FILE STATUS IS FS.
+000100*===================================*
+

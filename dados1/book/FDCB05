@@ -1,0 +1,31 @@
+000010*========================================*
+000020* FDCB05 - FD DO CADASTRO MOVIMENTO DE CARTAO
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACB05
+000090     VALUE OF FILE-ID IS ARQCB-05.
+000100 01  REGCB-05.
+000110     03 CHAVECB-05.
+000120        05 CARCB05    PIC 9(02).
+000130        05 DOCCB05    PIC 9(08).
+000140        05 DVDOCCB05  PIC 9(02).
+000150     03 DTECB05.
+000160        05 ANOECB05   PIC 99.
+000170        05 MESECB05   PIC 99.
+000180        05 DIAECB05   PIC 99.
+000190     03 DTQCB05.
+000200        05 ANOQCB05   PIC 99.
+000210        05 MESQCB05   PIC 99.
+000220        05 DIAQCB05   PIC 99.
+000230     03 VRBCB05       PIC 9(14).
+000240     03 VRBCB05R REDEFINES VRBCB05 PIC 9(12)V99.
+000250     03 VRCCB05       PIC 9(11).
+000260     03 VRCCB05R REDEFINES VRCCB05 PIC 9(09)V99.
+000270     03 VRLCB05       PIC 9(14).
+000280     03 VRLCB05R REDEFINES VRLCB05 PIC 9(12)V99.
+000290     03 STACB05       PIC X(01).
+000300*=====================================*
+

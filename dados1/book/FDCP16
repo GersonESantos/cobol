@@ -1,0 +1,16 @@
+000010****************************************
+000020*FDCP16- FATURAMENTO ACUMULADO POR ROTA*
+000030****************************************
+000040 FD  ACP16
+000050     VALUE OF FILE-ID IS ARQ16-ID.
+000060 01  REG-CP16.
+000070     02 CHAVE-16.
+000080        05 ROTA-16      PIC 9(03).
+000090        05 MES-16       PIC 99.
+000100     02 VRROTA-16       PIC 9(08)V99.
+000110     02 VRROTA-16R REDEFINES VRROTA-16 PIC 9(10).
+000120     02 FATROTA-16      PIC 9(10)V99.
+000130     02 FATROTA-16R REDEFINES FATROTA-16 PIC 9(12).
+000140     02 FILLER          PIC X(05).
+000150****************************************
+

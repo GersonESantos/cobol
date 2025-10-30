@@ -1,0 +1,28 @@
+000010************************************************************
+000020* FD-28 ARQUIVO DE VALES DE CLIENTES,FORNECEDOR E RESERVAS *
+000030************************************************************
+000040 FD  ACE28
+000050     VALUE OF FILE-ID IS ARQCE-28.
+000060 01  REG-28.
+000070     03 CHAVE-28.
+000080        05 TIPO-28    PIC X(01).
+000090*<C>liente, <F>ornecedor, <R>eserva de clientes
+000150        05 COD-28     PIC 9(05).
+000100        05 PROD-28    PIC 9(06).
+000110        05 DATA-28.
+000120           07 ANO-28  PIC 9(02).
+000130           07 MES-28  PIC 9(02).
+000140           07 DIA-28  PIC 9(02).
+000160     03 RAZ-28        PIC X(35).
+000170     03 QTDE-28       PIC 9(07).   
+000180     03 QTDE-28R REDEFINES QTDE-28 PIC 9(05)V99.
+000190*Quantidade de mercadoria
+000200     03 CON-28        PIC X(01).
+000210*<C>redito, <D>ebito 
+000220     03 VAL-28        PIC 9(11).
+000230     03 VAL-28R REDEFINES VAL-28 PIC 9(09)V99.
+000240*Valor da mercadoria, ou vale
+           03 STA-28        PIC X(01).
+000250     03 FILLER        PIC X(55).
+000260*=================F=I=M======================*
+

@@ -1,0 +1,16 @@
+000010*========================================*
+000020* FDFT01 - FD DO CADASTRO FUNCIONARIOS
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  AFT01
+000090     VALUE OF FILE-ID IS ARQFT-01.
+000100 01  REGFT-01.
+000110     03 CHAVEFT-01.
+000120        05 CODIFT01   PIC 9(04).
+000130     03 NOMEFT01      PIC X(30).
+000140     03 FILLER        PIC X(94).
+000150*=====================================*
+

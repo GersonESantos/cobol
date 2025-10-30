@@ -1,0 +1,9 @@
+000010****************************************
+000020*SELFL-09 CADASTRO DA FICHA FINANCEIRA *
+000030****************************************
+000040     SELECT AFL19                ASSIGN TO DISK
+000050                                 ACCESS MODE IS DYNAMIC
+000060                                 ORGANIZATION IS INDEXED
+000070                                 RECORD KEY IS CHAVE-19
+000080                                 FILE STATUS IS FS.
+

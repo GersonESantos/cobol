@@ -1,0 +1,25 @@
+000010*========================================*
+000020* FDCB06 - FD DO CADASTRO CHEQUES PRE-DATADOS
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACB06
+000090     VALUE OF FILE-ID IS ARQCB-06.
+000100 01  REGCB-06.
+000110     03 CHAVECB-06.
+000120        05 CGCCPFCB06.
+000130           07 CGCCB06   PIC 9(03).
+000140           07 CPFCB06   PIC 9(09).
+000150           07 DIGCB06   PIC 9(02).
+000160        05 CHEQUECB06   PIC 9(02).
+000170     03 DATACB06.
+000180        05 ANOCB06      PIC 9(02).
+000190        05 MESCB06      PIC 9(02).
+000200        05 DIACB06      PIC 9(02).
+000210     03 VALCHECB06      PIC 9(13).
+000220     03 VALCHECB06R REDEFINES VALCHECB06 PIC 9(11)V99.
+000230     03 FILLER          PIC X(29).
+000240*=====================================*
+

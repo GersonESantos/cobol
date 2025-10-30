@@ -1,0 +1,14 @@
+000010*******************************************************
+000020* SELCBAL                                             *
+000030*******************************************************
+000040     SELECT ACBAL     ASSIGN TO DISK
+000050                      ACCESS MODE IS DYNAMIC
+000060                      ORGANIZATION IS INDEXED
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                      RECORD KEY IS KRAZAO-AL
+000090                      ALTERNATE RECORD KEY IS KDIARIO-AL
+000100                      WITH DUPLICATES
+000110                      FILE STATUS IS FS.
+000120******************************************************
+000130
+

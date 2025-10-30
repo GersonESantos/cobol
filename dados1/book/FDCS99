@@ -1,0 +1,17 @@
+000010*========================================*
+000020* FDCS99 - FD DO CADASTRO ARQUIVOS DE SAIDAS
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACS99
+000090     VALUE OF FILE-ID IS ARQCS-99.
+000100 01  REGCS-99.
+000110     03 CHAVECS-99.
+000120        05 SETCS99       PIC 9(04).
+000130        05 CODCS99       PIC 9(06).
+000140     03 QTPRECS99          PIC 9(08).
+000150     03 FILLER        PIC X(01).
+000160*=====================================*
+

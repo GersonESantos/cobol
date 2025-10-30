@@ -1,0 +1,15 @@
+000010******************************************************
+000020* SELBA03 - COPY SELECT CADASTRO DE  CHEQUES         *
+000030******************************************************
+000040     SELECT ABA03  ASSIGN TO DISK
+000050                   ORGANIZATION IS INDEXED
+000060                   ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                   RECORD KEY IS CHAVEP03
+000090                   ALTERNATE RECORD KEY CHBA03
+000100                   WITH DUPLICATES
+000110                   ALTERNATE RECORD KEY DATA03
+000120                   WITH DUPLICATES
+000130                   FILE STATUS IS FS.
+000140******************************************************
+

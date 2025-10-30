@@ -1,0 +1,12 @@
+000010*=========================*
+000020*EXPANDE RELATORIO NO SMX *
+000030*=========================*
+000040     MOVE 0 TO BIN-TRAB
+000050     ADD 18 TO BIN-TRAB
+000060     MOVE BIN-TRAB TO BINARIA
+000070     MOVE BINA2    TO P1
+000080     MOVE P1       TO X2
+000090     MOVE X        TO REG-REL
+000100     WRITE REG-REL.
+000110*============================
+

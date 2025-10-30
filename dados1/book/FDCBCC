@@ -1,0 +1,15 @@
+000010*=============================================*
+000020*FDCBCC - FD DO CENTRO DE CUSTO CONTABILIDADE *
+000030*=============================================*
+000040 FD  ACBCC
+000050     VALUE OF FILE-ID IS ARQ09-CB.
+000060 01  REG-ACBCC.
+000070     03 CHAVE-CC.
+000080        05 CUSTO-CC   PIC 9(04).
+000090     03 NOME-CC       PIC X(30).
+000100     03 TIPO-CC       PIC 9.
+000110     03 VALOR-CC      PIC S9(15).
+000120     03 VALOR-CCR REDEFINES VALOR-CC PIC S9(13)V99.
+000130     03 FILLER        PIC X(14).
+000140*=============================================*
+

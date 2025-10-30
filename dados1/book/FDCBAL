@@ -1,0 +1,26 @@
+000010***********************
+000020* FDCBAL              *
+000030***********************
+000040 FD  ACBAL
+000050     VALUE OF FILE-ID IS ARQ05-CB.
+000060 01  REG-ACBAL.
+000070     03 KRAZAO-AL.
+000080        05 CONTA-AL         PIC 9(13).
+000090        05 KDIARIO-AL.
+000100           07 DATA-AL.
+000110              09 ANO-AL     PIC 99.
+000120              09 MES-AL     PIC 99.
+000130              09 DIA-AL     PIC 99.
+000140           07 LCTO-AL.
+000150              09 MESL-AL    PIC 99.
+000160              09 NUML-AL.
+000170                 11 LOTE-AL PIC 999.
+000180                 11 DOC-AL  PIC 99.
+000190              09 NAT-AL     PIC X.
+000200              09 COMPL-AL   PIC 99.
+000210     03 CONTRA-AL           PIC 9(13).
+000220     03 VALOR-AL            PIC 9(11)V99.
+000230     03 SIT-AL              PIC X.
+000240     03 FILLER              PIC X(16).
+000250***********************
+

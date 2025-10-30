@@ -1,0 +1,16 @@
+000010
+000020*===================================================*
+000030* SELCB05 - COPY SELECT CADASTRO DE MOVIMENTO DE CARTAO
+000040*===================================================*
+000050           SELECT ACB05  ASSIGN TO DISK
+000060                         ORGANIZATION IS INDEXED
+000070                         ACCESS MODE IS DYNAMIC
+000080               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                         RECORD KEY IS CHAVECB-05
+000100                         ALTERNATE RECORD KEY IS DTECB05
+000110                         WITH DUPLICATES
+000120                         ALTERNATE RECORD KEY IS DTQCB05
+000130                         WITH DUPLICATES
+000140                         FILE STATUS IS FS.
+000150*===================================================*
+

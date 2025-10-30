@@ -1,0 +1,12 @@
+000010*===================================================*
+000020* SELTM01 - COPY SELECT CADASTRO DE TELEMARKETING
+000030*===================================================*
+000040     SELECT ATM01 ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070                      RECORD KEY IS CHAVETM-01
+000080                      LOCK MODE IS MANUAL
+                            WITH LOCK ON MULTIPLE RECORDS
+000110                      FILE STATUS IS FS.
+000090*===================================================*
+

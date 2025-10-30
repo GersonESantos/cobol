@@ -1,0 +1,9 @@
+000010**************
+000020*RESPONSAVEL *
+000030**************
+000040     SELECT AGE02     ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070                      RECORD KEY IS CHAVE-02
+000080                      FILE STATUS IS FS.
+

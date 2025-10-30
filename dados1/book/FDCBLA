@@ -1,0 +1,29 @@
+000010**********************
+000020* FDCBLA             *
+000030**********************
+000040 FD  ACBLA
+000050     VALUE OF FILE-ID IS ARQ01-CB.
+000060 01  REG-ACBLA.
+000070     03 KRAZAO-LA.
+000080        05 CONTA-LA   PIC 9(13).
+000090        05 KDIARIO-LA.
+000100           07 DATA-LA.
+000110              09 ANO-LA PIC 99.
+000120              09 MES-LA PIC 99.
+000130              09 DIA-LA PIC 99.
+000140           07 LCTO-LA.
+000150              09 MESL-LA  PIC 99.
+000160              09 NUML-LA.
+000170                 11 LOTE-LA PIC 999.
+000180                 11 DOC-LA  PIC 99.
+000190              09 NAT-LA     PIC X.
+000200              09 COMPL-LA   PIC 99.
+000210     03 CONTRA-LA           PIC 9(13).
+000220     03 VALOR-LA            PIC 9(11)V99.
+000230     03 VALOR-LAR REDEFINES
+000240        VALOR-LA            PIC 9(13).
+000250     03 SIT-LA              PIC X.
+000260     03 CUSTO-LA            PIC 9(04).
+000270     03 FILLER              PIC X(12).
+000280**********************
+

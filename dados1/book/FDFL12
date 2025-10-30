@@ -1,0 +1,15 @@
+000010***************************************
+000020*FDFL12-CADASTRO DE VALES DE REVELACAO*
+000030***************************************
+000040 FD  VAL12
+000050     VALUE OF FILE-ID IS ARQFL-12.
+000060 01  REG-12.
+000070     05  CHAVE-12.
+000080         10  CODFUN-12                          PIC X(018).
+000090*            (CODIGO DO FUNCIONARIO)
+000100     05  CODIGO-12                              PIC 9(003).
+000110*            (CODIGO DA OCORRENCIA)
+000120     05  VALOR-12                               PIC 9(009)V99.
+000130*        (VALOR DA OCORRENCIA)
+000140     05  FILLER                                 PIC X(018).
+

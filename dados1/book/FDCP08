@@ -1,0 +1,18 @@
+000010*=======================================*
+000020*FDCP08 ARQUIVO DE CREDITOS DE CLIENTE  *
+000030*=======================================*
+000040 FD  ACP08
+000050     VALUE OF FILE-ID IS ARQ08-ID.
+000060 01  REG-CP08.
+000070     05  CHAVE-08.
+000080         07  CLIENTE-08      PIC 9(05).
+000090         07  DATA-08         PIC 9(06).
+000100         07  NUMNF-08        PIC 9(6).
+000110     05  CRED-08             PIC 9(8)V99.
+000120     05  CRED-RED REDEFINES CRED-08 PIC 9(10).
+000130     05  STATUS-08           PIC 9.
+000140     05  PRAZO-08            PIC 99.
+000150     05  DESCONTO-08         PIC 99.
+000160     05  FILLER              PIC X(06).
+000170
+

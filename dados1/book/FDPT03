@@ -1,0 +1,14 @@
+000010*================================*
+000020*FDPT03-CADASTRO DE RESPONSAVEIS *
+000030*================================*
+000040 FD  APT03
+000050     VALUE OF FILE-ID IS ARQPA-03.
+000060 01  REG-APT03.
+000070     03 CHAVE03.
+000080*====> codigo do responsavel
+000090        05 CODIGO03    PIC 9(03).
+000100*====> descricao do responsavel
+000110     03 RAZAO03        PIC X(40).
+000120     03 FILLER         PIC X(21).
+000130*=======================================*
+

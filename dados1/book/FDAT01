@@ -1,0 +1,24 @@
+000010*========================================*
+000020* FDAT01 - FD DO AGENDA TELEFONICA  AAT01      *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  AAT01
+000090     VALUE OF FILE-ID IS ARQAT-01.
+000100 01  REG-AT01.
+000110     03 CHAT01.
+000120        05 CHNOMEAT01       PIC X(20).
+000130     03 APELIDOAT01          PIC X(20).
+000140     03 ENDERECOAT01          PIC X(20).
+000150     03 BAIRROAT01          PIC X(20).
+000160     03 CIDADEAT01          PIC X(20).
+000170     03 CEPAT01          PIC 9(09).
+000180     03 UFAT01          PIC X(03).
+000190     03 TELEFONEAT01          PIC 9(07).
+000200     03 ANIVERSARIOAT01          PIC 9(06).
+000210     03 HOBBYAT01          PIC X(20).
+000220     03 FILLER        PIC X(01).
+000230*=====================================*
+

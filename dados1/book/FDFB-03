@@ -1,0 +1,22 @@
+000010*======================================
+000020 FD   ACEFB03
+000030      VALUE OF FILE-ID IS "/dados2/arquivos/ace/ACEFB03".
+000040 01   REGCEFB03.
+000050      05 CHAVEFB-03.
+000060         07 LNHFB-03       PIC 999.
+000070      05 VARFB-A.
+000080         07 CODFB-03A      PIC 9(06).
+000090         07 TITFB-03A      PIC X(27).
+000100      05 VARFB-B.
+000110         07 CODFB-03B      PIC 9(06).
+000120         07 TITFB-03B      PIC X(27).
+000130      05 VARFB-C.
+000140         07 CODFB-03C      PIC 9(06).
+000150         07 TITFB-03C      PIC X(27).
+000160      05 VARFB-D.
+000170         07 CODFB-03D      PIC 9(06).
+000180         07 TITFB-03D      PIC X(27).
+000190      05 VARFB-E.
+000200         07 CODFB-03E      PIC 9(06).
+000210         07 TITFB-03E      PIC X(27).
+

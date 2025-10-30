@@ -1,0 +1,26 @@
+000010*=====================================*
+000020* FDCO-CADASTRO DE EMPRESA - SISTEMA  *
+000030*=====================================*
+000040 DATA DIVISION.
+000050 FILE SECTION.
+000060 FD  EMPCO
+000070     VALUE OF FILE-ID IS ARQ00-CO.
+000080 01  REG-EMPCO.
+000090     03 CHAVE-CO.
+000100        05 CODEMP-CO  PIC 99.
+000110     03 NOME-CO       PIC X(35).
+000120     03 END-CO        PIC X(34).
+000130     03 BAIRRO-CO     PIC X(20).
+000140     03 MUNIC-CO      PIC X(20).
+000150     03 CEP-CO        PIC 9(05).
+000160     03 UF-CO         PIC XX.
+000170     03 CGC-CO        PIC 9(14).
+000180     03 INSCRIEST-CO  PIC 9(13).
+000190     03 DATA-CO.
+000200        05 DIA-CO     PIC 99.
+000210        05 MES-CO     PIC 99.
+000220        05 ANO-CO     PIC 99.
+000230     03 INDICE-CO     PIC X(05).
+000240     03 FILLER        PIC X(356).
+000250*=====================================*
+

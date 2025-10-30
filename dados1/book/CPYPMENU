@@ -1,0 +1,281 @@
+000010*****************************************************************
+000020 COPY "/dados1/bel/book/TELASIS".
+000030* CPYPMENU COPY PROCEDURE MENU MODO JANELAS                     *
+000040*****************************************************************
+000050rform start-up
+000060rform which-key-loop
+000070  until   key-code-1 = 9
+000080     display (01, 01) erase.
+000090op run.
+000100 start-up.
+000110     display g-picscrn2
+000120* Move cursor off screen
+000130ll "CBL_SET_CSR_POS" using cursor-off-screen
+000140* Read the current screen for later re-display
+000150ll "CBL_READ_SCR_CHATTRS" using screen-origin
+000160     screen-buffer
+000170     screen-attrs
+000180     screen-string-length
+000190* Display first block
+000200rform mark-block
+000210* Enable function keys
+000220ll x"af" using set-bit-pairs
+000230 user-key-control.
+000240 which-key-loop.
+000250ll x"af" using get-single-char
+000260 key-status
+000270aluate key-type
+000280when user-fn-key
+000290  evaluate key-code-1
+000300n f1-key	   display hilite1-00
+000310n f2-key	   PERFORM ROT-MANUT
+000320n f3-key	   PERFORM ROT-ENTRA
+000330n f4-key	   PERFORM ROT-RELAT
+000340n f5-key	   PERFORM ROT-UTILS
+000350n f6-key	   perform clear-pop-up
+000360n other	   call x"e5"
+000370  end-evaluate
+000380when adis-fn-key
+000390  evaluate key-code-1
+000400n up-arrow perform move-block-up
+000410           when carriage-return  PERFORM ROT-OPCAO
+000420n down-arrow   perform move-block-down
+000430n other	   call x"e5"
+000440  end-evaluate
+000450d-evaluate.
+000460 pop-up-help.
+000470 pop-up-story1.
+000480 pop-up-story2.
+000490 which-key-loop-MANUT.
+000500ll x"af" using get-single-char
+000510 key-status
+000520aluate key-type
+000530when user-fn-key
+000540  evaluate key-code-1
+000550n f1-key	   display hilite1-00
+000560n f6-key	   perform clear-pop-up
+000570                             move "f" to flag-w
+000580n other	   call x"e5"
+000590  end-evaluate
+000600when adis-fn-key
+000610  evaluate key-code-1
+000620n up-arrow perform move-block-up-MANUT
+000630           when carriage-return perform chama
+000640n down-arrow   perform move-block-down-MANUT
+000650n other	   call x"e5"
+000660  end-evaluate
+000670d-evaluate.
+000680 which-key-loop-ENTRA.
+000690ll x"af" using get-single-char
+000700 key-status
+000710aluate key-type
+000720when user-fn-key
+000730  evaluate key-code-1
+000740n f1-key	   display hilite2-00
+000750n f6-key	   perform clear-pop-up
+000760                             move "f" to flag-w
+000770n other	   call x"e5"
+000780  end-evaluate
+000790when adis-fn-key
+000800  evaluate key-code-1
+000810n up-arrow perform move-block-up-ENTRA
+000820           when carriage-return perform chama
+000830n down-arrow   perform move-block-down-ENTRA
+000840n other	   call x"e5"
+000850  end-evaluate
+000860d-evaluate.
+000870 which-key-loop-RELAT.
+000880ll x"af" using get-single-char
+000890 key-status
+000900aluate key-type
+000910when user-fn-key
+000920  evaluate key-code-1
+000930n f1-key	   display hilite1-00
+000940n f6-key	   perform clear-pop-up
+000950                             move "f" to flag-w
+000960n other	   call x"e5"
+000970  end-evaluate
+000980when adis-fn-key
+000990  evaluate key-code-1
+001000n up-arrow perform move-block-up-RELAT
+001010           when carriage-return perform chama
+001020n down-arrow   perform move-block-down-RELAT		 when other	   call x"e5"
+001030  end-evaluate
+001040d-evaluate.
+001050 which-key-loop-UTILS.
+001060ll x"af" using get-single-char
+001070 key-status
+001080aluate key-type
+001090when user-fn-key
+001100  evaluate key-code-1
+001110n f1-key	   display hilite1-00
+001120n f6-key	   perform clear-pop-up
+001130                             move "f" to flag-w
+001140n other	   call x"e5"
+001150  end-evaluate
+001160when adis-fn-key
+001170  evaluate key-code-1
+001180n up-arrow perform move-block-up-UTILS
+001190           when carriage-return perform chama
+001200n down-arrow   perform move-block-down-UTILS
+001210  end-evaluate
+001220d-evaluate.
+001230 clear-pop-up.
+001240* recover the original screen *
+001250ll "CBL_WRITE_SCR_CHATTRS" using screen-origin
+001260     screen-buffer
+001270     screen-attrs
+001280     screen-string-length
+001290rform mark-block.
+001300
+001310 move-block-up.
+001320rform clear-block
+001330 screen-row > top-row
+001340  subtract 2 from screen-row
+001350se
+001360  move bottom-row to screen-row
+001370d-if
+001380     perform mark-block.
+001390 move-block-up-MANUT.
+001400rform clear-block-MANUT
+001410 screen-row-MANUT > top-row-MANUT
+001420  subtract 1 from screen-row-MANUT
+001430se
+001440  move bottom-row-MANUT to screen-row-MANUT
+001450d-if
+001460rform mark-block-MANUT.
+001470 move-block-up-ENTRA.
+001480rform clear-block-ENTRA
+001490 screen-row-ENTRA > top-row-ENTRA
+001500  subtract 1 from screen-row-ENTRA
+001510se
+001520  move bottom-row-ENTRA to screen-row-ENTRA
+001530d-if
+001540rform mark-block-ENTRA.
+001550 move-block-up-RELAT.
+001560rform clear-block-RELAT
+001570 screen-row-RELAT > top-row-RELAT
+001580  subtract 1 from screen-row-RELAT
+001590se
+001600  move bottom-row-RELAT to screen-row-RELAT
+001610d-if
+001620rform mark-block-RELAT.
+001630 move-block-up-UTILS.
+001640rform clear-block-UTILS
+001650 screen-row-UTILS > top-row-UTILS
+001660  subtract 1 from screen-row-UTILS
+001670se
+001680  move bottom-row-UTILS to screen-row-UTILS
+001690d-if
+001700rform mark-block-UTILS.
+001710 move-block-down.
+001720rform clear-block
+001730 screen-row < bottom-row
+001740  add 2 to screen-row
+001750se
+001760  move top-row to screen-row
+001770d-if
+001780rform mark-block.
+001790 move-block-down-MANUT.
+001800rform clear-block-MANUT
+001810 screen-row-MANUT < bottom-row-MANUT
+001820  add 1 to screen-row-MANUT
+001830se
+001840  move top-row-MANUT to screen-row-MANUT
+001850d-if
+001860rform mark-block-MANUT.
+001870 move-block-down-ENTRA.
+001880rform clear-block-ENTRA
+001890 screen-row-ENTRA < bottom-row-ENTRA
+001900  add 1 to screen-row-ENTRA
+001910se
+001920  move top-row-ENTRA to screen-row-ENTRA
+001930d-if
+001940rform mark-block-ENTRA.
+001950 move-block-down-RELAT.
+001960rform clear-block-RELAT
+001970 screen-row-RELAT < bottom-row-RELAT
+001980  add 1 to screen-row-RELAT
+001990se
+002000  move top-row-RELAT to screen-row-RELAT
+002010d-if
+002020rform mark-block-RELAT.
+002030 move-block-down-UTILS.
+002040rform clear-block-UTILS
+002050 screen-row-UTILS < bottom-row-UTILS
+002060  add 1 to screen-row-UTILS
+002070se
+002080  move top-row-UTILS to screen-row-UTILS
+002090d-if
+002100rform mark-block-UTILS.
+002110 clear-block.
+002120ll "CBL_WRITE_SCR_ATTRS" using screen-position
+002130   black-and-white
+002140   string-length.
+002150 clear-block-MANUT.
+002160ll "CBL_WRITE_SCR_ATTRS" using screen-position-MANUT
+002170   black-and-white-MANUT
+002180   string-length-MANUT.
+002190 clear-block-ENTRA.
+002200ll "CBL_WRITE_SCR_ATTRS" using screen-position-ENTRA
+002210   black-and-white-ENTRA
+002220   string-length-ENTRA.
+002230 clear-block-RELAT.
+002240ll "CBL_WRITE_SCR_ATTRS" using screen-position-RELAT
+002250   black-and-white-RELAT
+002260   string-length-RELAT.
+002270 clear-block-UTILS.
+002280ll "CBL_WRITE_SCR_ATTRS" using screen-position-UTILS
+002290   black-and-white-UTILS
+002300   string-length-UTILS.
+002310 mark-block.
+002320ll "CBL_WRITE_SCR_ATTRS" using screen-position
+002330   reverse-vid
+002340                                      string-length.
+002350 mark-block-MANUT.
+002360ll "CBL_WRITE_SCR_ATTRS" using screen-position-MANUT
+002370   reverse-vid-MANUT
+002380   string-length-MANUT.
+002390 mark-block-ENTRA.
+002400ll "CBL_WRITE_SCR_ATTRS" using screen-position-ENTRA
+002410   reverse-vid-ENTRA
+002420   string-length-ENTRA.
+002430 mark-block-RELAT.
+002440ll "CBL_WRITE_SCR_ATTRS" using screen-position-RELAT
+002450   reverse-vid-RELAT
+002460   string-length-RELAT.
+002470 mark-block-UTILS.
+002480ll "CBL_WRITE_SCR_ATTRS" using screen-position-UTILS
+002490   reverse-vid-UTILS
+002500   string-length-UTILS.
+002510 ROT-OPCAO.
+002520     IF SCREEN-ROW = 7  PERFORM ROT-MANUT.
+002530     IF SCREEN-ROW = 9  PERFORM ROT-ENTRA.
+002540     IF SCREEN-ROW = 11 PERFORM ROT-RELAT.
+002550     IF SCREEN-ROW = 13 PERFORM ROT-UTILS.
+002560 ROT-MANUT.
+002570     display hilite2-00
+002580rform mark-block-MANUT
+002590rform which-key-loop-MANUT  until
+002600                flag-w = "f" OR KEY-CODE-1 = 9
+002610ve spaces to flag-w.
+002620 ROT-ENTRA.
+002630     display hilite3-00
+002640rform mark-block-ENTRA
+002650rform which-key-loop-ENTRA  until
+002660                flag-w = "f" OR KEY-CODE-1 = 9
+002670ve spaces to flag-w .
+002680 ROT-RELAT.
+002690     display hilite4-00
+002700rform mark-block-RELAT
+002710rform which-key-loop-RELAT  until
+002720                flag-w = "f" OR KEY-CODE-1 = 9
+002730ve spaces to flag-w.
+002740 ROT-UTILS.
+002750     display hilite5-00
+002760rform mark-block-UTILS
+002770rform which-key-loop-UTILS  until
+002780                flag-w = "f" OR KEY-CODE-1 = 9
+002790ve spaces to flag-w.
+002800
+

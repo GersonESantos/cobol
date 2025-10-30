@@ -1,0 +1,14 @@
+000000 01  WS-BUFFER                   PIC X(4000).
+000440 01  WS-TIPO-GCEP                PIC 99     VALUE 0.
+000450 01  WS-TIPO-GCONS               PIC 99     VALUE ZEROS.
+000470 01  CAMPO                       PIC 99     VALUE 0.
+000480 01  CAMPO-30                    PIC X(30)  VALUE SPACES.
+000490 01  MODO                        PIC X(15)  VALUE SPACES.
+000500 01  ED-CEP                      PIC 99.999.999.
+000510 01  WS-CEP                      PIC 9(08).
+000000 01  CEP-W                       PIC 9(05) VALUE ZEROS.
+000000 01  CCEP-W                      PIC 9(03) VALUE ZEROS.
+000000 01  CBAI-W                      PIC X(20) VALUE SPACES.
+000000 01  CEND-W                      PIC X(35) VALUE SPACES.
+000000 01  CMUN-W                      PIC X(20) VALUE SPACES.
+

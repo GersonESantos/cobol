@@ -1,0 +1,14 @@
+000010***********************
+000020*SELC-29              *
+000030***********************
+000040      SELECT  ACE29   ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000080                      RECORD KEY IS CHAVE-29
+000080              LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000090                      ALTERNATE RECORD KEY IS DESC-29
+                            WITH DUPLICATES  
+000090                      ALTERNATE RECORD KEY IS CODFOR-29 
+                            WITH DUPLICATES  
+000110                      FILE STATUS IS FS.
+

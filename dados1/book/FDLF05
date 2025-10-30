@@ -1,0 +1,25 @@
+000010*=================================================*
+000020* FDLF05 - ARQUIVO DE CONTROLE DE BLOCOS N.FISCAIS*
+000030*=================================================*
+000040 FD  ALF05
+000050     VALUE OF FILE-ID IS ARQLF-05.
+000060 01  REG-LF05.
+000070     02  CHAVE-LF05.
+000080         03  FILIAL-05         PIC 9(02).
+000090         03  DATAVEN-05.
+000100             05  ANOVEN-05     PIC 99.
+000110             05  MESVEN-05     PIC 99.
+000120             05  DIAVEN-05     PIC 99.
+000130         03  NFINICIAL-05      PIC 9(07).
+000140         03  NFFINAL-05        PIC 9(07).
+000150         03  SERIE-05          PIC X(03).
+000160     02  DATAEMIS-05.
+000170         03  ANOEMIS-05        PIC 99.
+000180         03  MESEMIS-05        PIC 99.
+000190         03  DIAEMIS-05        PIC 99.
+000200     02  HISTORICO-05          PIC X(50).
+000210     02  NUMAUTO-05            PIC 9(12).
+000220     02  QTBLOCO-05            PIC 9(05).
+000230     02  STATUS-05             PIC 9.
+000240     02  FILLER                 PIC X(29).
+

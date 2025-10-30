@@ -1,0 +1,27 @@
+000010*==========================================*
+000020* FD-14 - FD DO CADASTRO APURACAO DE ESTOQUE
+000030*==========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACE14
+000090     VALUE OF FILE-ID IS ARQCE-14.
+000100 01  REG-14.
+000110     03 CHAVE-14.
+000120        05 LOJA-14    PIC 9(02).
+000130        05 COD-14     PIC 9(06).
+000140     03 DESC-14       PIC X(40).
+000150     03 QUANT-14      PIC 9(07).
+000160     03 QUANT-14R REDEFINES QUANT-14 PIC 9(05)V99.
+000170     03 UNID-14       PIC X(03).
+000180     03 CATUAL-14     PIC 9(14).
+000190     03 CATUAL-14R REDEFINES
+000200        CATUAL-14     PIC 9(12)V99.
+000210     03 CATOT-14      PIC 9(14).
+000220     03 CATOT-14R REDEFINES
+000230        CATOT-14      PIC 9(12)V99.
+000240     03 STA-14        PIC X(01).
+000240     03 FILLER        PIC X(41).
+000250*=====================================*
+

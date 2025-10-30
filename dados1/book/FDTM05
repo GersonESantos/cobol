@@ -1,0 +1,29 @@
+000140*========================================*
+000150* FDTM05 - FD DO CADASTRO DE CLI-SELMA   * 
+000160*========================================*
+000170* Qualquer alteracao efetuada nesta FD   *
+000180* devera' ser alterado tambem no programa*
+000190* de reorganizacao  do arquivo           *
+000200*========================================*
+000210 FD  ATM05 
+000220     VALUE OF FILE-ID IS ARQTM-05.
+000230 01  REGTM-05.
+000240     02 CHAVETM-05.
+000310        03 CLI-RAZTE05     PIC X(35).
+000250        03 TELFONETM05.
+000260           05 DDDTM05      PIC 9(03).
+000270           05 TELFONTM05.
+000280              07 TELETM05  PIC 9(03).
+000290              07 FONETM05  PIC 9(04).
+000300     02 CLITM05            PIC 9(4).
+000320     02 CLI-ENDTE05        PIC X(35).
+000330     02 CLI-BAITE05        PIC X(20).
+000340     02 CLI-MUNTE05        PIC X(20).
+000350     02 CLI-CEPTE05        PIC 9(05).
+000360     02 CLI-CCEPTE05       PIC 9(03).
+000370     02 CLI-UFTE05         PIC X(02).
+000380     02 CLI-RTE05          PIC XX.
+000390     02 CLI-TELTE05        PIC 9(10).
+000400     02 FILLER             PIC X(94).
+000410*-----------------------FIM---------------------
+

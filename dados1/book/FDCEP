@@ -1,0 +1,41 @@
+000010*----------------------------------------------------------------*
+000120*   TAMANHO DO REGISTRO - 80 BYTES                               *
+000130*   TIPOS DE REGISTROS: 02                                       *
+000150*                          . CHAVE PRINCIPAL - CHAVE-LC          *
+000170*                          . CHAVE PRINCIPAL - CHAVE-LG          *
+000180*                          . CHAVES ALTERNAT- NUMCEP-LG          *
+000190*                                            - END1-LG           *
+000200*                                            - BAI-LG            *
+000210*----------------------------------------------------------------*
+000220 FD  ARQCEP
+000230     LABEL RECORD IS STANDARD
+000240     VALUE OF FILE-ID IS "/dados1/cadcep/aftcep1".
+000250 01  REGCEP-LG.
+000260     03 CHAVE-LG.
+000270        05 TIPO-LG      PIC 9(02). 
+000280        05 NUMCEP-LG.
+000290           10 CEP-LG    PIC 9(05).
+000300           10 CCEP-LG   PIC 9(03).
+000310        05 NUMCEPR-LG REDEFINES NUMCEP-LG PIC 9(08).
+000320        05 END-LG.
+000330           10 END1-LG   PIC X(10).
+000340           10 END2-LG   PIC X(15).
+000350     03 BAI-LG          PIC X(20).
+000360     03 MUN-LG          PIC X(20).
+000370     03 UF-LG           PIC XX.
+000380     03 TIPOGL-LG       PIC XXX.
+000390 01  REGCEP-LC.
+000400     03 CHAVE-LC.
+000410        05 TIPO-LC      PIC 9(02).
+000420        05 NUMCEP-LC.
+000430           10 CEP-LC    PIC 9(05).
+000440           10 CCEP-LC   PIC 9(03).
+000450        05 NUMCEPR-LC REDEFINES NUMCEP-LC PIC 9(08).
+000460        05 MUN-LC.
+000470           10 END1-LC   PIC X(10).
+000480           10 END2-LC   PIC X(15).
+000490     03 OBS-LC          PIC X(40).
+000500     03 UF-LC           PIC XX.
+000510     03 TIPOGL-LC       PIC XXX.
+000210*---------------------------------------------------*
+

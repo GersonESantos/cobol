@@ -1,0 +1,27 @@
+000010*=====================================*
+000020* FDTM-CADASTRO DE EMPRESA - SISTEMA  *
+000010*=====================================*
+000040 DATA DIVISION.
+000050 FILE SECTION.
+000060 FD  EMPTM
+000080     VALUE OF FILE-ID IS ARQTM-00.
+000090 01  REG-EMPTM.
+           03 CHAVE-TM.
+000100        05 CODEMP-TM  PIC 99.
+000110     03 NOME-TM       PIC X(35).
+000210     03 END-TM        PIC X(34).
+000220     03 BAIRRO-TM     PIC X(20).
+000230     03 MUNIC-TM      PIC X(20).
+000240     03 CEP-TM        PIC 9(05).
+000240     03 CCEP-TM       PIC 9(03).
+000250     03 UF-TM         PIC XX.
+000260     03 CGC-TM        PIC 9(14).
+000290     03 INSCRIEST-TM  PIC 9(13).
+000160     03 DATA-TM.
+000190        05 ANO-TM     PIC 99.
+000180        05 MES-TM     PIC 99.
+000170        05 DIA-TM     PIC 99.
+000420     03 INDICE-TM     PIC X(05).
+000430     03 FILLER        PIC X(97).
+000010*=====================================*
+

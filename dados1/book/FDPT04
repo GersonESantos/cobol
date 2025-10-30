@@ -1,0 +1,23 @@
+000010*===============================*
+000020*FDPT04-CADASTRO DE SEGURADORAS *
+000030*===============================*
+000040 FD  APT04
+000050     VALUE OF FILE-ID IS ARQPA-04.
+000060 01  REG-APT04.
+000070     02 CHAVE-PT04.
+000080*====> codigo da seguradora
+000090        03 CODIGO-PT04 PIC 9(03).
+000100*====> descricao da seguradora
+000110     02 RAZAO-PT04    PIC X(35).
+000120*====> endereco da seguradora
+000130     02 ENDERECO-PT04 PIC X(30).
+000140     02 BAIRRO-PT04   PIC X(20).
+000150     02 MUNIC-PT04    PIC X(20).
+000160     02 CEP-PT04      PIC 9(05).
+000170     02 CCEP-PT04     PIC 9(03).
+000180     02 TELEFONE-PT04.
+000190        03 TELE-PT04  PIC 9(03).
+000200        03 FONE-PT04  PIC 9(04).
+000210     02 FILLER        PIC X(05).
+000220*=======================================*
+

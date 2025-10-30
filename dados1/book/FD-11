@@ -1,0 +1,24 @@
+000010***********************************************
+000020*FD-11 -MOVIMENTO  PARA  ALTERACAO  DE  PRECO *
+000030***********************************************
+000040 FD  ACE11
+000050     VALUE OF FILE-ID IS ARQCE-11.
+000060 01  REG-11.
+000070     03 CHAVE-11.
+000080        05 DATALT-11.
+000090           07 DIAALT-11 PIC 99.
+000100           07 MESALT-11 PIC 99.
+000110           07 ANOALT-11 PIC 99.
+000120        05 CODPRO-11    PIC X(06).
+000130     03 NPRECO-11       PIC 9(10).
+000140     03 DATCAD-11.
+000150        05 DIACAD-11    PIC 99.
+000160        05 MESCAD-11    PIC 99.
+000170        05 ANOCAD-11    PIC 99.
+000180     03 FLAG-11         PIC X.
+000190*P = JA EMITIDA A LISTA
+000200     03 TIPO-11         PIC X.
+000210*A = A VISTA  V = VAREJO  T = TODOS
+000220     03  FILLER         PIC X(02).
+000230***********************************************
+

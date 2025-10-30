@@ -1,0 +1,27 @@
+000010*========================================*
+000020* FDTM02 - FD DO CADASTRO CONTATOS             
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ATM02 
+000090     VALUE OF FILE-ID IS ARQTM-02.
+000100 01  REGTM-02.
+000110     03 CHAVETM-02.
+000120        05 CLITM02       PIC 9(05).
+000130        05 ULTTM02.
+000140           07 ANOTM02    PIC 9(02).
+000150           07 MESTM02    PIC 9(02).
+000160           07 DIATM02    PIC 9(02).
+000170        05 TIPTM02       PIC X(01).
+000180*<V>ISITA, <T>ELEFONE, <C>OMPRAS, <F>AX
+000190     03 TELETM02.
+000200        05 DDDTM02       PIC 9(03).
+000210        05 TELTM02       PIC 9(03).
+000220        05 FONTM02       PIC 9(04).
+000230     03 CONTM02          PIC X(40).
+000240     03 OBSTM02          PIC X(60).
+000250     03 FILLER           PIC X(134).
+000260*=====================================*
+

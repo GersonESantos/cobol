@@ -1,0 +1,14 @@
+000010*====================================*
+000020*COMPRIME RELATORIO NO SMX-EMILIA PC *
+000030*====================================*
+000040 01  X.
+000050     03 X2          PIC X.
+000060 01  P1             PIC X.
+000070 01  P2             PIC X.
+000080 01  BIN-TRAB       PIC 9(04) USAGE IS BINARY VALUE 0.
+000090 01  BINARIA        PIC 9(04) USAGE IS BINARY.
+000100 01  BINARIA-R REDEFINES BINARIA.
+000110     05 BINA1       PIC X.
+000120     05 BINA2       PIC X.
+000130*====================================*
+

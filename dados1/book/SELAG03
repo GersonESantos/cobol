@@ -1,0 +1,9 @@
+000010***************************************
+000020*SELAG03 - CADASTRO DE TIPO DE AGENDA *
+000030***************************************
+000040     SELECT AGE03     ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000070                      RECORD KEY IS CHAVE-03
+000080                      FILE STATUS IS FS.
+

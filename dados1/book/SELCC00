@@ -1,0 +1,8 @@
+000010**** COPY SELECT EMPRESA..........................................
+000020     SELECT    EMPCC     ASSIGN TO DISK
+000030                         ORGANIZATION IS INDEXED
+000040                         ACCESS MODE IS DYNAMIC
+000070               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000080                         RECORD KEY IS CHAVE-EMPCC
+000090                         FILE STATUS IS FS.
+

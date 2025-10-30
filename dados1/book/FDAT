@@ -1,0 +1,26 @@
+000010*=====================================*
+000020* FDAT-CADASTRO DE EMPRESA - SISTEMA  *
+000030*=====================================*
+000040 DATA DIVISION.
+000050 FILE SECTION.
+000060 FD  EMPAT
+000070     VALUE OF FILE-ID IS ARQAT-00.
+000080 01  REG-EMPAT.
+000090     03 CHAVE-AT.
+000100        05 CODEMP-AT  PIC 99.
+000110     03 NOME-AT       PIC X(35).
+000120     03 END-AT        PIC X(34).
+000130     03 BAIRRO-AT     PIC X(20).
+000140     03 MUNIC-AT      PIC X(20).
+000150     03 CEP-AT        PIC 9(05).
+000160     03 UF-AT         PIC XX.
+000170     03 CGC-AT        PIC 9(14).
+000180     03 INSCRIEST-AT  PIC 9(13).
+000190     03 DATA-AT.
+000200        05 DIA-AT     PIC 99.
+000210        05 MES-AT     PIC 99.
+000220        05 ANO-AT     PIC 99.
+000230     03 INDICE-AT     PIC X(05).
+000240     03 FILLER        PIC X(356).
+000250*=====================================*
+

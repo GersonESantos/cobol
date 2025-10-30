@@ -1,0 +1,11 @@
+000010*========================================*
+000020*SELPT05 - SELECT DO CADASTRO DE INDICES *
+000030*========================================*
+000040     SELECT  APT05    ASSIGN TO DISK
+000050                      ORGANIZATION IS INDEXED
+000060                      ACCESS MODE IS DYNAMIC
+000090               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000100                      RECORD KEY IS DATAPT-05
+000110                      FILE STATUS IS FS.
+000120*========================================*
+

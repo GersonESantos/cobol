@@ -1,0 +1,8 @@
+000010     SELECT  ACP15           ASSIGN TO DISK
+000020                             ORGANIZATION IS INDEXED
+000030                             ACCESS MODE IS DYNAMIC
+000040               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000050                             RECORD KEY IS CHAVE-15
+000060                             FILE STATUS IS FS.
+000070
+

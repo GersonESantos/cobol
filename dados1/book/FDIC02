@@ -1,0 +1,29 @@
+000010********************************
+000020* FDIC02-LANCAMENTOS CONTABEIS *
+000030********************************
+000040 FD  AIC02
+000050     VALUE OF FILE-ID IS ARQ02-IC.
+000060 01  REG-AIC02.
+000070     03 KRAZAOIC-02.
+000080        05 CONTAIC-02         PIC 9(13).
+000090        05 KDIARIOIC-02.
+000100           07 DATAIC-02.
+000110              09 ANOIC-02     PIC 99.
+000120              09 MESIC-02     PIC 99.
+000130              09 DIAIC-02     PIC 99.
+000140           07 LCTOIC-02.
+000150              09 MESLIC-02    PIC 99.
+000160              09 NUMLIC-02.
+000170                 11 LOTEIC-02 PIC 999.
+000180                 11 DOCIC-02  PIC 99.
+000190              09 NATIC-02     PIC X.
+000200              09 COMPLIC-02   PIC 99.
+000210     03 CONTRAIC-02           PIC 9(13).
+000220     03 VALORIC-02            PIC 9(11)V99.
+000230     03 VALORIC-02R REDEFINES
+000240        VALORIC-02            PIC 9(13).
+000250     03 SITIC-02              PIC X.
+000260     03 CUSTOIC-02            PIC 9(04).
+000270     03 FILLER                PIC X(12).
+000280**********************
+

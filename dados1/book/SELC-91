@@ -1,0 +1,18 @@
+000010
+000020***********************
+000030*SELC-91              *
+000040***********************
+000050      SELECT  ACE91   ASSIGN TO DISK
+000060                      ORGANIZATION IS INDEXED
+000070                      ACCESS MODE IS DYNAMIC
+000080                      RECORD KEY IS CHAVE-91
+000090                      LOCK MODE IS MANUAL 
+000100                      WITH LOCK ON MULTIPLE RECORDS
+000110                      ALTERNATE RECORD KEY IS COD-91 
+000120                      WITH DUPLICATES
+000130                      ALTERNATE RECORD KEY IS DATMOV-91
+000140                      WITH DUPLICATES
+000150                      ALTERNATE RECORD KEY IS CHCLIMOV-91
+000160                      WITH DUPLICATES
+000170                      FILE STATUS IS FS.
+

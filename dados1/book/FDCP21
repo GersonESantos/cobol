@@ -1,0 +1,22 @@
+000010******************************
+000020* FDCP21 PREVISAO DE RECEITAS*
+000030******************************
+000040 FD  ACP21
+000050     VALUE OF FILE-ID IS ARQ21-ID.
+000060 01  REG-CP21.
+000070     03 CHAVE-21.
+000080        05  CODIGO-21       PIC 9(06).
+000090     03 DESCRICAO-21        PIC X(30).
+000100     03 VALOR-21            PIC 9(14).
+000110     03 VALOR-21R REDEFINES
+000120        VALOR-21            PIC 9(12)V99.
+000130     03 DATVEN-21.
+000140        05 ANO-21           PIC 99.
+000150        05 MES-21           PIC 99.
+000160        05 DIA-21           PIC 99.
+000170     03 OBS-21              PIC X(30).
+000180     03 INCIDENCIA-21       PIC 9(02).
+000190     03 INCIDENCIAP-21      PIC 9(02).
+000200     03 FILLER              PIC X(40).
+000210****************************************
+

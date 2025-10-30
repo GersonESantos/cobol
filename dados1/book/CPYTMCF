@@ -1,0 +1,21 @@
+000010****************************************
+000020CPYTMCF                                *
+000030****************************************
+000040     DISPLAY (07, 33) "<I>NCLUSAO".
+000050     DISPLAY (09, 33) "<A>LTERACAO".
+000060     DISPLAY (11, 33) "<E>XCLUSAO".
+000070     DISPLAY (13, 33) "<P>ESQUISA".
+000080     DISPLAY (15, 33) "<L>ISTAGEM".
+000090     DISPLAY (17, 33) "< > OPCAO DESEJADA".
+000100 R-8888.
+000110     ACCEPT (17, 34) OPCAO WITH UPDATE AUTO-SKIP.
+000120     ACCEPT E FROM ESCAPE KEY.
+000130     IF OPCAO = "!" OR E = "01" GO TO R-9999.
+000140     IF OPCAO = "I" GO TO ROT-I.
+000150     IF OPCAO = "A" GO TO ROT-A.
+000160     IF OPCAO = "E" GO TO ROT-E.
+000170     IF OPCAO = "P" GO TO ROT-P.
+000180     IF OPCAO = "L" GO TO ROT-L.
+000190     GO TO R-8888.
+000200*****************************************
+

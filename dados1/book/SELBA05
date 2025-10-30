@@ -1,0 +1,11 @@
+000010******************************************************
+000020* SELBA05 - COPY SELECT CADASTRO DE BANCO *
+000030******************************************************
+000040     SELECT ABA05  ASSIGN TO DISK
+000050                   ORGANIZATION IS INDEXED
+000060                   ACCESS MODE IS DYNAMIC
+000090               LOCK MODE IS MANUAL WITH LOCK ON MULTIPLE RECORDS
+000100                   RECORD KEY IS CHBA05
+000110                   FILE STATUS IS FS.
+000120******************************************************
+

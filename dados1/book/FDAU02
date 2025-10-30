@@ -1,0 +1,21 @@
+000010*========================================*
+000020* FDAU02 - FD DO FAMILIA  AAU02      *
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  AAU02
+000090     VALUE OF FILE-ID IS ARQAU-02.
+000100 01  REG-AU02.
+000110     03 CHAU02.
+000120        05 PRINC02           PIC 9(06).
+000130        05 PAI02             PIC 99.
+000140        05 IRMAO02           PIC 99.
+000150        05 FILHO02           PIC 99.
+000160        05 NETO02            PIC 99.
+000170        05 BISNETO02         PIC 99.
+000180     03 SEGUND02             PIC 9(06).
+000190     03 FILLER               PIC X(21).
+000200*=====================================*
+

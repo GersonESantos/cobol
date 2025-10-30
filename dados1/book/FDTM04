@@ -1,0 +1,60 @@
+000010*========================================*
+000020* FDTM04 - FD DO CADASTRO DE COTACAO     * 
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ATM04 
+000090     VALUE OF FILE-ID IS ARQTM-04.
+000100 01  REGTM-04.
+000110     02 CHAVETM-04.
+000120        03 CLITM04         PIC 9(05).
+000130        03 COTATM04.
+000140           05 COTA04       PIC 9(05).
+000150           05 DIFCOTA04    PIC 9(02).
+000160        03 PRODTM04        PIC 9(06).
+000170     02 HEDTM04.
+000180        03 RAZAOTM04       PIC X(35).
+000190        03 TIPTM04         PIC 9(01).
+000200        03 ENDERECOTM04    PIC X(35).
+000210        03 BAIRROTM04      PIC X(20).
+000210        03 MUNICIPIOTM04   PIC X(20).
+000220        03 CEPTM04         PIC 9(05).
+000230        03 CCEPTM04        PIC 9(03).
+000240        03 UFTM04          PIC X(02).
+000250        03 TELFONETM04.
+000260           05 DDDTM04      PIC 9(03).
+000270           05 TELFONTM04.
+000280              07 TELETM04  PIC 9(03).
+000290              07 FONETM04  PIC 9(04).
+000300        03 TELFAX.
+000310           05 DDDFTM04     PIC 9(03).
+000320           05 TELFONFTM04.
+000330              07 TELEFTM04 PIC 9(03).
+000340              07 FONEFTM04 PIC 9(04).
+000350        03 CONTM04         PIC X(30).
+000360        03 ENTREGATM04     PIC X(10).
+000370        03 PRAZOTM04       PIC X(10).
+000380        03 VENDTM04        PIC 9(04).
+000390        03 DTCTM04.
+000400           05 AATM04       PIC 9(02).
+000410           05 MMTM04       PIC 9(02).
+000420           05 DDTM04       PIC 9(02).
+000430        03 OBCLITM04       PIC X(65).
+000440        03 OBFEITM04       PIC X(65).
+000450        03 FILLER          PIC X(200).
+000460     02 HEDTM04 REDEFINES HEDTM04.
+000470        03 DESCEHD-04      PIC X(40).
+000480        03 QTHED-04        PIC 9(07).
+000490        03 QTHED-04R REDEFINES
+000500           QTHED-04        PIC 9(05)V99.
+000510        03 PRECOHED-04     PIC 9(12).
+000520        03 PRECOHED-04R REDEFINES
+000530           PRECOHED-04     PIC 9(10)V99.
+000540        03 VRDESHED-04     PIC 9(12).
+000550        03 VRDESHED-04R REDEFINES
+000560           VRDESHED-04     PIC 9(10)V99.
+000570        03 FILLER          PIC X(460).
+000580*-----------------------FIM---------------------
+

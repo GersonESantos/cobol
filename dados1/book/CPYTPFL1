@@ -1,0 +1,13 @@
+000010****************************************************
+000020* CPYTPFL                                          *
+000030****************************************************
+000040*    DISPLAY BRANQUEIA.
+000050     DISPLAY (22, 14) EX-MENS.
+000060     DISPLAY (02, 14) HH-W ":" MS-W.
+000070     DISPLAY (02, 75) EM-EMP-K0.
+000080     DISPLAY (04, 04) TS.
+000090     DISPLAY (04, 24) INFT.
+000100***********************FIM DO COPY******************
+000110* para compilar o OFL2701 - CADASTRO DE FUNCIONARIOS
+000120*     retirar asteristicos das linhas 40,50,60,70.
+

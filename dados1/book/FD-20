@@ -1,0 +1,18 @@
+000010***********************************
+000020* FD-20 ARQUIVO DE TRANSPORTADOR  *
+000030***********************************
+000040 FD  ACE20
+000050     VALUE OF FILE-ID IS ARQCE-20.
+000060 01  REG-ACE20.
+000070     03 TRANSP-20     PIC 9999.
+000080     03 TRANSP-20R REDEFINES TRANSP-20 PIC X(04).
+000090     03 RAZAO-20      PIC X(30).
+000100     03 END-20        PIC X(30).
+000110     03 MUN-20        PIC X(20).
+000120     03 UF-20         PIC XX.
+000130     03 CGC-20        PIC 9(14).
+000140     03 INSCR-20      PIC 9(13).
+000150     03 FILLER        PIC X(15).
+000160* ! SELC-20 FD-20 TRANSPORTADOR
+000170***********************************
+

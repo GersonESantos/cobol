@@ -1,0 +1,9 @@
+000010****************************************
+000020*SELFL-20
+000030****************************************
+000040     SELECT AFL20     ASSIGN TO DISK
+000050                      ACCESS MODE IS DYNAMIC
+000060                      ORGANIZATION IS INDEXED
+000070                      RECORD KEY IS CHAVE-20
+000080                      FILE STATUS IS FS.
+

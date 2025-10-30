@@ -1,0 +1,40 @@
+000010****************************************
+000020*FDCP13-ARQUIVO DE DUPLICATA ACUMULADO *
+000030****************************************
+000040 FD  ACP13
+000050     VALUE OF FILE-ID IS ARQ13-ID.
+000060 01  REG-CP13.
+000070     05 NUM-FAT-13      PIC 9(6).
+000080     05 NF-13 REDEFINES
+000090        NUM-FAT-13      PIC X(6).
+000100     05 CLIENTE-13      PIC X(5).
+000110     05 EMI-13.
+000120        07 AE-13        PIC 99.
+000130        07 ME-13        PIC 99.
+000140        07 DE-13        PIC 99.
+000150     05 VENC-13.
+000160        07 AV-13        PIC 99.
+000170        07 MV-13        PIC 99.
+000180        07 DV-13        PIC 99.
+000190     05 FAT-13          PIC 9(08)V99.
+000200     05 FATRED-13 REDEFINES
+000210        FAT-13          PIC 9(10).
+000220     05 STATUS-13       PIC X.
+000230     05 DTPGTO-13.
+000240        07 APGTO-13     PIC 99.
+000250        07 MPGTO-13     PIC 99.
+000260        07 DPGTO-13     PIC 99.
+000270     05 VRPGTO-13       PIC 9(8)V99.
+000280     05 VRRED-13 REDEFINES
+000290        VRPGTO-13       PIC 9(10).
+000300     05 PORTDUP-13      PIC 99.
+000310     05 SIT-13          PIC X.
+000320     05 JUR-13          PIC 9(6)V99.
+000330     05 JURRED-13 REDEFINES
+000340        JUR-13          PIC 9(8).
+000350     05 DESC-13         PIC 9(6)V99.
+000360     05 DESCRED-13 REDEFINES
+000370        DESC-13         PIC 9(8).
+000380     05 FILLER          PIC X(59).
+000390****************************************
+

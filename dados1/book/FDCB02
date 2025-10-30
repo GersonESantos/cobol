@@ -1,0 +1,17 @@
+000010*========================================*
+000020* FDCB02 - FD DO CADASTRO HISTORICO BANCARIO
+000030*========================================*
+000040* Qualquer alteracao efetuada nesta FD   *
+000050* devera' ser alterado tambem no programa*
+000060* de reorganizacao  do arquivo           *
+000070*========================================*
+000080 FD  ACB02
+000090     VALUE OF FILE-ID IS ARQCB-02.
+000100 01  REGCB-02.
+000110     03 CHAVECB-02.
+000120        05 CODCB02    PIC 9(03).
+000130     03 DESCB02       PIC X(30).
+000140     03 NATCB02       PIC X(01).
+000150     03 FILLER        PIC X(32).
+000160*=====================================*
+
