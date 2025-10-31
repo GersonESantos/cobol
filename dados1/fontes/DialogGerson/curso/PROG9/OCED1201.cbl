@@ -79,7 +79,7 @@
               move 1 to EXIT-FLAG
               CLOSE ACE01.
 
-      *   PERFORM L-S
+          PERFORM L-S
 
           .
 
@@ -97,7 +97,7 @@
       *            PERFORM Clear-Record
                 .
       *   PERFORM Call-Dialog-System
-          PERFORM L-S
+      *   PERFORM L-S
 
           .
 

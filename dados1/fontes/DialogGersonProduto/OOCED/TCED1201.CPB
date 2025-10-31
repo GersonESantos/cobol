@@ -1,0 +1,166 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 16.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 11.
+
+       01 DATA-BLOCK.
+          03 FLAGS.
+            05 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+            05 I-FLAG                          PIC 9.
+             88 I-FLAG-TRUE                  VALUE 1.
+            05 P-FLAG                          PIC 9.
+             88 P-FLAG-TRUE                  VALUE 1.
+            05 R-FLAG                          PIC 9.
+             88 R-FLAG-TRUE                  VALUE 1.
+            05 E-FLAG                          PIC 9.
+             88 E-FLAG-TRUE                  VALUE 1.
+          03 MENS-ERRO                       PIC X(70).
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 FUNCTION-DATA.
+             05 WINDOW-HANDLE                PIC x(4) COMP-5.
+             05 OBJECT-REFERENCE OBJECT REFERENCE.
+             05 CALL-FUNCTION                PIC X(30).
+             05 NUMERIC-VALUE                PIC x(4) COMP-5.
+             05 NUMERIC-VALUE2               PIC x(4) COMP-5.
+             05 SIZE-WIDTH                   PIC x(4) COMP-5.
+             05 SIZE-HEIGHT                  PIC x(4) COMP-5.
+             05 POSITION-X                   PIC x(4) COMP-5.
+             05 POSITION-Y                   PIC x(4) COMP-5.
+             05 IO-TEXT-BUFFER               PIC X(256).
+             05 IO-TEXT-BUFFER2              PIC X(256).
+          03 CURRENT-WINDOW-SBAR OBJECT REFERENCE.
+          03 WIN-01-SBAR-OBJREF OBJECT REFERENCE.
+          03 TOOLTIP-REF OBJECT REFERENCE.
+          03 CHARACTER-ARRAY OBJECT REFERENCE.
+          03 DSONLINE-PARAMETER-BLOCK.
+           05 DSONLINE-FUNCTION               PIC  X(4).
+           05 DSONLINE-RETURN                 PIC  X(2)  COMP-X.
+           05 DSONLINE-HELP-FLAGS             PIC  X(2)  COMP-X.
+           05 DSONLINE-HELP-CONTEXT           PIC  9(4).
+           05 DSONLINE-HELP-TOPIC             PIC  X(32).
+           05 DSONLINE-HELP-FILE              PIC  X(256).
+      *  *
+      *  * Screenset master fields
+      *********************************
+      * FD-01DBL ARQUIVO ACE01, PRODUTOS *
+      *********************************
+       03  REG-01CPB.
+           05 COD-01CPB         PIC 9(06).
+      *CODIGO DO PRODUTO
+           05  DESC-01CPB       PIC X(40).
+           05  UND-01CPB        PIC X(04).
+           05  LIVRO-01CPB      PIC X.
+           05  CLASSECE-01CPB   PIC X.
+      *CLASSE P\EMISSAO DE MAPA DE LOJA.
+      *P=MATERIA PRIMA - L=MATERIAL LIMPESA - R=REFEICOES E LANCHES
+      *B=BRINDES E INDENIZACAO-M=MATERIAL DE CONSUMO-V=MANUT.VEICULO
+      *UNIDADE DE FORNECIMENTO
+           05  ESTMIN-01CPB     PIC 9(07).
+      *ESTOQUE MINIMO
+           05  QTPED-01CPB      PIC 9(07).
+      *QUANTIDADE ACUMULADA DOS PEDIDOS NAO ENTREGUES
+           05  QTENT-01CPB      PIC 9(07).
+      *QUANTIDADE DE SAIDAS PARA OS ULTIMOS 12 MESES
+           05  EST-01CPB        PIC 9(07).
+      *ESTOQUE DA MERCADORIA NA EMPRESA
+           05  DCUSTO-01CPB     PIC 9(06).
+           05  CONDPG-01CPB     PIC 9(03).
+      *PRAZO DE PAGAMENTO DE MERCADORIA EM DIAS
+           05  DATCAD-01CPB     PIC 9(06).
+      *DATA DE CADASTRAMENTO E REMARCACAO DO PRODUTO
+           05  DATNOV-01CPB     PIC 9(04).
+      *MES E ANO DO ULTIMO MOVIMENTO DE MERCADORIA
+           05  CODTAB-01CPB     PIC X(01).
+           05  CONTOU-01CPB     PIC X(01).
+           05  CODFOR-01CPB     PIC 9(04).
+           05  CREAL-01CPB      PIC 9(10).
+      *CUSTO REAL
+           05  CMEDIO-01CPB     PIC 9(10).
+      *CUSTO MEDIO.
+           05  PRATAC-01CPB     PIC 9(10).
+      *PRECO DE VENDA NO ATACADO
+           05  PRVAR-01CPB      PIC 9(10).
+      *PRECO DE VENDA NO VAREJO
+           05  VRPU-01CPB       PIC 9(10).
+           05  CATUAL-01CPB     PIC 9(10).
+      *CUSTO ATUAL
+           05  EMB-01CPB        PIC 999.
+           05  ARTIGO-01CPB     PIC 9(06).
+           05  DTCON-01CPB      PIC 9(06).
+      * DATA DA CONTAGEM DE ESTOQUE.
+           05  RAZ-01CPB      PIC X(01).
+      *S SAI NO RAZAO
+           05  FILLER        PIC X(03).
+           05  CODLUZA-01CPB    PIC X(05).
+           05  CONFPR-01CPB     PIC X(01).
+           05  CONFCUS-01CPB    PIC X(01).
+           05  CODTRI-01CPB     PIC 9.
+           05  DATINF-01CPB     PIC 9(04).
+      *QUANTIDADE ACUMULADA DE ENTREGAS NOMES
+           03  QTSAIDAR-01CPB OCCURS 12 TIMES.
+              05 QTSAI-01CPB   PIC 9(05).
+
+      *DATA DO ULTIMO INFLACIONAMENTO DO CUSTO REAL
+      *======================================
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-WINDOW-HANDLE            PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-OBJECT-REFERENCE         PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-CALL-FUNCTION            PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-NUMERIC-VALUE            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-NUMERIC-VALUE2           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-SIZE-WIDTH               PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-SIZE-HEIGHT              PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-POSITION-X               PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-POSITION-Y               PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-IO-TEXT-BUFFER           PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-IO-TEXT-BUFFER2          PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-CURRENT-WINDOW-SBAR      PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-WIN-01-SBAR-OBJREF       PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-TOOLTIP-REF              PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-CHARACTER-ARRAY          PIC 9(4) COMP-5 VALUE
+                                               19.
+
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

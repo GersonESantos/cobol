@@ -1,0 +1,130 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 9.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 1.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+000010*********************************
+000020*  ARQUIVO ACE01, PRODUTOS *
+000030*********************************
+000070     03 CHAVECPB-01.
+000080        04 CODCPB-01     PIC X(06).
+000090        04 CODCPB-01R REDEFINES CODCPB-01 PIC 9(06).
+000100*CODIGO DO PRODUTO
+000110     03 DESCCPB-01       PIC X(40).
+000110     03 FILLER REDEFINES DESCCPB-01.
+              05 FILLER     PIC X(29).
+000770        05 ORIGCPB-01    PIC X(11).
+000120     03 UNDCPB-01        PIC X(04).
+000130     03 LIVROCPB-01      PIC X.
+000140     03 CLASSECECPB-01   PIC X.
+000150*CLASSE P\EMISSAO DE MAPA DE LOJA.
+000160*P=MATERIA PRIMA - L=MATERIAL LIMPESA - R=REFEICOES E LANCHES
+000170*B=BRINDES E INDENIZACAO-M=MATERIAL DE CONSUMO-V=MANUT.VEICULO
+000180*UNIDADE DE FORNECIMENTO
+000190     03 ESTMINCPB-01     PIC 9(07).
+000200     03 ESTMINCPB-01R REDEFINES ESTMINCPB-01 PIC 9(05)V99.
+000210*ESTOQUE MINIMO
+000220     03 QTPEDCPB-01      PIC 9(07).
+000230     03 QTPEDCPB-01R REDEFINES QTPEDCPB-01 PIC 9(05)V99.
+000240*QUANTIDADE ACUMULADA DOS PEDIDOS NAO ENTREGUES
+000250     03 QTENTCPB-01      PIC 9(07).
+000260     03 QTENTCPB-01R REDEFINES QTENTCPB-01 PIC 9(05)V99.
+000270*QUANTIDADE ACUMULADA DE ENTREGAS NOMES
+000280     03 QTSAIDARCPB-01 OCCURS 12 TIMES.
+000290        05 QTSAICPB-01   PIC 9(05).
+000300        05 QTSAICPB-01R REDEFINES QTSAICPB-01 PIC 9(03)V99.
+000310*QUANTIDADE DE SAIDAS PARA OS ULTIMOS 12 MESES
+000320     03 ESTCPB-01        PIC 9(07).
+000330     03 ESTCPB-01R REDEFINES ESTCPB-01 PIC 9(05)V99.
+000340*ESTOQUE DA MERCADORIA NA EMPRESA
+000350     03 DCUSTOCPB-01.
+000360        04 DIACUSTOCPB-01 PIC 99.
+000370        04 MESCUSTOCPB-01 PIC 99.
+000380        04 ANOCUSTOCPB-01 PIC 99.
+000390     03 CONDPGCPB-01     PIC 9(03).
+000400*PRAZO DE PAGAMENTO DE MERCADORIA EM DIAS
+000410     03 DATCADCPB-01.
+000420        04 DIACADCPB-01  PIC 99.
+000430        04 MESCADCPB-01  PIC 99.
+000440        04 ANOCADCPB-01  PIC 99.
+000450*DATA DE CADASTRAMENTO E REMARCACAO DO PRODUTO
+000460     03 DATNOVCPB-01.
+000470        04 MESNOVCPB-01  PIC 99.
+000480        04 ANONOVCPB-01  PIC 99.
+000490*MES E ANO DO ULTIMO MOVIMENTO DE MERCADORIA
+000500     03 CODTABCPB-01     PIC X(01).
+000510     03 CONTOUCPB-01     PIC X(01).
+000520     03 CODFORCPB-01     PIC 9(04).
+000530     03 CREALCPB-01      PIC 9(10).
+000540     03 CREALCPB-01R REDEFINES CREALCPB-01 PIC 9(08)V99.
+000550*CUSTO REAL
+000560     03 CMEDIOCPB-01     PIC 9(10).
+000570     03 CMEDIOCPB-01R REDEFINES CMEDIOCPB-01 PIC 9(08)V99.
+000580*CUSTO MEDIO.
+000590     03 PRATACCPB-01     PIC 9(10).
+000600     03 PRATACCPB-01R REDEFINES PRATACCPB-01 PIC 9(08)V99.
+000610*PRECO DE VENDA NO ATACADO
+000620     03 PRVARCPB-01      PIC 9(10).
+000630     03 PRVARCPB-01R REDEFINES PRVARCPB-01 PIC 9(08)V99.
+000640*PRECO DE VENDA NO VAREJO
+000650     03 VRPUCPB-01       PIC 9(10).
+000660     03 VRPUCPB-01R REDEFINES VRPUCPB-01 PIC 9(08)V99.
+000670     03 CATUALCPB-01     PIC 9(10).
+000680     03 CATUALCPB-01R REDEFINES CATUALCPB-01 PIC 9(08)V99.
+000690*CUSTO ATUAL
+000700     03 EMBCPB-01        PIC 999.
+000710     03 ARTIGOCPB-01     PIC 9(06).
+000720     03 DTCONCPB-01.
+000730        05 ACONCPB-01    PIC 9(02).
+000740        05 MCONCPB-01    PIC 9(02).
+000750        05 DCONCPB-01    PIC 9(02).
+000760* DATA DA CONTAGEM DE ESTOQUE.
+000770     03 RAZCPB-01      PIC X(01).
+      *S SAI NO RAZAO
+000770     03 FILLER        PIC X(03).
+000770     03 CODLUZACPB-01    PIC X(05).
+000770     03 CONFPRCPB-01     PIC X(01).
+000770     03 CONFCUSCPB-01    PIC X(01).
+000780     03 CODTRICPB-01     PIC 9.
+000790     03 DATINFCPB-01.
+000800        04 DIAINFCPB-01  PIC 99.
+000810        04 MESINFCPB-01  PIC 99.
+000820*DATA DO ULTIMO INFLACIONAMENTO DO CUSTO REAL
+000830*======================================
+
+
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               3.
+
+          03 OPERACAO                         PIC X(10).
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
