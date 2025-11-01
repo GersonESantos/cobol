@@ -1,0 +1,74 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 8.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 28.
+
+       01 DATA-BLOCK.
+          03 OPCAO-DSG                       PIC 9.
+             88 OPCAO-DSG-TRUE               VALUE 1.
+          03 MENSAGEM-DSG                    PIC X(40).
+          03 FUNCAO-DSG                      PIC X(2).
+          03 REG-CLI-DSG.
+             05 CODIGO-CLI-DSG               PIC X(4).
+             05 NOME-CLI-DSG                 PIC X(30).
+             05 ENDERECO-CLI-DSG             PIC X(40).
+             05 SALDO-CLI-DSG                PIC S9(7)V9(2).
+             05 OBSERVACAO-CLI-DSG           PIC X(50).
+          03 REG-CONT-DSG.
+             05 CODIGO-CLI-CONT-DSG          PIC X(4).
+             05 NUM-TITULO-CONT-DSG          PIC X(10).
+             05 DESCRICAO-CONT-DSG           PIC X(30).
+             05 VALOR-CONT-DSG               PIC S9(7)V9(2).
+             05 DATA-VENC-CONT-DSG           PIC 9(8).
+             05 SITUACAO-CONT-DSG            PIC X.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-OPCAO-DSG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-MENSAGEM-DSG             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-FUNCAO-DSG               PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-CODIGO-CLI-DSG           PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-NOME-CLI-DSG             PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-ENDERECO-CLI-DSG         PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-SALDO-CLI-DSG            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-OBSERVACAO-CLI-DSG       PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-CODIGO-CLI-CONT-DSG      PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-NUM-TITULO-CONT-DSG      PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-DESCRICAO-CONT-DSG       PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-VALOR-CONT-DSG           PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-DATA-VENC-CONT-DSG       PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-SITUACAO-CONT-DSG        PIC 9(4) COMP-5 VALUE
+                                               16.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

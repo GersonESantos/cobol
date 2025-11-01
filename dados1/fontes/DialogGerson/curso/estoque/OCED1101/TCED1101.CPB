@@ -1,0 +1,128 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 7.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 11.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 FUNCTION-DATA.
+             05 WINDOW-HANDLE                PIC x(4) COMP-5.
+             05 OBJECT-REFERENCE OBJECT REFERENCE.
+             05 CALL-FUNCTION                PIC X(30).
+             05 NUMERIC-VALUE                PIC x(4) COMP-5.
+             05 NUMERIC-VALUE2               PIC x(4) COMP-5.
+             05 SIZE-WIDTH                   PIC x(4) COMP-5.
+             05 SIZE-HEIGHT                  PIC x(4) COMP-5.
+             05 POSITION-X                   PIC x(4) COMP-5.
+             05 POSITION-Y                   PIC x(4) COMP-5.
+             05 IO-TEXT-BUFFER               PIC X(256).
+             05 IO-TEXT-BUFFER2              PIC X(256).
+          03 CURRENT-WINDOW-SBAR OBJECT REFERENCE.
+          03 WIN-01-SBAR-OBJREF OBJECT REFERENCE.
+          03 TOOLTIP-REF OBJECT REFERENCE.
+          03 CHARACTER-ARRAY OBJECT REFERENCE.
+      **
+      ** tooltips Gerson   FIM
+      **
+      **  HELP GERSON INICIO
+      **
+      ** Data block for the on-line help canned dialog
+      **
+        03 DSONLINE-PARAMETER-BLOCK         OCCURS    1.
+         05 DSONLINE-FUNCTION               PIC  X(4).
+         05 DSONLINE-RETURN                 PIC  X(2)  COMP-X.
+         05 DSONLINE-HELP-FLAGS             PIC  X(2)  COMP-X.
+         05 DSONLINE-HELP-CONTEXT           PIC  9(4).
+         05 DSONLINE-HELP-TOPIC             PIC  X(32).
+         05 DSONLINE-HELP-FILE              PIC  X(256).
+      **
+      **  FIM HLEP
+      ** Screenset master fields
+      **
+      ** campos de mensagens
+        03 MENS-ERRO                        PIC  X(72).
+      **
+
+      *   campos de arquivos
+        03 COD-01DBL                        PIC  9(6).
+        03 DES-01DBL                        PIC  X(40).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-WINDOW-HANDLE            PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-OBJECT-REFERENCE         PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-CALL-FUNCTION            PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-NUMERIC-VALUE            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-NUMERIC-VALUE2           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-SIZE-WIDTH               PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-SIZE-HEIGHT              PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-POSITION-X               PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-POSITION-Y               PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-IO-TEXT-BUFFER           PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-IO-TEXT-BUFFER2          PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-CURRENT-WINDOW-SBAR      PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-WIN-01-SBAR-OBJREF       PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-TOOLTIP-REF              PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-CHARACTER-ARRAY          PIC 9(4) COMP-5 VALUE
+                                               19.
+
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
