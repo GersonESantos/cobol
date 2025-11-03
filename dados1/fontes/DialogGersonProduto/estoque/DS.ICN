@@ -1,0 +1,40 @@
+;
+; Dialog System Resource Side File
+;
+; (c) Copyright Micro Focus Ltd 1995-1997. All rights reserved.
+;
+
+;------------------ Microsoft Windows Images -------------------------------
+
+[win-pointers]
+
+[win-icons]
+
+dsicon                : dsicow32.dll  0111
+dlgicon2              : dsicow32.dll  0101
+on-line               : dsicow32.dll  0102
+ab-min-icon           : dsicow32.dll  0104
+pnticon               : dsicow32.dll  0105
+dlgicon               : dsicow32.dll  0106
+dsdatdef              : dsicow32.dll  0107
+trap-min-icon         : dsicow32.dll  0108
+new-trap-icon         : dsicow32.dll  0111
+
+[win-bitmaps]
+
+ds                    : dsbmpw32.dll  0500
+
+;
+; Dialog System reserved WINDOWS images
+;
+
+DS22_Undefined_Bitmap : dsbmpw32.dll 0400
+DS22_pos              : dsbmpw32.dll 0771
+DS22_size1            : dsbmpw32.dll 0772
+
+
+DS22_ABOUT16          : dsbmpw32.dll 1720
+DS22_ABOUT256         : about256.bmp
+
+DS22_FINWIZ           : finwiz.bmp
+DS22_CSWIZ            : cswiz.bmp

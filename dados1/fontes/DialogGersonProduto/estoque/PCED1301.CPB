@@ -1,0 +1,124 @@
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 13.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 1.
+
+       01 DATA-BLOCK.
+          03 CAMPOSCPB.
+000010*******************
+000020*FDEMP- EMPRESA   *
+000030*******************
+000070     05 COD-EMPCECPB      PIC 99.
+000080     05 DESC-EMPCEDCPB     PIC X(21).
+000090     05 DEC-EMPCECPB      PIC X.
+000010*********************************
+000020* FD-01 ARQUIVO ACE01, PRODUTOS *
+000030*********************************
+000090     05 COD-01CPB     PIC 9(06).
+000100*CODIGO DO PRODUTO
+000110     05 DESC-01CPB       PIC X(40).
+000830*======================================
+000010****************************
+000020* FD-02 -PRODUTOS NA LOJA  *
+000030****************************
+000070     05 CHAVE-02CPB.
+000080        07 LOJA-02CPB    PIC XX.
+000090*CODIGO DA LOJA
+000100        07 COD-02CPB     PIC X(06).
+000110*CODIGO DO PRODUTO
+000120     05 FLAG-02CPB       PIC X.
+000130*=   D DELETAR QUANDO ESTOQUE = 0
+000140     05 QTLOJ-02CPB      PIC 9(07).
+000160*QUANTIDADE NA LOJA
+000170     05 QTREP-02CPB      PIC 9(07).
+000190*QUANTIDADE PARA REPOSICAO
+000200     05 QTMIN-02CPB      PIC 9(07).
+000220*QUANTIDADE MINIMA
+000230     05 QTSAI-02CPB      PIC 9(07).
+000250*QUANTIDADE DE SAIDA NA LOJA NO MES
+000260     05 DATNOV-02CPB.
+000270        07 MESNOV-02CPB  PIC 99.
+000280        07 ANONOV-02CPB  PIC 99.
+000290*DATA DO ULTIMO MOVIMENTO
+000300     05 VED-02CPB        PIC 9(12).
+000320*VENDA NO MES
+000330     05 SUG-02CPB        PIC X(01).
+000340     05 VRCUS-02CPB      PIC 9(10).
+
+000010**************************************
+000020* FD-05-ARQUIVO DE GRAVACAO DE LOJAS *
+000030**************************************
+000070     05 CHAVE-05CPB.
+000080        07 LOJA-05CPB    PIC XX.
+000090*CODIGO DA LOJA
+000100     05 RAZAO-05CPB      PIC X(50).
+000110*RAZAO SOCIAL
+
+
+         03 ENTRY-FLGS.
+           05 INCLUSAO-FLG               PIC 9.
+                88 INCLUSAO-FLG-VERDADE       VALUE 1.
+           05 ALTERACAO-FLG               PIC 9.
+                88 ALTERACAO-FLG-VERDADE       VALUE 1.
+           05 EXCLUSAO-FLG               PIC 9.
+                88 EXCLUSAO-FLG-VERDADE       VALUE 1.
+           05 PESQUIZA-FLG               PIC 9.
+                88 PESQUIZA-FLG-VERDADE       VALUE 1.
+           05 LISTAGEN-FLG               PIC 9.
+                88 LISTAGEN-FLG-VERDADE       VALUE 1.
+           05 SAIR-FLG               PIC 9.
+               88 SAIR-FLG-VERDADE       VALUE 1.
+           05 LIMPAR-FLG                PIC 9.
+         03 DATACPB.
+            05 DIACPB            PIC 99.
+            05 MESCPB            PIC 99.
+            05 ANOCPB            PIC 9999.
+         03 HORACPB.
+           05 HHCPB              PIC 99.
+           05 MMCPB              PIC 99.
+           05 SSCPB              PIC 99.
+       03 menf                   pic xxx.
+                88 LIMPAR-FLG-TRUE        VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+       01 ENTRY-FIELD-NUMBERS.
+          03 ENTRY-FLD-NO-NAME               PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 ENTRY-FLD-NO-MALE               PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 ENTRY-FLD-NO-ADDRESS            PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 ENTRY-FLD-NO-CLUB               PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 ENTRY-FLD-NO-AGE                PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 ENTRY-FLD-NO-CODE               PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 ENTRY-FLD-NO-EXIT-FLG           PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 ENTRY-FLD-NO-SAVE-FLG           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 ENTRY-FLD-NO-CLR-FLG            PIC 9(4) COMP-5 VALUE
+                                               10.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

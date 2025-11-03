@@ -1,0 +1,69 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 1.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 1.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 DSMDI-PARAMETERS.
+             05 DSMDI-PARENT                 PIC x(4) COMP-5.
+             05 DSMDI-FUNCTION               PIC X(4).
+             05 DSMDI-RETURN                 PIC x(4) COMP-5.
+             05 DSMDI-BITMAP                 PIC X(30).
+             05 DSMDI-BITMAP-STYLE           PIC 9.
+                88 DSMDI-BITMAP-STYLE-TRUE   VALUE 1.
+          03 DSMDI-RESTRICT.
+             05 DSMDI-LEFT                   PIC x(4) COMP-5.
+             05 DSMDI-TOP                    PIC x(4) COMP-5.
+             05 DSMDI-RIGHT                  PIC x(4) COMP-5.
+             05 DSMDI-BOTTOM                 PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-DSMDI-PARENT             PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-DSMDI-FUNCTION           PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-DSMDI-RETURN             PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-DSMDI-BITMAP             PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-DSMDI-BITMAP-STYLE       PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-DSMDI-LEFT               PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-DSMDI-TOP                PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-DSMDI-RIGHT              PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-DSMDI-BOTTOM             PIC 9(4) COMP-5 VALUE
+                                               14.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

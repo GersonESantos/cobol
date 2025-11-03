@@ -1,0 +1,50 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 6.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 46.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 DSDIR-PARAMS.
+             05 DSDIR-FUNCTION               PIC X(4).
+             05 DSDIR-RETURN-CODE            PIC x(2) COMP-X.
+             05 DSDIR-FILENAME               PIC X(256).
+          03 DSDIR-PARAMS2.
+             05 DSDIR-TITLE                  PIC X(256).
+      *
+      * Variaveis de interface
+          03 CODIGO                          PIC 9(6).
+          03 NOME                            PIC X(40).
+          03 DATA-NASC                       PIC 9(8).
+          03 TELEFONE                        PIC X(15).
+          03 E-MAIL                          PIC X(50).
+          03 ENDERECO                        PIC X(50).
+          03 COMPLEMENTO                     PIC X(20).
+          03 BAIRRO                          PIC X(20).
+          03 CIDADE                          PIC X(20).
+          03 ESTADO                          PIC X(2).
+          03 CEP                             PIC 9(8).
+          03 FOTO                            PIC X(100).
+      *
+      * Variaveis de controle
+          03 OPERACAO                        PIC X(30).
+          03 LINHALISTA                      PIC X(100).
+          03 ALTE                            PIC 9.
+          03 PESQ                            PIC X(50).
+          03 CAMPO-ERRO                      PIC X(76).
+          03 PESQSENSITIVE                   PIC 9.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************

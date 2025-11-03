@@ -202,6 +202,8 @@
            end-perform
            perform FecharArquivoCidade
            .
+
+
        PosicionarAnterior section.
            perform AbrirArquivoCidadeInput
            move TL-cidade to cidade

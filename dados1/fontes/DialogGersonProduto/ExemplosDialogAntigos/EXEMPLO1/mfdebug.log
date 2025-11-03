@@ -1,0 +1,46 @@
+
+NetExpress Exception Handler - 13/03/2021  06:10:44
+
+D:\MeuDiscoCobol5\dados1\Fontes\EXEMPLO1\RELEASE\produto.exe caused an exception at address : 0x76EFB2E4
+Exception type - EXCEPTION_ACCESS_VIOLATION on Write. Address 0x00000003
+
+Registers:
+
+	EAX 0000001F	EBX 00000000
+	ECX 0CB7B13B	EDX 00000007
+	DS  002B	ESI 7EB64A00
+	ES  002B	EDI 00000003
+	FS  0053	GS  002B
+	CS  0023	EIP 76EFB2E4
+	SS  002B	ESP 0019F560	EBP 0019F7E8
+	Flags 00010246
+
+Error occurred in : C:\Windows\System32\MSVCRT.dll, loaded at 0x76E80000
+
+	CompanyName Microsoft Corporation
+	FileDescription Windows NT CRT DLL
+	FileVersion 7.0.19041.546 (WinBuild.160101.0800)
+	LegalCopyright © Microsoft Corporation. All rights reserved.
+	OriginalFileName msvcrt.dll
+	ProductName Microsoft® Windows® Operating System
+	ProductVersion 7.0.19041.546
+
+COBOL call stack:
+
+	PRODUTO	(obj program)
+
+Run-time : D:\MeuDiscoCobol5\dados1\Fontes\EXEMPLO1\RELEASE\cblrtss.dll, loaded at 0x600F0000
+
+	CompanyName MERANT International Limited
+	FileDescription Micro Focus 32-bit RTS
+	FileVersion 3.714, 3.491
+	LegalCopyright Copyright (C) 1984-2000 MERANT International Limited
+	OriginalFileName cblrtss.dll
+	ProductName Micro Focus Net Express
+	ProductVersion 3.1.11
+
+OS Information:
+
+Windows NT 6.2 (Build 9200: )
+CPU: Intel Pentium Model 94 step 3, 8 processors
+Available memory - 2097151 KB
